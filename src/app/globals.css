@@ -15,6 +15,7 @@
   --color-on-surface-variant: #3d4a42;
   --color-surface-container-lowest: #ffffff;
   --color-surface-container-low: #edf4ff;
+  --color-surface-container: #e3efff;
   --color-surface-container-high: #dde9fa;
   --color-surface-variant: #d7e4f5;
 
@@ -129,5 +130,16 @@
 
   .timeline-item:last-child .timeline-line::before {
     display: none;
+  }
+
+  .bento-card {
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .bento-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
   }
 }

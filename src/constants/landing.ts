@@ -1,27 +1,16 @@
 import type { LucideIcon } from "lucide-react";
 import {
-  Bell,
-  Bookmark,
   Briefcase,
   Building2,
   ClipboardCheck,
-  Compass,
   CreditCard,
   GraduationCap,
   History,
-  Home,
   Key,
   Landmark,
   Monitor,
   ScrollText,
-  User,
 } from "lucide-react";
-
-export interface NavLink {
-  label: string;
-  href: string;
-  active?: boolean;
-}
 
 export interface Category {
   title: string;
@@ -69,29 +58,6 @@ export interface PrepTool {
   href: string;
 }
 
-export interface FooterColumn {
-  title: string;
-  links: { label: string; href: string }[];
-}
-
-export interface MobileNavItem {
-  label: string;
-  href: string;
-  icon: LucideIcon;
-  active?: boolean;
-}
-
-export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "/", active: true },
-  { label: "Private Jobs", href: "#" },
-  { label: "Govt Jobs", href: "#" },
-  { label: "Abroad Jobs", href: "#" },
-  { label: "Results", href: "#" },
-  { label: "Scholarships", href: "#" },
-  { label: "Schemes", href: "#" },
-  { label: "Resources", href: "#" },
-];
-
 export const POPULAR_SEARCHES: PopularSearch[] = [
   { label: "SSC CGL 2024", href: "#" },
   { label: "Railway RRB", href: "#" },
@@ -102,7 +68,7 @@ export const CATEGORIES: Category[] = [
   {
     title: "Private Jobs",
     description: "TCS, Infosys, Startups",
-    href: "#",
+    href: "/private-jobs",
     icon: Building2,
   },
   {
@@ -238,47 +204,4 @@ export const PREP_TOOLS: PrepTool[] = [
   { label: "Resume Builder", href: "#" },
   { label: "Mock Test Portal", href: "#" },
   { label: "PYQ Archives", href: "#" },
-];
-
-export const FOOTER_COLUMNS: FooterColumn[] = [
-  {
-    title: "Jobs",
-    links: [
-      { label: "Private Jobs Hub", href: "#" },
-      { label: "Govt Portals", href: "#" },
-      { label: "Remote Roles", href: "#" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { label: "Result Center", href: "#" },
-      { label: "Scholarship Finder", href: "#" },
-      { label: "State Schemes", href: "#" },
-    ],
-  },
-  {
-    title: "Prep",
-    links: [
-      { label: "Admit Cards", href: "#" },
-      { label: "Answer Keys", href: "#" },
-      { label: "Career Blog", href: "#" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { label: "About Us", href: "#" },
-      { label: "Contact", href: "#" },
-      { label: "Privacy Policy", href: "#" },
-    ],
-  },
-];
-
-export const MOBILE_NAV_ITEMS: MobileNavItem[] = [
-  { label: "Home", href: "/", icon: Home, active: true },
-  { label: "Explore", href: "#", icon: Compass },
-  { label: "Updates", href: "#", icon: Bell },
-  { label: "Saved", href: "#", icon: Bookmark },
-  { label: "Profile", href: "#", icon: User },
 ];
