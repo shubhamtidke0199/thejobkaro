@@ -69,3 +69,75 @@ export interface NotificationFilterTab {
   label: string;
   value: "all" | GovernmentJobCategory;
 }
+
+export interface GovernmentJobMetaTag {
+  label: string;
+  variant: "primary" | "secondary";
+}
+
+export interface GovernmentJobStat {
+  label: string;
+  value: string;
+  highlight?: boolean;
+}
+
+export interface EligibilityItem {
+  label: string;
+  description: string;
+}
+
+export interface ImportantDateRow {
+  event: string;
+  date: string;
+  urgent?: boolean;
+  badge?: string;
+}
+
+export interface SelectionStep {
+  step: number;
+  title: string;
+  description: string;
+  active?: boolean;
+}
+
+export interface GovernmentJobFaq {
+  question: string;
+  answer: string;
+}
+
+export interface GovernmentJobApplicationStatus {
+  endsLabel: string;
+  progressPercent: number;
+}
+
+export interface GovernmentJobDetail {
+  slug: string;
+  title: string;
+  subtitle: string;
+  logo: string;
+  logoAlt: string;
+  metaTags: GovernmentJobMetaTag[];
+  overview: string;
+  stats: GovernmentJobStat[];
+  eligibility: EligibilityItem[];
+  importantDates: ImportantDateRow[];
+  selectionProcess: SelectionStep[];
+  faqs: GovernmentJobFaq[];
+  application: GovernmentJobApplicationStatus;
+}
+
+export interface RelatedOpportunity {
+  id: string;
+  title: string;
+  category: string;
+  deadlineLabel: string;
+  deadlineUrgent?: boolean;
+  href: string;
+  icon: LucideIcon;
+}
+
+export interface SponsoredStudyOffer {
+  title: string;
+  description: string;
+  ctaLabel: string;
+}

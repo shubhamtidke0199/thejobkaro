@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { MapPin, Sparkles, Wallet } from "lucide-react";
 
+import { privateJobDetailHref } from "@/components/features/private-jobs/privateJobDetailHref";
 import type { RecommendedJob } from "@/types/private-jobs";
 import { RECOMMENDED_JOBS } from "@/data/private-jobs";
 
@@ -11,15 +12,10 @@ interface RecommendedJobCardProps {
 
 function RecommendedJobCard({ job }: RecommendedJobCardProps) {
   const Icon: LucideIcon = job.icon;
+  const detailHref = privateJobDetailHref(job.detailSlug);
 
-  return (
-    <article
-      className={`bento-card relative rounded-xl border p-4 ${
-        job.matchScore
-          ? "border-primary/30 bg-surface-container-lowest"
-          : "border-outline-variant bg-surface-container-lowest"
-      }`}
-    >
+  const cardContent = (
+    <>
       {job.matchScore && (
         <span className="absolute top-3 right-3 rounded bg-primary-fixed px-2 py-0.5 font-label text-label-sm font-bold text-on-primary-fixed uppercase">
           {job.matchScore}% Match
@@ -44,6 +40,27 @@ function RecommendedJobCard({ job }: RecommendedJobCardProps) {
           </div>
         </div>
       </div>
+    </>
+  );
+
+  return (
+    <article
+      className={`bento-card relative rounded-xl border p-4 ${
+        job.matchScore
+          ? "border-primary/30 bg-surface-container-lowest"
+          : "border-outline-variant bg-surface-container-lowest"
+      }`}
+    >
+      {detailHref ? (
+        <Link
+          href={detailHref}
+          className="block transition-opacity hover:opacity-90"
+        >
+          {cardContent}
+        </Link>
+      ) : (
+        cardContent
+      )}
     </article>
   );
 }

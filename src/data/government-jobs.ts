@@ -56,6 +56,22 @@ export const RECOMMENDED_GOVERNMENT_JOBS: RecommendedGovernmentJob[] = [
 
 export const GOVERNMENT_JOB_LISTINGS: GovernmentJobListing[] = [
   {
+    id: "ssc-cgl-2024",
+    title: "SSC CGL 2024",
+    description:
+      "Staff Selection Commission Combined Graduate Level Examination for Group B and C posts across ministries.",
+    location: "Across India",
+    qualification: "Any Graduate",
+    postedAt: "Posted: 1d ago",
+    logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6yGl1lSx_86IEae8m654FpnkDgRccW2Dc7vhWYb4cC9Ecv7BvZZwftmSjuncoxtbIjJI_uC7rdPB4jFh0re7Q4krrMj7dvpFOd2smRFuxQxstspy3nWV4m6QTz7M-a2gZljTH2YWtDLp-4mp3XW0lbITmXmUaHsT-kW79hDo0oyDJS6t-Cq91B65w0wNfNqosPxOIm_k3sHSB1B7_ic_PzSWcoCFJcHMM9EE6VLOhMJTW4llAnPqmi5NGMFE3mMG_aRemeRVZFzs6",
+    logoAlt: "Staff Selection Commission SSC logo",
+    tags: [
+      { label: "Central Govt", variant: "secondary" },
+      { label: "Mass Hiring", variant: "primary" },
+    ],
+    category: "central",
+  },
+  {
     id: "ntpc-executive-trainees",
     title: "Executive Trainees in Finance & HR",
     description:

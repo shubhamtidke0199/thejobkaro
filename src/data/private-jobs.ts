@@ -19,10 +19,12 @@ export const RECOMMENDED_JOBS: RecommendedJob[] = [
   },
   {
     title: "Product Designer",
-    company: "Creative Pulse",
-    location: "Bengaluru",
-    salary: "₹18L+",
+    company: "ScaleX AI",
+    location: "San Francisco (Remote)",
+    salary: "$180k – $240k",
     icon: Palette,
+    matchScore: 92,
+    detailSlug: "scalex-lead-product-designer",
   },
 ];
 
@@ -37,6 +39,7 @@ export const SPONSORED_JOB: SponsoredJobListing = {
   logo: "https://lh3.googleusercontent.com/aida-public/AB6AXuDNV5M9Hmp_GD2e0Hxqps1I48cGxWs5o_mpCKbG9UnkybxVJ0at0hBRZJMVmNxN1PfgrLDCvw1hwe03H0MLNFRkLvjxwLyz83cBs6nFTo_Il79A7duNR0BhEhnmOuPgH36xkvNTs3hdFudbgVlsefTjeVBPwZededJdV3dYwnboKZWs9k4wnfKEHFm3xgjZ4NO77tR0w_9n9xQ1cJirhDb8bm9daTWRH_lQXLgSySs96w4rSwfNTLcZ8N2wTleWBg65n3ix7R_Ok8Oq",
   logoAlt: "ScaleX AI company logo",
   badge: "HOT",
+  detailSlug: "scalex-lead-product-designer",
 };
 
 export const PRIVATE_JOBS: PrivateJob[] = [
