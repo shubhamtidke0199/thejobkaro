@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lead Product Designer | ScaleX AI | JobKaro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-container": "#7f93a8",
+                        "surface-variant": "#d7e4f5",
+                        "error": "#ba1a1a",
+                        "inverse-primary": "#5cdda8",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#edf4ff",
+                        "inverse-surface": "#26313e",
+                        "primary": "#006c4b",
+                        "inverse-on-surface": "#e8f1ff",
+                        "on-secondary-container": "#566478",
+                        "primary-fixed": "#7bfac3",
+                        "on-surface-variant": "#3d4a42",
+                        "on-background": "#101d29",
+                        "on-surface": "#101d29",
+                        "primary-container": "#03a575",
+                        "on-primary-fixed": "#002114",
+                        "surface": "#f7f9ff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#dde9fa",
+                        "surface-container-highest": "#d7e4f5",
+                        "outline-variant": "#bccac0",
+                        "on-primary-fixed-variant": "#005138",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "on-tertiary-fixed-variant": "#35495b",
+                        "on-primary": "#ffffff",
+                        "background": "#f7f9ff",
+                        "on-tertiary-fixed": "#071d2e",
+                        "secondary-fixed": "#d5e3fb",
+                        "surface-bright": "#f7f9ff",
+                        "primary-fixed-dim": "#5cdda8",
+                        "surface-tint": "#006c4b",
+                        "on-primary-container": "#003120",
+                        "tertiary-fixed": "#d0e5fc",
+                        "secondary": "#515f73",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-error": "#ffffff",
+                        "outline": "#6d7a72",
+                        "on-tertiary-container": "#172c3d",
+                        "tertiary-fixed-dim": "#b4c9df",
+                        "on-secondary-fixed": "#0e1c2e",
+                        "tertiary": "#4d6074",
+                        "surface-container": "#e3efff",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#cfdbec",
+                        "secondary-container": "#d2e1f9"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "container-max": "1280px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "40px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Geist"],
+                        "body-lg": ["Inter"],
+                        "mono-code": ["Geist"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            transition: all 0.2s ease-in-out;
+        }
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 20px rgba(7, 22, 39, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-outline shadow-sm sticky top-0 z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-gutter">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed" href="#">JobKaro</a>
+<div class="hidden md:flex items-center gap-stack-md">
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Private Jobs</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Govt Jobs</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Results</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Resources</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="hidden lg:flex items-center text-secondary font-label-sm px-4 py-2 hover:bg-surface-variant/50 transition-colors rounded-lg active:scale-95 duration-150">Sign In</button>
+<button class="bg-primary text-on-primary font-label-sm px-6 py-2.5 rounded-full hover:bg-primary-container transition-colors active:scale-95 duration-150">Post a Job</button>
+</div>
+</nav>
+</header>
+<main class="max-w-container-max mx-auto px-margin-desktop py-stack-lg">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 mb-stack-lg overflow-x-auto whitespace-nowrap">
+<a class="text-secondary font-label-sm hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-secondary text-[16px]">chevron_right</span>
+<a class="text-secondary font-label-sm hover:text-primary transition-colors" href="#">Private Jobs</a>
+<span class="material-symbols-outlined text-secondary text-[16px]">chevron_right</span>
+<span class="text-on-surface font-label-sm font-bold">Lead Product Designer</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Main Content Canvas -->
+<div class="lg:col-span-8 space-y-gutter">
+<!-- Hero Section Card -->
+<section class="bento-card rounded-xl p-stack-lg">
+<div class="flex flex-col md:flex-row md:items-start justify-between gap-stack-md">
+<div class="flex gap-stack-md">
+<div class="w-16 h-16 rounded-lg bg-surface-container flex items-center justify-center overflow-hidden flex-shrink-0 border border-outline-variant">
+<img class="w-12 h-12 object-contain" data-alt="Minimalist abstract logo for ScaleX AI, a high-growth technology startup. The logo features a geometric letter S formed by intersecting emerald green and charcoal slate polygons, set against a pristine white background. The visual style is crisp, modern, and conveys high-end artificial intelligence and professional software engineering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASQztyslm_aexxXFPkB7LxKXPzd-CJhQd9-_BMkVzeTb_AqGzVI8u-nnZNchcPpTGY9dGWDk5IFhlN3NKDbX7TuqNUi-hotVbqe8CUoUYbr59UQhYisyPPf3RJCh_TymZUzimG_6-iCAl03rcg8owtL-GOyfTpaYfl6654nn5iDG0byYyENQExI-eHgP8BE9AjS49HUxv2mVPQY6KuvCBIRG4GdFXQSEBWl0bgUqxZZK15sY2LIlPmX-bD42ulMnbMM7HmkSUGmVeD"/>
+</div>
+<div class="space-y-1">
+<div class="flex items-center gap-2 flex-wrap">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight">Lead Product Designer</h1>
+<span class="bg-error-container text-on-error-container font-mono-code text-[11px] px-2 py-0.5 rounded uppercase tracking-wider font-bold h-fit">Hot</span>
+</div>
+<p class="font-headline-md text-headline-md text-secondary">ScaleX AI • San Francisco / Remote</p>
+</div>
+</div>
+</div>
+<div class="mt-stack-lg flex flex-wrap items-center justify-between gap-stack-md pt-stack-md border-t border-outline-variant">
+<div class="flex flex-col">
+<span class="text-secondary font-label-sm">Annual Salary</span>
+<span class="text-on-surface font-headline-md text-headline-md font-bold">$180k – $240k</span>
+</div>
+<div class="flex gap-stack-sm w-full md:w-auto">
+<button class="flex-1 md:flex-none flex items-center justify-center gap-2 border border-outline text-secondary font-label-sm px-6 py-3 rounded-lg hover:bg-surface-variant transition-colors active:scale-95 duration-150">
+<span class="material-symbols-outlined text-[20px]">bookmark</span>
+                                Save
+                            </button>
+<button class="flex-1 md:flex-none bg-primary text-on-primary font-label-sm px-8 py-3 rounded-lg hover:bg-primary-container transition-all shadow-md active:scale-95 duration-150">Apply Now</button>
+</div>
+</div>
+</section>
+<!-- Job Overview Grid (Bento Style) -->
+<section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bento-card rounded-xl p-4 flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[24px]">work</span>
+<span class="text-secondary font-label-sm mt-1">Job Type</span>
+<span class="text-on-surface font-bold text-body-md">Full-time</span>
+</div>
+<div class="bento-card rounded-xl p-4 flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[24px]">trending_up</span>
+<span class="text-secondary font-label-sm mt-1">Experience</span>
+<span class="text-on-surface font-bold text-body-md">5+ years</span>
+</div>
+<div class="bento-card rounded-xl p-4 flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[24px]">layers</span>
+<span class="text-secondary font-label-sm mt-1">Department</span>
+<span class="text-on-surface font-bold text-body-md">Product Design</span>
+</div>
+<div class="bento-card rounded-xl p-4 flex flex-col gap-1">
+<span class="material-symbols-outlined text-primary text-[24px]">calendar_today</span>
+<span class="text-secondary font-label-sm mt-1">Posted Date</span>
+<span class="text-on-surface font-bold text-body-md">2 days ago</span>
+</div>
+</section>
+<!-- Main Content Body -->
+<section class="bento-card rounded-xl p-stack-lg space-y-stack-lg">
+<div class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface border-l-4 border-primary pl-4">About the Role</h2>
+<div class="space-y-4 text-on-surface-variant font-body-md leading-relaxed">
+<p>ScaleX AI is at the forefront of the generative revolution, building the infrastructure that powers tomorrow's intelligent applications. As our Lead Product Designer, you won't just be designing interfaces; you'll be defining the mental models for how humans interact with complex AI systems.</p>
+<p>We are looking for a visionary designer who thrives at the intersection of high-precision utility and emotional resonance. You will lead the design effort for our core developer platform, ensuring that complex data workflows feel as intuitive as a simple workspace app.</p>
+</div>
+</div>
+<div class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface border-l-4 border-primary pl-4">What You'll Do</h2>
+<ul class="space-y-3 list-none">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Own the end-to-end design process for our core AI Orchestration platform, from research to high-fidelity implementation.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Collaborate directly with the CTO and Head of Product to translate complex technical capabilities into elegant user experiences.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-primary mt-0.5">check_circle</span>
+<span class="text-on-surface-variant">Standardize and evolve the ScaleX Design System, maintaining a standard of "New Silicon Valley" minimalism across all products.</span>
+</li>
+</ul>
+</div>
+<div class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface border-l-4 border-primary pl-4">Requirements</h2>
+<ul class="space-y-3 list-none">
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5">arrow_right</span>
+<span class="text-on-surface-variant">5+ years of experience in product design, ideally within SaaS, FinTech, or Developer Tools.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5">arrow_right</span>
+<span class="text-on-surface-variant">A portfolio demonstrating high-precision utility, sophisticated typography, and complex data visualization.</span>
+</li>
+<li class="flex gap-3">
+<span class="material-symbols-outlined text-secondary mt-0.5">arrow_right</span>
+<span class="text-on-surface-variant">Proficiency in Figma and experience building/managing systemic design libraries.</span>
+</li>
+</ul>
+</div>
+<div class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-on-surface border-l-4 border-primary pl-4">Perks &amp; Benefits</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary p-2 bg-white rounded-md shadow-sm">health_and_safety</span>
+<span class="font-label-sm text-on-surface">Premium Health, Vision &amp; Dental</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary p-2 bg-white rounded-md shadow-sm">account_balance_wallet</span>
+<span class="font-label-sm text-on-surface">Competitive Equity Package</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary p-2 bg-white rounded-md shadow-sm">distance</span>
+<span class="font-label-sm text-on-surface">Remote-First Culture</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-low rounded-lg">
+<span class="material-symbols-outlined text-primary p-2 bg-white rounded-md shadow-sm">fitness_center</span>
+<span class="font-label-sm text-on-surface">$150/mo Wellness Stipend</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar -->
+<aside class="lg:col-span-4 space-y-gutter sticky top-20">
+<!-- About Company Card -->
+<section class="bento-card rounded-xl p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">About ScaleX AI</h3>
+<p class="text-on-surface-variant font-body-md mb-6 leading-relaxed">
+                        The infrastructure layer for Enterprise AI. We help Global 2000 companies deploy, monitor, and scale LLM-powered applications with confidence.
+                    </p>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-2 border-b border-outline-variant">
+<span class="text-secondary font-label-sm">Company Size</span>
+<span class="text-on-surface font-bold font-label-sm">50 - 150 employees</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-outline-variant">
+<span class="text-secondary font-label-sm">Industry</span>
+<span class="text-on-surface font-bold font-label-sm">Artificial Intelligence</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="text-secondary font-label-sm">Website</span>
+<a class="text-primary font-bold font-label-sm hover:underline" href="#">scalex.ai</a>
+</div>
+</div>
+</section>
+<!-- Hiring Manager Card -->
+<section class="bento-card rounded-xl p-6">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Hiring Manager</h3>
+<div class="flex items-center gap-4">
+<div class="w-14 h-14 rounded-full overflow-hidden border-2 border-primary-container p-0.5">
+<img class="w-full h-full object-cover rounded-full" data-alt="Professional headshot of a female design leader in her late 30s. She has a warm, confident expression and is wearing a minimalist charcoal turtleneck. The background is a soft-focus modern office with lush green plants and natural light. High-end, premium corporate photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNuzuzp3DWvcqRV90Vrhm7nosZNjRySeJiyGpnNMqP51ASZ0K6IvL5Nrmxz7CflzyfwmxzTHGesorDA6QXPO95966O_TwncV9D5mYsYsq6gdRHVj-YXJW-SQBYaZwGj_cPRhRVOlOxyVQoSMhofEYWdtPqSkx_NUjPMO89a06JhRcdKfaweawusJ-6p8uOcisUbKKWbW3D_KjzicgqKI0KPR-WjPLle4YJB2z2upb6GG7npPi6Msj-nAhY1RtDm_PjcqmvDCXWWClq"/>
+</div>
+<div>
+<h4 class="text-on-surface font-bold text-body-md">Sarah Chen</h4>
+<p class="text-secondary font-label-sm">Head of Design</p>
+</div>
+</div>
+<button class="w-full mt-6 py-2.5 text-primary font-label-sm font-bold border border-primary/20 bg-primary/5 hover:bg-primary/10 transition-colors rounded-lg">Message Sarah</button>
+</section>
+<!-- Similar Opportunities -->
+<section class="space-y-4">
+<h3 class="font-headline-md text-headline-md text-on-surface px-1">Similar Roles</h3>
+<div class="space-y-3">
+<a class="bento-card rounded-xl p-4 block hover:border-primary/40 transition-all group" href="#">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-variant rounded flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">rocket_launch</span>
+</div>
+<div>
+<h4 class="text-on-surface font-bold font-label-sm group-hover:text-primary transition-colors">Senior UI Engineer</h4>
+<p class="text-secondary font-label-sm">VectorFlow • $160k - $210k</p>
+</div>
+</div>
+</a>
+<a class="bento-card rounded-xl p-4 block hover:border-primary/40 transition-all group" href="#">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-surface-variant rounded flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary group-hover:text-primary transition-colors">api</span>
+</div>
+<div>
+<h4 class="text-on-surface font-bold font-label-sm group-hover:text-primary transition-colors">Staff Product Designer</h4>
+<p class="text-secondary font-label-sm">ModelLayer • $200k - $260k</p>
+</div>
+</div>
+</a>
+</div>
+</section>
+<!-- AdSense Card -->
+<section class="bg-on-background text-on-primary-fixed rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute -right-12 -top-12 w-48 h-48 bg-primary/20 rounded-full blur-3xl group-hover:bg-primary/30 transition-all"></div>
+<div class="relative z-10">
+<span class="font-mono-code text-[10px] text-primary-fixed uppercase tracking-widest">Sponsored</span>
+<h3 class="font-headline-md text-headline-md mt-4 mb-2">Accelerate Your Search</h3>
+<p class="text-primary-fixed-dim font-label-sm mb-6">Get premium job coaching and resume audits from Silicon Valley experts.</p>
+<button class="w-full py-2 bg-primary-fixed text-on-primary-fixed font-bold font-label-sm rounded-lg hover:shadow-lg transition-all">Explore Career Services</button>
+</div>
+</section>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-on-background w-full py-stack-lg mt-stack-lg border-t border-outline-variant/10">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-gutter">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-md text-headline-md font-bold text-primary-fixed">JobKaro</span>
+<p class="font-label-sm text-label-sm text-surface-variant">© 2024 JobKaro. Accelerating professional growth.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-stack-md">
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed transition-colors" href="#">About Us</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed transition-colors" href="#">Contact</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="font-label-sm text-label-sm text-surface-variant hover:text-primary-fixed transition-colors" href="#">Help Center</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction for Sticky Header and Hero Elevation -->
+<script>
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.add('shadow-sm');
+                header.classList.remove('shadow-md');
+            }
+        });
+
+        // Simple button active state micro-animation
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(btn => {
+            btn.addEventListener('mousedown', () => btn.classList.add('scale-95'));
+            btn.addEventListener('mouseup', () => btn.classList.remove('scale-95'));
+            btn.addEventListener('mouseleave', () => btn.classList.remove('scale-95'));
+        });
+    </script>
+</body></html>
