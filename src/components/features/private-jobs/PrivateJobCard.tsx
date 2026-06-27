@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
-import type { PrivateJob, SponsoredJobListing } from "@/constants/private-jobs";
+import type { PrivateJob, SponsoredJobListing } from "@/types/private-jobs";
 
 import { BookmarkButton } from "./BookmarkButton";
 

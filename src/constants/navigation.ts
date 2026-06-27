@@ -1,4 +1,3 @@
-import type { LucideIcon } from "lucide-react";
 import {
   Bell,
   Bookmark,
@@ -7,25 +6,16 @@ import {
   User,
 } from "lucide-react";
 
-export interface NavLink {
-  label: string;
-  href: string;
-}
-
-export interface MobileNavItem {
-  label: string;
-  href: string;
-  icon: LucideIcon;
-}
-
-export interface FooterColumn {
-  title: string;
-  links: { label: string; href: string }[];
-}
+import type {
+  FooterColumn,
+  MobileNavItem,
+  NavLink,
+} from "@/types/navigation";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
   { label: "Private Jobs", href: "/private-jobs" },
+  { label: "Internships", href: "/internships" },
   { label: "Govt Jobs", href: "#" },
   { label: "Abroad Jobs", href: "#" },
   { label: "Results", href: "#" },
@@ -47,6 +37,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Jobs",
     links: [
       { label: "Private Jobs Hub", href: "/private-jobs" },
+      { label: "Internships", href: "/internships" },
       { label: "Govt Portals", href: "#" },
       { label: "Remote Roles", href: "#" },
     ],
@@ -76,12 +67,3 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     ],
   },
 ];
-
-export function isNavLinkActive(href: string, activeHref: string): boolean {
-  if (href === "/") return activeHref === "/";
-  return activeHref.startsWith(href) && href !== "#";
-}
-
-export function isMobileNavActive(href: string, activeHref: string): boolean {
-  return isNavLinkActive(href, activeHref);
-}

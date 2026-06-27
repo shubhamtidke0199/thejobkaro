@@ -1,11 +1,8 @@
 import { ChevronDown } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
-import {
-  PRIVATE_JOBS,
-  SORT_OPTIONS,
-  SPONSORED_JOB,
-} from "@/constants/private-jobs";
+import { SORT_OPTIONS } from "@/constants/private-jobs";
+import { PRIVATE_JOBS, SPONSORED_JOB } from "@/data/private-jobs";
 
 import {
   PrivateJobCard,

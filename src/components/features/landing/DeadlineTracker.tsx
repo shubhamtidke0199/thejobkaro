@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { Timer } from "lucide-react";
 
-import type { Deadline } from "@/constants/landing";
+import type { Deadline } from "@/types/landing";
 
 interface DeadlineTrackerProps {
   deadlines: Deadline[];

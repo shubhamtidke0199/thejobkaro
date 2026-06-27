@@ -9,11 +9,8 @@ import { FeaturedOpportunities } from "@/components/features/landing/FeaturedOpp
 import { Hero } from "@/components/features/landing/Hero";
 import { NotificationTimeline } from "@/components/features/landing/NotificationTimeline";
 import { PreparationTools } from "@/components/features/landing/PreparationTools";
-import {
-  DEADLINES,
-  NOTIFICATIONS,
-  PREP_TOOLS,
-} from "@/constants/landing";
+import { PREP_TOOLS } from "@/constants/landing";
+import { DEADLINES, NOTIFICATIONS } from "@/data/landing";
 
 export default function Home() {
   return (

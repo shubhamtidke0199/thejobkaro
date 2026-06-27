@@ -2,8 +2,8 @@ import Link from "next/link";
 import type { LucideIcon } from "lucide-react";
 import { MapPin, Sparkles, Wallet } from "lucide-react";
 
-import type { RecommendedJob } from "@/constants/private-jobs";
-import { RECOMMENDED_JOBS } from "@/constants/private-jobs";
+import type { RecommendedJob } from "@/types/private-jobs";
+import { RECOMMENDED_JOBS } from "@/data/private-jobs";
 
 interface RecommendedJobCardProps {
   job: RecommendedJob;

@@ -2,7 +2,8 @@ import Link from "next/link";
 import { Search, UserCircle } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
-import { isNavLinkActive, NAV_LINKS } from "@/constants/navigation";
+import { NAV_LINKS } from "@/constants/navigation";
+import { isNavLinkActive } from "@/lib/navigation";
 
 interface NavbarProps {
   activeHref?: string;

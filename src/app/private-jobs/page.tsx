@@ -8,7 +8,8 @@ import { JobFiltersSidebar } from "@/components/features/private-jobs/JobFilters
 import { PrivateJobListings } from "@/components/features/private-jobs/PrivateJobListings";
 import { RecommendedJobsSection } from "@/components/features/private-jobs/RecommendedJobsSection";
 import { SeoContentBlock } from "@/components/features/private-jobs/SeoContentBlock";
-import { JOB_LISTING_COUNT, SORT_OPTIONS } from "@/constants/private-jobs";
+import { JOB_LISTING_COUNT } from "@/data/private-jobs";
+import { SORT_OPTIONS } from "@/constants/private-jobs";
 
 export const metadata: Metadata = {
   title: "Private Jobs | JobKaro - Accelerating Professional Growth",

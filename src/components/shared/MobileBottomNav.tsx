@@ -1,9 +1,7 @@
 import Link from "next/link";
 
-import {
-  isMobileNavActive,
-  MOBILE_NAV_ITEMS,
-} from "@/constants/navigation";
+import { MOBILE_NAV_ITEMS } from "@/constants/navigation";
+import { isMobileNavActive } from "@/lib/navigation";
 
 interface MobileBottomNavProps {
   activeHref?: string;
