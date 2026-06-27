@@ -1,0 +1,144 @@
+---
+alwaysApply: false
+---
+# Project Rules
+
+## General Principles
+
+* Write production-quality code.
+* Prioritize readability over cleverness.
+* Follow SOLID principles where appropriate.
+* Keep files focused and maintainable.
+* Avoid premature optimization.
+* Every commit should improve the codebase.
+
+---
+
+## Architecture
+
+* Use the Next.js App Router.
+* Use TypeScript
+* Organize code by feature rather than file type.
+* Prefer composition over inheritance.
+* Keep business logic separate from UI.
+
+---
+
+## Folder Structure
+
+Use this structure whenever possible:
+
+app/
+components/
+components/ui/
+components/shared/
+components/features/
+lib/
+hooks/
+services/
+types/
+utils/
+constants/
+public/
+
+Do not create deeply nested folders unless necessary.
+
+---
+
+## Naming Conventions
+
+Components:
+PascalCase
+
+Example:
+BrokerCard.tsx
+
+Hooks:
+useSomething.ts
+
+Utilities:
+camelCase
+
+Types:
+PascalCase
+
+Constants:
+UPPER_SNAKE_CASE
+
+---
+
+## Imports
+
+Order imports as:
+
+1. React / Next.js
+2. Third-party libraries
+3. Internal components
+4. Hooks
+5. Utilities
+6. Types
+7. Styles
+
+Remove unused imports.
+
+---
+
+## Code Quality
+
+Avoid:
+
+* duplicated logic
+* magic numbers
+* dead code
+* console.log
+* commented-out code
+
+Prefer extracting reusable utilities.
+
+---
+
+## Data
+
+If the same JSX appears more than twice,
+extract it into a reusable component.
+
+If multiple cards differ only by content,
+store their content in arrays and render using map().
+
+---
+
+## Error Handling
+
+Every data-driven component should consider:
+
+* loading state
+* empty state
+* error state
+
+Never assume data exists.
+
+---
+
+## Performance
+
+* Minimize client-side JavaScript.
+* Prefer Server Components.
+* Lazy-load heavy components.
+* Optimize images.
+* Avoid unnecessary rerenders.
+
+---
+
+## Before Completing Any Task
+
+Always review:
+
+* readability
+* responsiveness
+* accessibility
+* duplication
+* performance
+* maintainability
+* semantic HTML
+
+Never consider a task complete without reviewing your own code.

@@ -1,0 +1,235 @@
+---
+alwaysApply: false
+---
+# Component Design Rules
+
+## Philosophy
+
+Components should be:
+
+* reusable
+* composable
+* predictable
+* easy to understand
+
+Avoid giant components.
+
+---
+
+## Reusability
+
+Extract reusable UI when:
+
+* repeated more than twice
+* improves readability
+* encapsulates styling
+* encapsulates logic
+
+Do NOT create tiny wrapper components with no benefit.
+
+---
+
+## Component Structure
+
+Preferred order:
+
+Imports
+
+Types
+
+Constants
+
+Component
+
+Helper functions
+
+Export
+
+---
+
+## Props
+
+Prefer explicit props.
+
+Avoid passing unnecessary props.
+
+Use interfaces.
+
+Example:
+
+interface FeatureCardProps {
+title: string;
+description: string;
+icon: ReactNode;
+}
+
+---
+
+## Variants
+
+When components have multiple styles,
+use variants instead of duplication.
+
+Good:
+
+<Button variant="primary" />
+
+<Button variant="secondary" />
+
+Not:
+
+PrimaryButton
+
+SecondaryButton
+
+DangerButton
+
+---
+
+## Lists
+
+Never duplicate JSX.
+
+Instead:
+
+const features = [...]
+
+features.map(...)
+
+---
+
+## Sections
+
+Landing pages should be broken into sections.
+
+Example:
+
+Navbar
+
+Hero
+
+LogoCloud
+
+Features
+
+Pricing
+
+Testimonials
+
+FAQ
+
+CTA
+
+Footer
+
+---
+
+## Cards
+
+Cards should accept props.
+
+Avoid hardcoding content.
+
+---
+
+## Buttons
+
+Reuse a common Button component.
+
+Never duplicate button styling.
+
+---
+
+## Forms
+
+Inputs should share:
+
+* spacing
+* typography
+* borders
+* focus styles
+* validation styles
+
+Use reusable form components.
+
+---
+
+## Containers
+
+Use a reusable container pattern.
+
+Example:
+
+max-w-7xl
+
+mx-auto
+
+px-4
+
+sm:px-6
+
+lg:px-8
+
+Avoid repeating layout classes everywhere.
+
+---
+
+## Section Spacing
+
+Maintain consistent spacing.
+
+Prefer:
+
+py-12
+
+py-16
+
+py-20
+
+Do not randomly mix spacing.
+
+---
+
+## Animations
+
+Animations should be subtle.
+
+Avoid distracting effects.
+
+Prefer CSS transitions over JavaScript.
+
+---
+
+## Maintainability
+
+Before adding a new component ask:
+
+Can an existing component solve this?
+
+If yes, extend it instead of creating another.
+
+---
+
+## Final Review
+
+Every component should be:
+
+✓ Reusable
+
+✓ Typed
+
+✓ Responsive
+
+✓ Accessible
+
+✓ Semantic
+
+✓ Uses design tokens
+
+✓ Uses Tailwind correctly
+
+✓ Easy to read
+
+✓ Easy to extend
+
+✓ Production-ready

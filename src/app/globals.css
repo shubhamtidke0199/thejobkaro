@@ -1,26 +1,133 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f9ff;
+  --foreground: #101d29;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Surfaces */
+  --color-background: #f7f9ff;
+  --color-foreground: #101d29;
+  --color-surface: #f7f9ff;
+  --color-on-background: #101d29;
+  --color-on-surface: #101d29;
+  --color-on-surface-variant: #3d4a42;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #edf4ff;
+  --color-surface-container-high: #dde9fa;
+  --color-surface-variant: #d7e4f5;
+
+  /* Primary: #006c4b — actions, links, brand. Container #03a575 — hover, chips */
+  --color-primary: #006c4b;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #03a575;
+  --color-on-primary-container: #003120;
+  --color-primary-fixed: #7bfac3;
+  --color-primary-fixed-dim: #5cdda8;
+  --color-on-primary-fixed: #002114;
+
+  /* Secondary & tertiary */
+  --color-secondary: #515f73;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #d2e1f9;
+  --color-on-secondary-container: #566478;
+  --color-tertiary: #4d6074;
+  --color-tertiary-container: #7f93a8;
+  --color-on-tertiary-container: #172c3d;
+  --color-tertiary-fixed: #d0e5fc;
+  --color-on-tertiary-fixed: #071d2e;
+
+  /* Error */
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  /* Inverse (sponsored cards) */
+  --color-inverse-surface: #26313e;
+  --color-inverse-on-surface: #e8f1ff;
+
+  /* Outline */
+  --color-outline: #6d7a72;
+  --color-outline-variant: #bccac0;
+
+  /* Typography */
+  --font-sans: var(--font-hanken-grotesk), ui-sans-serif, system-ui, sans-serif;
+  --font-family-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-family-label: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-family-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --text-display-lg: 3rem;
+  --text-display-lg--line-height: 3.5rem;
+  --text-display-lg-mobile: 2rem;
+  --text-display-lg-mobile--line-height: 2.5rem;
+  --text-headline-md: 1.5rem;
+  --text-headline-md--line-height: 2rem;
+  --text-label-sm: 0.8125rem;
+  --text-label-sm--line-height: 1rem;
+
+  /* Radius */
+  --radius-sm: 0.25rem;
+  --radius-DEFAULT: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 20px rgba(7, 22, 39, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-primary-ring: 0 0 0 4px rgba(0, 108, 75, 0.1);
+
+  /* Spacing */
+  --spacing-section: 4rem;
+  --spacing-gutter: 1.5rem;
+  --spacing-stack-lg: 2rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-family-body);
+  }
+
+  ::selection {
+    background-color: #03a575;
+    color: #ffffff;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .bento-card-gradient {
+    background: linear-gradient(
+      135deg,
+      rgb(255, 255, 255) 0%,
+      rgb(247, 249, 255) 100%
+    );
+  }
+
+  .glass-search {
+    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.8);
+  }
+
+  .timeline-line::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 24px;
+    bottom: 0;
+    width: 2px;
+    border-left: 2px dashed var(--color-outline-variant);
+  }
+
+  .timeline-item:last-child .timeline-line::before {
+    display: none;
+  }
 }

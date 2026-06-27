@@ -1,0 +1,226 @@
+---
+alwaysApply: false
+---
+# Frontend Rules
+
+## React
+
+* Prefer functional components.
+* Keep components small.
+* Avoid components longer than ~250 lines.
+* Extract reusable UI.
+* Avoid prop drilling when better alternatives exist.
+
+---
+
+## Next.js
+
+Default to Server Components.
+
+Only use:
+
+"use client"
+
+when required for:
+
+* state
+* effects
+* browser APIs
+* event handlers
+
+Do not make components client components unnecessarily.
+
+---
+
+## State Management
+
+Prefer:
+
+1. local state
+2. URL state
+3. server state
+4. global state
+
+Do not introduce global state without justification.
+
+---
+
+## Tailwind CSS
+
+Use Tailwind utilities.
+
+Prefer spacing scale:
+
+p-4
+p-6
+p-8
+
+instead of:
+
+p-[19px]
+
+Avoid arbitrary values unless absolutely necessary.
+
+---
+
+## Colors
+
+Never hardcode colors. Use design tokens from `src/app/globals.css`.
+
+**Canonical token names (Material 3):**
+
+```
+bg-background / bg-surface-container-lowest
+text-on-surface / text-on-surface-variant
+text-secondary
+bg-primary / text-on-primary
+bg-primary-container / text-on-primary-container
+border-outline-variant
+```
+
+**Important:** `primary` is `#006c4b`. `#03a575` is `primary-container` (hover states, chips).
+
+Legacy aliases like `text-foreground` map to `text-on-surface` — prefer M3 names in new code.
+
+---
+
+## Typography
+
+Use the typography scale.
+
+Prefer:
+
+text-sm
+text-base
+text-lg
+text-xl
+text-2xl
+
+Avoid arbitrary font sizes.
+
+---
+
+## Layout
+
+Prefer:
+
+container
+mx-auto
+max-w-7xl
+grid
+flex
+gap
+
+Avoid fixed widths.
+
+Always build mobile first.
+
+---
+
+## Images
+
+Use Next.js Image.
+
+Always include meaningful alt text.
+
+Optimize images.
+
+---
+
+## Icons
+
+Use lucide-react.
+
+Avoid inline SVG unless required.
+
+---
+
+## Accessibility
+
+Always:
+
+* proper labels
+* keyboard navigation
+* aria attributes
+* focus states
+* sufficient contrast
+
+Decorative icons:
+
+aria-hidden="true"
+
+---
+
+## SEO
+
+Every page should include:
+
+* one H1
+* proper heading hierarchy
+* semantic landmarks
+* metadata
+* descriptive alt text
+
+---
+
+## HTML
+
+Prefer semantic elements:
+
+header
+
+nav
+
+main
+
+section
+
+article
+
+aside
+
+footer
+
+Avoid unnecessary div nesting.
+
+---
+
+## Styling
+
+Never use inline styles.
+
+Keep Tailwind classes readable.
+
+
+---
+
+## Responsive
+
+Every component should support:
+
+* Mobile
+* Tablet
+* Laptop
+* Desktop
+
+Never assume desktop-first layouts.
+
+---
+
+## Review Checklist
+
+Before finishing:
+
+✓ Responsive
+
+✓ Accessible
+
+✓ Semantic
+
+✓ SEO-friendly
+
+✓ Uses design tokens
+
+✓ No duplicated JSX
+
+✓ Clean React code

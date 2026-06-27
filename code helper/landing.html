@@ -1,0 +1,520 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JobKaro | Accelerating Professional Growth</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .bento-card-gradient {
+                background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(247,249,255,1) 100%);
+            }
+            .glass-search {
+                backdrop-filter: blur(12px);
+                background: rgba(255, 255, 255, 0.8);
+            }
+            .timeline-line::before {
+                content: '';
+                position: absolute;
+                left: 7px;
+                top: 24px;
+                bottom: 0;
+                width: 2px;
+                border-left: 2px dashed #bccac0;
+            }
+            .timeline-item:last-child .timeline-line::before {
+                display: none;
+            }
+        </style>
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#006c4b",
+                        "background": "#f7f9ff",
+                        "surface-variant": "#d7e4f5",
+                        "secondary-fixed": "#d5e3fb",
+                        "surface-container-highest": "#d7e4f5",
+                        "inverse-primary": "#5cdda8",
+                        "tertiary-fixed-dim": "#b4c9df",
+                        "secondary": "#515f73",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#3d4a42",
+                        "surface-bright": "#f7f9ff",
+                        "tertiary-container": "#7f93a8",
+                        "on-primary-fixed-variant": "#005138",
+                        "inverse-on-surface": "#e8f1ff",
+                        "secondary-container": "#d2e1f9",
+                        "on-error-container": "#93000a",
+                        "surface": "#f7f9ff",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#566478",
+                        "on-background": "#101d29",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "surface-container-low": "#edf4ff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#5cdda8",
+                        "on-tertiary-fixed-variant": "#35495b",
+                        "primary-fixed": "#7bfac3",
+                        "surface-container-high": "#dde9fa",
+                        "primary": "#006c4b",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-tertiary-fixed": "#071d2e",
+                        "tertiary": "#4d6074",
+                        "outline-variant": "#bccac0",
+                        "inverse-surface": "#26313e",
+                        "primary-container": "#03a575",
+                        "on-surface": "#101d29",
+                        "surface-container": "#e3efff",
+                        "on-tertiary-container": "#172c3d",
+                        "tertiary-fixed": "#d0e5fc",
+                        "outline": "#6d7a72",
+                        "surface-dim": "#cfdbec",
+                        "on-secondary-fixed": "#0e1c2e",
+                        "on-primary-container": "#003120",
+                        "on-primary-fixed": "#002114"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                },
+                "spacing": {
+                        "stack-md": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "container-max": "1280px",
+                        "stack-lg": "32px"
+                },
+                "fontFamily": {
+                        "headline-md": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Geist"],
+                        "mono-code": ["Geist"]
+                },
+                "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                }
+              },
+            },
+          }
+        </script>
+    </head>
+    <body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+    <!-- TopNavBar -->
+    <header class="bg-surface sticky top-0 z-[100] w-full border-b border-outline-variant">
+    <nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-16">
+    <div class="font-headline-md text-headline-md font-bold text-primary">JobKaro</div>
+    <div class="hidden md:flex items-center space-x-8">
+    <a class="text-primary font-bold border-b-2 border-primary pb-1 font-body-md text-body-md" href="#">Home</a>
+    <a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Private Jobs</a>
+    <a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Govt Jobs</a><a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Abroad Jobs</a>
+    <a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Results</a>
+    <a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Scholarships</a>
+    <a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Schemes</a>
+    <a class="text-secondary hover:text-primary transition-colors font-body-md text-body-md" href="#">Resources</a>
+    </div>
+    <div class="flex items-center space-x-4">
+    <button class="p-2 hover:bg-surface-variant/50 rounded-lg transition-all active:scale-95">
+    <span class="material-symbols-outlined text-on-surface">search</span>
+    </button>
+    <button class="p-2 hover:bg-surface-variant/50 rounded-lg transition-all active:scale-95">
+    <span class="material-symbols-outlined text-on-surface">account_circle</span>
+    </button>
+    </div>
+    </nav>
+    </header>
+    <main class="min-h-screen">
+    <!-- Hero Section -->
+    <section class="relative pt-20 pb-24 px-margin-mobile overflow-hidden">
+    <div class="max-w-container-max mx-auto relative z-10 text-center">
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-background max-w-4xl mx-auto mb-8">
+                        Find Jobs, Results, Scholarships &amp; Opportunities — <span class="text-primary">All in One Place</span>
+    </h1>
+    <div class="max-w-2xl mx-auto relative">
+    <div class="glass-search flex items-center p-2 rounded-xl shadow-lg border border-outline-variant focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+    <span class="material-symbols-outlined ml-3 text-secondary">search</span>
+    <input class="w-full border-none bg-transparent focus:ring-0 font-body-md text-body-md px-4 py-3 text-on-surface" id="hero-search" placeholder="Search for SSC, TCS, internships..." type="text">
+    <button class="bg-primary text-on-primary px-6 py-3 rounded-lg font-bold hover:bg-primary-container transition-all active:scale-95">Search</button>
+    </div>
+    <!-- Suggestions -->
+    <div class="mt-4 flex flex-wrap justify-center gap-2">
+    <span class="text-label-sm font-label-sm text-secondary self-center">Popular:</span>
+    <a class="px-3 py-1 bg-surface-container-high rounded-full text-label-sm font-label-sm text-on-secondary-container hover:bg-primary-container hover:text-on-primary transition-colors" href="#">SSC CGL 2024</a>
+    <a class="px-3 py-1 bg-surface-container-high rounded-full text-label-sm font-label-sm text-on-secondary-container hover:bg-primary-container hover:text-on-primary transition-colors" href="#">Railway RRB</a>
+    <a class="px-3 py-1 bg-surface-container-high rounded-full text-label-sm font-label-sm text-on-secondary-container hover:bg-primary-container hover:text-on-primary transition-colors" href="#">Google Internships</a>
+    </div>
+    </div>
+    </div>
+    <!-- Atmospheric BG Effect -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-0 pointer-events-none opacity-20">
+    <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[60%] rounded-full bg-primary/20 blur-[120px]"></div>
+    <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[60%] rounded-full bg-tertiary/20 blur-[120px]"></div>
+    </div>
+    </section>
+    <!-- Quick Access Bento Grid -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+    <h2 class="font-headline-md text-headline-md mb-stack-lg flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary">grid_view</span> Categories
+                </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <!-- Bento Items -->
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">corporate_fare</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Private Jobs</h3>
+    <p class="text-label-sm font-label-sm text-secondary">TCS, Infosys, Startups</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">account_balance</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Govt Jobs</h3>
+    <p class="text-label-sm font-label-sm text-secondary">SSC, UPSC, Banking</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">assignment_turned_in</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Results</h3>
+    <p class="text-label-sm font-label-sm text-secondary">Check Scorecards</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">credit_card</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Admit Cards</h3>
+    <p class="text-label-sm font-label-sm text-secondary">Download Now</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">vpn_key</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Answer Keys</h3>
+    <p class="text-label-sm font-label-sm text-secondary">Validate Responses</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">school</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Scholarships</h3>
+    <p class="text-label-sm font-label-sm text-secondary">Merit &amp; Need Based</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">policy</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Govt Schemes</h3>
+    <p class="text-label-sm font-label-sm text-secondary">State &amp; Central</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">desktop_windows</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Remote Jobs</h3>
+    <p class="text-label-sm font-label-sm text-secondary">Work from Home</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">business_center</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Internships</h3>
+    <p class="text-label-sm font-label-sm text-secondary">Paid &amp; Academic</p>
+    </a>
+    <a class="bento-card-gradient p-6 rounded-xl border border-outline-variant hover:shadow-lg hover:-translate-y-1 transition-all group" href="#">
+    <span class="material-symbols-outlined text-primary text-3xl mb-4 group-hover:scale-110 transition-transform">work_history</span>
+    <h3 class="font-headline-md text-body-md font-bold mb-1">Freelance Gigs</h3>
+    <p class="text-label-sm font-label-sm text-secondary">Short-term Projects</p>
+    </a>
+    </div>
+    </section>
+    <!-- Main Feed Layout -->
+    <section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+    <!-- Left Column: Latest Notifications & Featured -->
+    <div class="lg:col-span-8 space-y-stack-lg">
+    <!-- Latest Notifications Timeline -->
+    <div class="bg-surface p-6 rounded-xl border border-outline-variant">
+    <h2 class="font-headline-md text-headline-md mb-6">Latest Notifications</h2>
+    <div class="space-y-0 relative">
+    <!-- Notification Item -->
+    <div class="timeline-item timeline-line relative pb-8 flex gap-4">
+    <div class="relative z-10 flex-shrink-0 w-4 h-4 rounded-full bg-primary mt-1.5 shadow-[0_0_0_4px_rgba(0,108,75,0.1)]"></div>
+    <div class="flex-grow">
+    <div class="flex justify-between items-start">
+    <h4 class="font-body-md font-bold text-on-surface">SSC Multi Tasking Staff (MTS) 2024 Final Result</h4>
+    <span class="text-label-sm font-label-sm text-secondary">10 mins ago</span>
+    </div>
+    <div class="flex gap-2 mt-2">
+    <span class="px-2 py-0.5 bg-secondary-container text-on-secondary-container rounded text-[11px] font-mono-code uppercase">Result</span>
+    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-mono-code uppercase">SSC</span>
+    </div>
+    </div>
+    </div>
+    <div class="timeline-item timeline-line relative pb-8 flex gap-4">
+    <div class="relative z-10 flex-shrink-0 w-4 h-4 rounded-full bg-primary mt-1.5 shadow-[0_0_0_4px_rgba(0,108,75,0.1)]"></div>
+    <div class="flex-grow">
+    <div class="flex justify-between items-start">
+    <h4 class="font-body-md font-bold text-on-surface">Railway Recruitment Board (RRB) Technician Grade III Notification</h4>
+    <span class="text-label-sm font-label-sm text-secondary">2 hours ago</span>
+    </div>
+    <div class="flex gap-2 mt-2">
+    <span class="px-2 py-0.5 bg-primary-container text-on-primary-container rounded text-[11px] font-mono-code uppercase">Govt Job</span>
+    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-mono-code uppercase">Railway</span>
+    </div>
+    </div>
+    </div>
+    <div class="timeline-item timeline-line relative flex gap-4">
+    <div class="relative z-10 flex-shrink-0 w-4 h-4 rounded-full bg-outline-variant mt-1.5"></div>
+    <div class="flex-grow">
+    <div class="flex justify-between items-start">
+    <h4 class="font-body-md font-bold text-on-surface">Google Software Engineer Internship Summer 2025</h4>
+    <span class="text-label-sm font-label-sm text-secondary">Yesterday</span>
+    </div>
+    <div class="flex gap-2 mt-2">
+    <span class="px-2 py-0.5 bg-tertiary-container text-on-tertiary-container rounded text-[11px] font-mono-code uppercase">Internship</span>
+    <span class="px-2 py-0.5 bg-surface-container-high text-on-surface-variant rounded text-[11px] font-mono-code uppercase">Remote</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <button class="w-full mt-6 py-3 border border-outline-variant rounded-lg text-primary font-bold hover:bg-primary/5 transition-colors">View All Notifications</button>
+    </div>
+    <!-- Featured Opportunities Grid -->
+    <div>
+    <h2 class="font-headline-md text-headline-md mb-6">Featured Opportunities</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- Opportunity Card -->
+    <div class="bg-surface p-5 rounded-xl border border-outline-variant hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+    <div class="flex gap-4">
+    <img alt="Tech Corp" class="w-12 h-12 rounded-lg object-cover" data-alt="A minimalist logo for a high-tech software corporation, featuring clean geometric lines and a vibrant green accent color. The logo is displayed on a soft, high-key studio background with professional lighting, evoking a sense of modern innovation and corporate reliability in a clean light-mode UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOKc7how9l5scpIuaspSqzvqrnLM7C2t4t-hErN93Nex0nwBO0KS33G6gofOCAu2-FY2UWxbn5JmVJycQWmehqsN07bLRfgwMIuRgc2G8ZN_llhNhF7oc7y4GGEaqJCuF3dzFZ_7-hTWdgbcA028NuQe5Nw7a4saDyUBwjdB-1fFl5a0ciYuU3ThZwrFXU6HXdOc9du4qv__4JUST8wtoBFmLojp_rFHJtMGyhdbP_u89CbjohHTUER3DeY2K9eREgQ9BowK0DAwWR">
+    <div>
+    <h4 class="font-headline-md text-body-md font-bold">Senior Product Designer</h4>
+    <p class="text-label-sm font-label-sm text-secondary">InnovateX • Bangalore (Remote)</p>
+    </div>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+    <span class="text-primary font-bold">₹18L - ₹24L PA</span>
+    <span class="text-label-sm font-label-sm px-3 py-1 bg-primary-container/10 text-primary rounded-full">Apply Now</span>
+    </div>
+    </div>
+    <div class="bg-surface p-5 rounded-xl border border-outline-variant hover:border-primary/40 hover:shadow-md transition-all flex flex-col justify-between">
+    <div class="flex gap-4">
+    <img alt="Bank Logo" class="w-12 h-12 rounded-lg object-cover" data-alt="A professional emblem for a prestigious national bank, incorporating traditional security motifs with a modern flat design aesthetic. The color palette uses deep navy and soft gold, set against a bright, airy background that fits the minimalist and professional JobKaro platform style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkR6-jCfgUxBs2AXBZqeIDhODX90RdKc1FbZDNowavMYQ-Ab-y8sYR6GzGlnM17puoQvvtTneXNvOpznkTvblIigf4hnXJFzWlWyyKC1VLWw8wK5lGdypBwk-2dhhmcIx8wUNt2kSVoipjVHPGCbn9XB0fDC8lA2tGWG12AD--GM1w16iSMaU4T3PoxR8t5OhSz3q9RKJyE3quL-fMuk1_rrclc98TTBI4rA3KuqWjC-prR616MjF7uSR-sfVX-YHTOfKs51Y602mT">
+    <div>
+    <h4 class="font-headline-md text-body-md font-bold">Probationary Officer (PO)</h4>
+    <p class="text-label-sm font-label-sm text-secondary">SBI • Multiple Locations</p>
+    </div>
+    </div>
+    <div class="mt-4 flex justify-between items-center">
+    <span class="text-primary font-bold">Govt Salary Grade</span>
+    <span class="text-label-sm font-label-sm px-3 py-1 bg-primary-container/10 text-primary rounded-full">Apply Now</span>
+    </div>
+    </div>
+    <!-- AdSense Integrated Card -->
+    <div class="bg-inverse-surface md:col-span-2 p-5 rounded-xl border border-outline flex items-center justify-between group cursor-pointer relative overflow-hidden">
+    <div class="flex items-center gap-4 relative z-10">
+    <div class="w-12 h-12 rounded-lg bg-surface/10 flex items-center justify-center">
+    <span class="material-symbols-outlined text-surface">ads_click</span>
+    </div>
+    <div>
+    <h4 class="font-headline-md text-body-md font-bold text-inverse-on-surface">Master Data Science in 6 Months</h4>
+    <p class="text-label-sm font-label-sm text-surface-variant">Top-rated bootcamp with 100% placement assistance.</p>
+    </div>
+    </div>
+    <div class="text-right relative z-10">
+    <span class="font-mono-code text-[10px] text-surface-variant/50 uppercase block mb-1">Sponsored</span>
+    <button class="bg-primary-fixed text-on-primary-fixed px-4 py-2 rounded font-bold text-label-sm">Explore Course</button>
+    </div>
+    <div class="absolute top-0 right-0 w-32 h-full bg-primary/20 skew-x-12 translate-x-16 group-hover:translate-x-12 transition-transform"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Right Column: Sidebar -->
+    <aside class="lg:col-span-4 space-y-stack-lg">
+    <!-- Deadline Tracker -->
+    <div class="bg-surface p-6 rounded-xl border border-outline-variant shadow-sm">
+    <h3 class="font-headline-md text-body-md font-bold mb-4 flex items-center gap-2">
+    <span class="material-symbols-outlined text-error">timer</span> Closing Soon
+                        </h3>
+    <div class="space-y-4">
+    <div class="p-4 bg-error-container/30 rounded-lg border border-error-container">
+    <div class="flex justify-between items-start mb-2">
+    <h5 class="text-label-sm font-bold text-on-error-container">SSC CGL Tier 1 Registration</h5>
+    <span class="font-mono-code text-error text-[12px] font-bold">11:10:23</span>
+    </div>
+    <div class="w-full bg-on-error-container/10 h-1.5 rounded-full overflow-hidden">
+    <div class="bg-error h-full" style="width: 85%"></div>
+    </div>
+    <p class="text-[11px] mt-2 text-secondary">Closing tomorrow at 11:59 PM</p>
+    </div>
+    <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+    <div class="flex justify-between items-start mb-2">
+    <h5 class="text-label-sm font-bold text-on-surface">UPSC CSE Prelims Form</h5>
+    <span class="font-mono-code text-secondary text-[12px] font-bold">04 Days</span>
+    </div>
+    <div class="w-full bg-outline-variant h-1.5 rounded-full overflow-hidden">
+    <div class="bg-primary h-full" style="width: 45%"></div>
+    </div>
+    </div>
+    <div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant">
+    <div class="flex justify-between items-start mb-2">
+    <h5 class="text-label-sm font-bold text-on-surface">IBPS Clerk 2024</h5>
+    <span class="font-mono-code text-secondary text-[12px] font-bold">12 Days</span>
+    </div>
+    <div class="w-full bg-outline-variant h-1.5 rounded-full overflow-hidden">
+    <div class="bg-primary h-full" style="width: 20%"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Career Resources -->
+    <div class="bg-tertiary-fixed p-6 rounded-xl">
+    <h3 class="font-headline-md text-body-md font-bold text-on-tertiary-fixed mb-4">Preparation Tools</h3>
+    <ul class="space-y-3">
+    <li class="">
+    <a class="flex items-center justify-between p-3 bg-white/50 rounded-lg hover:bg-white transition-all" href="#">
+    <span class="text-label-sm font-label-sm font-bold">Resume Builder</span>
+    <span class="material-symbols-outlined text-sm">chevron_right</span>
+    </a>
+    </li>
+    <li class="">
+    <a class="flex items-center justify-between p-3 bg-white/50 rounded-lg hover:bg-white transition-all" href="#">
+    <span class="text-label-sm font-label-sm font-bold">Mock Test Portal</span>
+    <span class="material-symbols-outlined text-sm">chevron_right</span>
+    </a>
+    </li>
+    <li class="">
+    <a class="flex items-center justify-between p-3 bg-white/50 rounded-lg hover:bg-white transition-all" href="#">
+    <span class="text-label-sm font-label-sm font-bold">PYQ Archives</span>
+    <span class="material-symbols-outlined text-sm">chevron_right</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    <!-- Community / Social Ad -->
+    <div class="bg-primary p-6 rounded-xl text-on-primary">
+    <span class="material-symbols-outlined text-4xl mb-4">groups</span>
+    <h3 class="font-headline-md text-headline-md mb-2">Join 2M+ Aspirants</h3>
+    <p class="text-label-sm opacity-90 mb-6">Get real-time updates on Telegram and WhatsApp instantly.</p>
+    <div class="flex gap-2">
+    <button class="flex-1 bg-white text-primary py-2 rounded-lg font-bold text-label-sm">Telegram</button>
+    <button class="flex-1 border border-white/30 hover:bg-white/10 py-2 rounded-lg font-bold text-label-sm transition-all">WhatsApp</button>
+    </div>
+    </div>
+    </aside>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-surface-container-low border-t border-outline-variant">
+    <div class="w-full py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+    <div class="col-span-2">
+    <div class="font-headline-md text-headline-md font-bold text-primary mb-4">JobKaro</div>
+    <p class="text-body-md text-on-surface-variant max-w-xs mb-6">Accelerating professional growth by bridging the gap between talent and opportunity.</p>
+    <p class="text-label-sm text-on-surface-variant">© 2024 JobKaro. All rights reserved.</p>
+    </div>
+    <div>
+    <h4 class="font-bold text-on-surface mb-4">Jobs</h4>
+    <ul class="space-y-2 text-label-sm text-on-surface-variant">
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Private Jobs Hub</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Govt Portals</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Remote Roles</a></li>
+    </ul>
+    </div>
+    <div>
+    <h4 class="font-bold text-on-surface mb-4">Resources</h4>
+    <ul class="space-y-2 text-label-sm text-on-surface-variant">
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Result Center</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Scholarship Finder</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">State Schemes</a></li>
+    </ul>
+    </div>
+    <div>
+    <h4 class="font-bold text-on-surface mb-4">Prep</h4>
+    <ul class="space-y-2 text-label-sm text-on-surface-variant">
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Admit Cards</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Answer Keys</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Career Blog</a></li>
+    </ul>
+    </div>
+    <div>
+    <h4 class="font-bold text-on-surface mb-4">Company</h4>
+    <ul class="space-y-2 text-label-sm text-on-surface-variant">
+    <li class=""><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+    <li class=""><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+    </ul>
+    </div>
+    </div>
+    </footer>
+    <!-- BottomNavBar (Mobile Only) -->
+    <nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-surface border-t border-outline-variant shadow-lg rounded-t-xl">
+    <a class="flex flex-col items-center justify-center text-primary font-bold active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">home</span>
+    <span class="font-label-sm text-label-sm">Home</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">explore</span>
+    <span class="font-label-sm text-label-sm">Explore</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">notifications</span>
+    <span class="font-label-sm text-label-sm">Updates</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">bookmark</span>
+    <span class="font-label-sm text-label-sm">Saved</span>
+    </a>
+    <a class="flex flex-col items-center justify-center text-secondary active:scale-95 transition-transform" href="#">
+    <span class="material-symbols-outlined">person</span>
+    <span class="font-label-sm text-label-sm">Profile</span>
+    </a>
+    </nav>
+    <script>
+            // Micro-interaction: Countdown Timer Simulation
+            function updateTimers() {
+                const timers = document.querySelectorAll('.font-mono-code');
+                timers.forEach(timer => {
+                    if (timer.textContent.includes(':')) {
+                        let parts = timer.textContent.split(':');
+                        let seconds = parseInt(parts[2]);
+                        let minutes = parseInt(parts[1]);
+                        let hours = parseInt(parts[0]);
+                        
+                        seconds--;
+                        if (seconds < 0) {
+                            seconds = 59;
+                            minutes--;
+                        }
+                        if (minutes < 0) {
+                            minutes = 59;
+                            hours--;
+                        }
+                        
+                        timer.textContent = 
+                            (hours < 10 ? '0' + hours : hours) + ':' + 
+                            (minutes < 10 ? '0' + minutes : minutes) + ':' + 
+                            (seconds < 10 ? '0' + seconds : seconds);
+                    }
+                });
+            }
+            setInterval(updateTimers, 1000);
+    
+            // Hero Search Interaction
+            const searchInput = document.getElementById('hero-search');
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.classList.add('ring-4', 'ring-primary/10');
+            });
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.classList.remove('ring-4', 'ring-primary/10');
+            });
+        </script>
+    
+    
+    </body></html>
