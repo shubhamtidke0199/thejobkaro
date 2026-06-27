@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 
-import type { PrepTool } from "@/constants/landing";
+import type { PrepTool } from "@/types/landing";
 
 interface PreparationToolsProps {
   tools: PrepTool[];

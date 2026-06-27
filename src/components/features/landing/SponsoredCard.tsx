@@ -1,7 +1,7 @@
 import { MousePointerClick } from "lucide-react";
 
 import { Button } from "@/components/ui/Button";
-import type { SponsoredOpportunity } from "@/constants/landing";
+import type { SponsoredOpportunity } from "@/types/landing";
 
 interface SponsoredCardProps {
   sponsored: SponsoredOpportunity;

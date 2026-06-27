@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/Button";
-import type { Notification } from "@/constants/landing";
+import type { Notification } from "@/types/landing";
 
 interface NotificationTimelineProps {
   notifications: Notification[];

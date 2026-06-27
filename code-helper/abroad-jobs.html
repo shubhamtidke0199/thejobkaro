@@ -1,0 +1,506 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Abroad Jobs | JobKaro</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "surface-variant": "#d7e4f5",
+                        "secondary-container": "#d2e1f9",
+                        "tertiary-fixed": "#d0e5fc",
+                        "surface-dim": "#cfdbec",
+                        "inverse-surface": "#26313e",
+                        "inverse-on-surface": "#e8f1ff",
+                        "background": "#f7f9ff",
+                        "primary-fixed": "#7bfac3",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#dde9fa",
+                        "secondary-fixed": "#d5e3fb",
+                        "on-surface": "#101d29",
+                        "surface": "#f7f9ff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#566478",
+                        "surface-bright": "#f7f9ff",
+                        "surface-container": "#e3efff",
+                        "surface-container-low": "#edf4ff",
+                        "primary-fixed-dim": "#5cdda8",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#d7e4f5",
+                        "on-tertiary-fixed-variant": "#35495b",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#7f93a8",
+                        "on-primary-fixed-variant": "#005138",
+                        "on-tertiary-container": "#172c3d",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#bccac0",
+                        "on-background": "#101d29",
+                        "outline": "#6d7a72",
+                        "primary-container": "#03a575",
+                        "error": "#ba1a1a",
+                        "tertiary": "#4d6074",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "inverse-primary": "#5cdda8",
+                        "primary": "#006c4b",
+                        "on-surface-variant": "#3d4a42",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-primary-container": "#003120",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-fixed-dim": "#b4c9df",
+                        "secondary": "#515f73",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed": "#071d2e",
+                        "surface-tint": "#006c4b",
+                        "on-secondary-fixed": "#0e1c2e"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                },
+                "spacing": {
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "40px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "container-max": "1280px"
+                },
+                "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "mono-code": ["Geist"],
+                        "body-md": ["Inter"],
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "label-sm": ["Geist"]
+                },
+                "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+                }
+              },
+            },
+          }
+        </script>
+    <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                vertical-align: middle;
+            }
+            .bento-card-shadow {
+                box-shadow: 0px 4px 20px rgba(7, 22, 39, 0.05);
+            }
+            .glass-blur {
+                backdrop-filter: blur(8px);
+                -webkit-backdrop-filter: blur(8px);
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 4px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: transparent;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #bccac0;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+    <!-- TopNavBar -->
+    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop h-16 max-w-container-max mx-auto bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline">
+    <div class="flex items-center gap-stack-lg">
+    <span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">JobKaro</span>
+    <div class="hidden md:flex gap-stack-md items-center h-full">
+    <a class="font-body-md text-body-md font-medium text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Private Jobs</a>
+    <a class="font-body-md text-body-md font-medium text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Govt Jobs</a>
+    <a class="font-body-md text-body-md font-medium text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Private Jobs</a> <!-- Abroad Jobs maps here as sub-cat -->
+    <a class="font-body-md text-body-md font-medium text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Scholarships</a>
+    </div>
+    </div>
+    <div class="flex items-center gap-stack-md">
+    <div class="hidden sm:flex bg-surface-container-low px-4 py-1.5 rounded-full border border-outline-variant items-center gap-2">
+    <span class="material-symbols-outlined text-secondary text-[20px]">search</span>
+    <input class="bg-transparent border-none focus:ring-0 text-label-sm font-label-sm w-32" placeholder="Search global roles..." type="text">
+    </div>
+    <button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-medium hover:opacity-90 active:scale-95 transition-all">Sign Up</button>
+    </div>
+    </nav>
+    <!-- SideNavBar (Desktop Only) -->
+    
+    <main class="pt-16">
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden bg-inverse-surface py-20 px-margin-mobile md:px-margin-desktop min-h-[500px] flex items-center">
+    <div class="absolute inset-0 z-0 opacity-20">
+    <img class="w-full h-full object-cover" data-alt="A cinematic, high-definition view of Earth from space at night with glowing network lines connecting major global cities. The aesthetic is deep navy and emerald green, representing a high-tech global connectivity theme. Soft atmospheric lighting and subtle lens flares create a premium, futuristic atmosphere for a career platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsre3SVIwlQdeLzbOauqsxHHbyAhFGP-yHcMXAWxHbJyy93ceM3-gwZmIMyHeBf90LfyLwzeJyIBr9w6m5w50Iyap44slu_xd_8b-Ksjbg7EbapPVRamMX0h6UJrPsTK0SJ6qiDB-vmSZ-8gVEV9DeGceJzyPHL4HRKuhYzTgx8uR4I58mAg42JeTYVwT9tV_q8G9QkaDnJrWuUZyzZ4sJExHUuLZZxj4pPgBIYxLfhak5mas_dOP8I_A-LzvAiASwk0edJs8-ANZt">
+    <div class="absolute inset-0 bg-gradient-to-r from-inverse-surface via-transparent to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-3xl">
+    <span class="inline-block px-4 py-1.5 rounded-full bg-primary-container/20 border border-primary-fixed/30 text-primary-fixed font-mono-code text-label-sm mb-6">
+                        WORLDWIDE OPPORTUNITIES
+                    </span>
+    <h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-6 leading-tight">
+                        Global Careers, <br><span class="text-primary-fixed">Simplified.</span>
+    </h1>
+    <p class="text-surface-variant text-body-lg mb-10 max-w-xl">
+                        Bridge the gap between your local expertise and international ambition. Verified roles with visa sponsorship in 45+ countries.
+                    </p>
+    <!-- Intelligence Search Bar -->
+    <div class="bg-white/10 glass-blur p-2 rounded-xl border border-white/20 flex flex-col md:flex-row gap-2 shadow-2xl">
+    <div class="flex-1 flex items-center gap-3 px-4 py-3 bg-white rounded-lg">
+    <span class="material-symbols-outlined text-secondary">search</span>
+    <input class="w-full border-none focus:ring-0 text-on-surface" placeholder="Job title, skills or role" type="text">
+    </div>
+    <div class="flex-1 flex items-center gap-3 px-4 py-3 bg-white rounded-lg">
+    <span class="material-symbols-outlined text-secondary">location_on</span>
+    <input class="w-full border-none focus:ring-0 text-on-surface" placeholder="Country (e.g. Germany)" type="text">
+    </div>
+    <button class="bg-primary-container text-on-primary-container px-8 py-3 rounded-lg font-bold hover:bg-primary-fixed-dim transition-colors whitespace-nowrap">
+                            Explore Jobs
+                        </button>
+    </div>
+    </div>
+    </section>
+    <!-- Top Countries Section -->
+    <section class="py-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <div class="flex justify-between items-end mb-10">
+    <div>
+    <h2 class="font-headline-md text-headline-md text-on-surface">Featured Destinations</h2>
+    <p class="text-secondary">High-growth markets with active hiring</p>
+    </div>
+    <a class="text-primary font-medium flex items-center gap-1 hover:underline" href="#">View all countries <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+    <!-- Germany -->
+    <div class="group relative h-64 rounded-xl overflow-hidden cursor-pointer">
+    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A beautiful, vibrant shot of Berlin's architecture at dusk, with the TV Tower in the background and modern glass buildings in the foreground. The lighting is warm and inviting with deep blues and soft oranges. High-quality professional photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA413bqUjtJgBaQgg2sKDr4zOZW0YHCwIeObkAEL_xae_Ndk1KpQgqKZqnXR0SsopetByFblKH1mIE69S_rqG4slnuI87tQgbp_wjp7fu0ab2S312hcXh-bqd2dX9rKcgxlDC6g04ZqExU2W0LMJ0g60R8MarE29ky50iVQJXTaXXn6kqK-2r-ve12Ohs9tGAxT9OSihugH88wVRFI8F_B5M053SPkN8D7JNWch0tUYq33fQhcC1JXLe_9YRc4cpg0gfXMahRw_AQJq">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+    <h3 class="text-white font-bold text-headline-md">Germany</h3>
+    <div class="flex justify-between items-center text-primary-fixed mt-1">
+    <span class="text-label-sm font-mono-code">2,400+ Openings</span>
+    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+    </div>
+    </div>
+    </div>
+    <!-- UK -->
+    <div class="group relative h-64 rounded-xl overflow-hidden cursor-pointer">
+    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Modern London cityscape featuring the Shard and Tower Bridge during a clear blue sky day. Professional architectural photography with clean lines and high contrast, representing the premium UK job market." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwELXB4dIGrir8atfbjTa5eqC9J_CWB-Weob3L4Am9Jix2FM7F7QnR1-PLQD9VyPpeXHDuW3Q9XdoCxDCsTr-qfu_Ebq8UHzzBgZ9bvWwiRIa9JuJRa5fVhE74DbWcNOgKKt0eAksZCn7pbF53G-XsLsI4F2fkMsl2WiI8Ri6nx1jlFMp3mR5uTV2uYvylJYQwUKqXXgUxoB0fBiFx-73Y27Dekddf-z92v5pjzdrSSxqS8Ge4xXSyDTfHURk0nkbILsaX78kU6t-K">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+    <h3 class="text-white font-bold text-headline-md">United Kingdom</h3>
+    <div class="flex justify-between items-center text-primary-fixed mt-1">
+    <span class="text-label-sm font-mono-code">1,850+ Openings</span>
+    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+    </div>
+    </div>
+    </div>
+    <!-- UAE -->
+    <div class="group relative h-64 rounded-xl overflow-hidden cursor-pointer">
+    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="The futuristic Dubai skyline with the Burj Khalifa towering over sleek skyscrapers at night. Gold and blue lighting accents, highly luxury and modern vibe, sharp focus and high clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJF0_T2qzHOmqjvuWWIMcl2dBEZOZB_G07qid9N9HZkI5_kLHl6ZDpdJVvnkVH0Ce5a8ymHmQn8-ewdNSdvybbXvXIziMPSAWPfdwgKZc_RJrHA4oxJOfJID_wRf74bomJrmI2NIkBZ8lnZP6W9v_fyEDtcQj_EL1aXvFKuroYd4arK7Fm2JWreicge7bRocrPlyVmodtFdorml7YOBzFPnjd1YHHoXyrlf1nmTxEORjVv3S9xBBQevJ1voLhoD1LoJV09ecDOiOHl">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+    <h3 class="text-white font-bold text-headline-md">UAE</h3>
+    <div class="flex justify-between items-center text-primary-fixed mt-1">
+    <span class="text-label-sm font-mono-code">3,120+ Openings</span>
+    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+    </div>
+    </div>
+    </div>
+    <!-- USA -->
+    <div class="group relative h-64 rounded-xl overflow-hidden cursor-pointer">
+    <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A modern tech office in Silicon Valley with floor-to-ceiling windows showing palm trees and sunny California weather. Bright, high-key lighting, minimalist interior, representing the premium US tech industry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTH6VbJwsoy7hTvEzHTYcBK07gAHdNkhdtD2OIxUD4Pu8FPCq_iY0GZGDRjyY3tPGHho_AyqZiGcwjA1p9WexIGwbx9NIfYLWHZ4irzOl-8P9ZX3QSyRf0zYS12mPQKJQKXOL_R0ytvVnbGrx0zhYObhDJRuTapaCbXg830c4f6WAIIJG5D2qLjNkekYLOgDzyS6EHWI5GQ3oNnEyFRI9sNxO32mJnAqL5IzV6h203gFYJuReMmVOLt4-s6XXehvCrJxSGPVFbVk3R">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent p-6 flex flex-col justify-end">
+    <h3 class="text-white font-bold text-headline-md">USA</h3>
+    <div class="flex justify-between items-center text-primary-fixed mt-1">
+    <span class="text-label-sm font-mono-code">5,600+ Openings</span>
+    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Main Content Area with Filters and Listings -->
+    <section class="bg-surface-container-low py-stack-lg px-margin-mobile md:px-margin-desktop">
+    <div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+    <!-- Sidebar Filters -->
+    <aside class="lg:col-span-3 space-y-6">
+    <div class="bg-white p-6 rounded-xl border border-outline-variant bento-card-shadow">
+    <h3 class="font-bold text-on-surface mb-4 flex items-center gap-2">
+    <span class="material-symbols-outlined text-primary text-[20px]">filter_list</span> Filters
+                            </h3>
+    <div class="space-y-6">
+    <div>
+    <label class="text-label-sm text-secondary block mb-3 uppercase tracking-wider">Region</label>
+    <div class="space-y-2">
+    <label class="flex items-center gap-3 cursor-pointer group">
+    <input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+    <span class="text-body-md group-hover:text-primary transition-colors">Europe</span>
+    </label>
+    <label class="flex items-center gap-3 cursor-pointer group">
+    <input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+    <span class="text-body-md group-hover:text-primary transition-colors">North America</span>
+    </label>
+    <label class="flex items-center gap-3 cursor-pointer group">
+    <input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+    <span class="text-body-md group-hover:text-primary transition-colors">Middle East</span>
+    </label>
+    <label class="flex items-center gap-3 cursor-pointer group">
+    <input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+    <span class="text-body-md group-hover:text-primary transition-colors">APAC</span>
+    </label>
+    </div>
+    </div>
+    <hr class="border-outline-variant">
+    <div>
+    <label class="text-label-sm text-secondary block mb-3 uppercase tracking-wider">Visa &amp; Relocation</label>
+    <div class="space-y-2">
+    <label class="flex items-center gap-3 cursor-pointer group">
+    <input checked="" class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+    <span class="text-body-md group-hover:text-primary transition-colors">Visa Sponsorship</span>
+    </label>
+    <label class="flex items-center gap-3 cursor-pointer group">
+    <input class="w-4 h-4 rounded text-primary focus:ring-primary border-outline-variant" type="checkbox">
+    <span class="text-body-md group-hover:text-primary transition-colors">Relocation Covered</span>
+    </label>
+    </div>
+    </div>
+    <hr class="border-outline-variant">
+    <div>
+    <label class="text-label-sm text-secondary block mb-3 uppercase tracking-wider">Annual Salary (USD)</label>
+    <input class="w-full accent-primary" max="250" min="40" type="range" value="80">
+    <div class="flex justify-between text-label-sm text-secondary mt-2">
+    <span class="">$40k</span>
+    <span class="text-primary font-bold">$80k+</span>
+    <span class="">$250k</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Native AdSense Card -->
+    <div class="bg-inverse-surface p-6 rounded-xl border border-outline text-white overflow-hidden relative group">
+    <div class="absolute top-0 right-0 p-3 opacity-20">
+    <span class="material-symbols-outlined text-[60px]">flight_takeoff</span>
+    </div>
+    <span class="text-label-sm font-mono-code text-primary-fixed mb-2 block">SPONSORED</span>
+    <h4 class="font-bold text-body-lg mb-2">Relocate to Canada</h4>
+    <p class="text-secondary-fixed-dim text-body-md mb-4">Express Entry assessment for Tech Professionals.</p>
+    <button class="w-full py-2 bg-primary-container text-on-primary-container rounded-lg font-bold hover:bg-primary-fixed transition-colors">Check Eligibility</button>
+    </div>
+    </aside>
+    <!-- Job Listings -->
+    <div class="lg:col-span-9 space-y-4">
+    <div class="flex justify-between items-center mb-6">
+    <h3 class="font-headline-md text-headline-md text-on-surface">942 Jobs Found</h3>
+    <div class="flex items-center gap-2 text-label-sm font-label-sm text-secondary">
+                                Sort by: 
+                                <select class="bg-transparent border-none focus:ring-0 font-bold text-on-surface">
+    <option>Newest First</option>
+    <option>Highest Salary</option>
+    </select>
+    </div>
+    </div>
+    <!-- Opportunity Card 1 -->
+    <div class="bg-white p-6 rounded-xl border border-outline-variant hover:bg-surface-variant/20 hover:border-primary transition-all group bento-card-shadow">
+    <div class="flex flex-col md:flex-row gap-6">
+    <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+    <img alt="Siemens" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGNi8WMxp5g3nK28t3iYkbn3KIbyzmZko3ajR4o1OQmFCu1k7uQFeqmVcsiWS4WH3TdUfcN5DwfQC-UEja4UojlIIQ0nydxq0_1ywfryEfYNBcSf4f0k2x9dEtmsX_VNgunsTwwN1XtL-PC3jlodDVlO2jUjWX_wicMT1VrGywhOB6ffHg2Une-IFzYe6Sh_YkCuDxmXfbxoe2CTHFykwIk3z_MqpF8-RKRodcofInddNcGT4VohH7JF4KcutBF7Eg5ttXduSxr5Lf">
+    </div>
+    <div class="flex-1">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+    <div>
+    <h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Senior Software Engineer</h4>
+    <p class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">domain</span> Siemens Mobility • Berlin, Germany</p>
+    </div>
+    <div class="flex flex-wrap gap-2">
+    <span class="px-3 py-1 rounded-full bg-primary-container/10 text-primary text-label-sm font-bold border border-primary/20">Visa Sponsorship</span>
+    <span class="px-3 py-1 rounded-full bg-tertiary-container/10 text-tertiary text-label-sm font-bold border border-tertiary/20">Relocation Package</span>
+    </div>
+    </div>
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-1.5 text-on-surface-variant">
+    <span class="material-symbols-outlined text-[20px] text-primary">payments</span>
+    <span class="font-bold">€85k - €110k</span>
+    </div>
+    <div class="flex items-center gap-1.5 text-on-surface-variant">
+    <span class="material-symbols-outlined text-[20px]">schedule</span>
+    <span class="">Full-time</span>
+    </div>
+    </div>
+    <div class="flex items-center gap-3">
+    <span class="text-label-sm font-mono-code text-error bg-error-container px-2 py-1 rounded">Ends in 2d 04h</span>
+    <button class="bg-on-surface text-surface px-6 py-2 rounded-lg font-bold hover:bg-primary transition-colors">Apply Now</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Opportunity Card 2 -->
+    <div class="bg-white p-6 rounded-xl border border-outline-variant hover:bg-surface-variant/20 hover:border-primary transition-all group bento-card-shadow">
+    <div class="flex flex-col md:flex-row gap-6">
+    <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+    <img alt="Emirates" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqXHhUkhhBpchTStaJNvjgA3LbKPZEKv_481LxLBxgIN4NZKRhpKqQbAeYi1Gr9qnQ7P7yetE2-8Hq8kii58pIOoLDIrEbc1YVJUHvzF7fFrL0zTaZmL3QTw7FjJihqAAZB2AeOOq8luyKOqGGvJN-vdcPKc2n0rPSeYQs-uBL7n9AOsKYZ09F6UfAYoHn183-7qg7oGq59qK8l-1p4SBOdEX8sFEjCjpiBShOxXI89bq11ZiFBxuANCm7rna1ZRN5aHH5EjqJOuWv">
+    </div>
+    <div class="flex-1">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+    <div>
+    <h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Project Manager - Global Logistics</h4>
+    <p class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">domain</span> Emirates Group • Dubai, UAE</p>
+    </div>
+    <div class="flex flex-wrap gap-2">
+    <span class="px-3 py-1 rounded-full bg-primary-container/10 text-primary text-label-sm font-bold border border-primary/20">Tax-Free Salary</span>
+    <span class="px-3 py-1 rounded-full bg-secondary-container/10 text-secondary text-label-sm font-bold border border-secondary/20">Housing Provided</span>
+    </div>
+    </div>
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-1.5 text-on-surface-variant">
+    <span class="material-symbols-outlined text-[20px] text-primary">payments</span>
+    <span class="font-bold">$120k - $145k</span>
+    </div>
+    <div class="flex items-center gap-1.5 text-on-surface-variant">
+    <span class="material-symbols-outlined text-[20px]">schedule</span>
+    <span class="">Contract</span>
+    </div>
+    </div>
+    <div class="flex items-center gap-3">
+    <span class="text-label-sm font-mono-code text-secondary bg-surface-variant px-2 py-1 rounded">Applied 120 times</span>
+    <button class="bg-on-surface text-surface px-6 py-2 rounded-lg font-bold hover:bg-primary transition-colors">Apply Now</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- Opportunity Card 3 -->
+    <div class="bg-white p-6 rounded-xl border border-outline-variant hover:bg-surface-variant/20 hover:border-primary transition-all group bento-card-shadow">
+    <div class="flex flex-col md:flex-row gap-6">
+    <div class="w-16 h-16 rounded-xl bg-surface-container flex items-center justify-center shrink-0">
+    <img alt="Booking.com" class="w-10 h-10 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz5kzCXYfxtMl48W8SJMH_FdQ4QfEBOci71IE6o60d176z271brbjJLdwz8CnktLh_Upf92SZcTRGknOyDKiSW2bDaOj1x3CEBn6aohs-xDW1oTOMm71DyhAMpOPydL21KQUix3haP86fxIkupL12ovcfUijeXJE2E7vKT0K9wIKuAFYL8R9XqCxJS69tblIHCrjJEwB4Fpt7N7yKxI2kJWpzJktqLuCfXuN5AXPVRUY84VeVCMYfUsRJx3yTtLRs69-BzE8mltl-2">
+    </div>
+    <div class="flex-1">
+    <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
+    <div>
+    <h4 class="font-headline-md text-headline-md text-on-surface group-hover:text-primary transition-colors">Product Designer (UX/UI)</h4>
+    <p class="text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[18px]">domain</span> Booking.com • Amsterdam, Netherlands</p>
+    </div>
+    <div class="flex flex-wrap gap-2">
+    <span class="px-3 py-1 rounded-full bg-primary-container/10 text-primary text-label-sm font-bold border border-primary/20">Visa Sponsorship</span>
+    <span class="px-3 py-1 rounded-full bg-secondary-container/10 text-secondary text-label-sm font-bold border-secondary/20">Remote Friendly</span>
+    </div>
+    </div>
+    <div class="mt-6 flex flex-wrap items-center justify-between gap-4">
+    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-1.5 text-on-surface-variant">
+    <span class="material-symbols-outlined text-[20px] text-primary">payments</span>
+    <span class="font-bold">€70k - €95k</span>
+    </div>
+    <div class="flex items-center gap-1.5 text-on-surface-variant">
+    <span class="material-symbols-outlined text-[20px]">schedule</span>
+    <span class="">Full-time</span>
+    </div>
+    </div>
+    <div class="flex items-center gap-3">
+    <span class="text-label-sm font-mono-code text-error bg-error-container px-2 py-1 rounded">Ends in 8h 15m</span>
+    <button class="bg-on-surface text-surface px-6 py-2 rounded-lg font-bold hover:bg-primary transition-colors">Apply Now</button>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Expert Guidance Section -->
+    <section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface">
+    <div class="max-w-container-max mx-auto">
+    <div class="text-center mb-12">
+    <h2 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">International Career Success</h2>
+    <p class="text-secondary text-body-lg max-w-2xl mx-auto mt-4">Tools and insights to help you navigate your global move with confidence.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+    <!-- Visa Assistance -->
+    <div class="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group bento-card-shadow">
+    <div class="w-12 h-12 rounded-full bg-primary-container/20 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+    <span class="material-symbols-outlined text-[28px]">verified_user</span>
+    </div>
+    <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Visa Assistance</h3>
+    <p class="text-on-surface-variant mb-6">Expert documentation support for H1-B, Blue Card, and Golden Visa applications.</p>
+    <a class="text-primary font-bold flex items-center gap-2 group/link" href="#">Learn More <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span></a>
+    </div>
+    <!-- Currency Converter -->
+    <div class="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group bento-card-shadow">
+    <div class="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+    <span class="material-symbols-outlined text-[28px]">currency_exchange</span>
+    </div>
+    <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Currency Converter</h3>
+    <p class="text-on-surface-variant mb-6">Real-time exchange rates to calculate your net income in over 150+ global currencies.</p>
+    <div class="flex items-center gap-2 bg-surface-container rounded-lg p-3">
+    <span class="font-bold">1 USD</span>
+    <span class="material-symbols-outlined text-[16px]">sync</span>
+    <span class="text-primary font-bold">0.93 EUR</span>
+    </div>
+    </div>
+    <!-- Cost of Living -->
+    <div class="bg-white p-8 rounded-2xl border border-outline-variant hover:border-primary transition-all group bento-card-shadow">
+    <div class="w-12 h-12 rounded-full bg-tertiary-container/20 flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
+    <span class="material-symbols-outlined text-[28px]">bar_chart</span>
+    </div>
+    <h3 class="font-headline-md text-headline-md text-on-surface mb-3">Cost of Living</h3>
+    <p class="text-on-surface-variant mb-6">Compare rent, groceries, and leisure expenses across 5,000+ cities globally.</p>
+    <a class="text-primary font-bold flex items-center gap-2 group/link" href="#">Explore Cities <span class="material-symbols-outlined group-hover/link:translate-x-1 transition-transform">arrow_forward</span></a>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Footer -->
+    <footer class="w-full py-stack-lg px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-inverse-surface dark:bg-surface-container-lowest border-t border-outline">
+    <div class="flex flex-col items-center md:items-start gap-stack-sm">
+    <span class="text-headline-md font-headline-md font-bold text-primary-fixed dark:text-primary">JobKaro</span>
+    <p class="text-secondary-fixed-dim text-body-md text-center md:text-left">© 2026 JobKaro Platform. Accelerating Careers globally.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-stack-md">
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Terms of Service</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Cookie Policy</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Contact Us</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">About Us</a>
+    </div>
+    <div class="flex gap-4">
+    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center cursor-pointer hover:bg-primary-container transition-colors">
+    <span class="material-symbols-outlined text-white">public</span>
+    </div>
+    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center cursor-pointer hover:bg-primary-container transition-colors">
+    <span class="material-symbols-outlined text-white">share</span>
+    </div>
+    </div>
+    </footer>
+    </main>
+    <script>
+            // Simple micro-interaction for the search bar focus
+            const inputs = document.querySelectorAll('input[type="text"]');
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    input.parentElement.classList.add('ring-2', 'ring-primary-fixed/50');
+                });
+                input.addEventListener('blur', () => {
+                    input.parentElement.classList.remove('ring-2', 'ring-primary-fixed/50');
+                });
+            });
+        </script>
+    
+    
+    </body></html>

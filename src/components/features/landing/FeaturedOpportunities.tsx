@@ -1,7 +1,7 @@
 import {
   FEATURED_OPPORTUNITIES,
   SPONSORED_OPPORTUNITY,
-} from "@/constants/landing";
+} from "@/data/landing";
 
 import { OpportunityCard } from "./OpportunityCard";
 import { SponsoredCard } from "./SponsoredCard";

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import type { Opportunity } from "@/constants/landing";
+import type { Opportunity } from "@/types/landing";
 
 interface OpportunityCardProps {
   opportunity: Opportunity;

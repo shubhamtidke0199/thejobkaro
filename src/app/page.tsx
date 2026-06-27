@@ -1,25 +1,21 @@
 import { Container } from "@/components/shared/Container";
-
+import { Footer } from "@/components/shared/Footer";
+import { MobileBottomNav } from "@/components/shared/MobileBottomNav";
+import { Navbar } from "@/components/shared/Navbar";
 import { CategoriesSection } from "@/components/features/landing/CategoriesSection";
 import { CommunityCTA } from "@/components/features/landing/CommunityCTA";
 import { DeadlineTracker } from "@/components/features/landing/DeadlineTracker";
 import { FeaturedOpportunities } from "@/components/features/landing/FeaturedOpportunities";
-import { Footer } from "@/components/features/landing/Footer";
 import { Hero } from "@/components/features/landing/Hero";
-import { MobileBottomNav } from "@/components/features/landing/MobileBottomNav";
-import { Navbar } from "@/components/features/landing/Navbar";
 import { NotificationTimeline } from "@/components/features/landing/NotificationTimeline";
 import { PreparationTools } from "@/components/features/landing/PreparationTools";
-import {
-  DEADLINES,
-  NOTIFICATIONS,
-  PREP_TOOLS,
-} from "@/constants/landing";
+import { PREP_TOOLS } from "@/constants/landing";
+import { DEADLINES, NOTIFICATIONS } from "@/data/landing";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Navbar activeHref="/" />
       <main className="min-h-screen pb-20 md:pb-0">
         <Hero />
         <CategoriesSection />
@@ -41,7 +37,7 @@ export default function Home() {
         </Container>
       </main>
       <Footer />
-      <MobileBottomNav />
+      <MobileBottomNav activeHref="/" />
     </>
   );
 }

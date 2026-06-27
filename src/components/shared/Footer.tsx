@@ -1,21 +1,24 @@
 import Link from "next/link";
 
 import { Container } from "@/components/shared/Container";
-import { FOOTER_COLUMNS } from "@/constants/landing";
+import { FOOTER_COLUMNS } from "@/constants/navigation";
 
 export function Footer() {
   return (
-    <footer className="border-t border-outline-variant bg-surface-container-low">
+    <footer className="mt-12 border-t border-outline-variant bg-surface-container-low">
       <Container className="grid grid-cols-2 gap-6 py-8 md:grid-cols-4 lg:grid-cols-6">
         <div className="col-span-2">
-          <p className="mb-4 font-sans text-headline-md font-bold text-primary">
+          <Link
+            href="/"
+            className="mb-4 block font-sans text-headline-md font-bold text-primary"
+          >
             JobKaro
-          </p>
+          </Link>
           <p className="mb-6 max-w-xs text-base text-on-surface-variant">
             Accelerating professional growth by bridging the gap between talent
             and opportunity.
           </p>
-          <p className="font-label text-sm text-on-surface-variant">
+          <p className="font-label text-label-sm text-on-surface-variant">
             © {new Date().getFullYear()} JobKaro. All rights reserved.
           </p>
         </div>
@@ -23,7 +26,7 @@ export function Footer() {
         {FOOTER_COLUMNS.map((column) => (
           <div key={column.title}>
             <h4 className="mb-4 font-bold text-on-surface">{column.title}</h4>
-            <ul className="space-y-2 font-label text-sm text-on-surface-variant">
+            <ul className="space-y-2 font-label text-label-sm text-on-surface-variant">
               {column.links.map((link) => (
                 <li key={link.label}>
                   <Link

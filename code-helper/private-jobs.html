@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Private Jobs | JobKaro - Accelerating Professional Growth</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-nav-indicator {
+            position: relative;
+        }
+        .active-nav-indicator::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: currentColor;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9ff;
+        }
+        .bento-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 20px rgba(7, 22, 39, 0.05);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#006c4b",
+                      "background": "#f7f9ff",
+                      "surface-variant": "#d7e4f5",
+                      "secondary-fixed": "#d5e3fb",
+                      "surface-container-highest": "#d7e4f5",
+                      "inverse-primary": "#5cdda8",
+                      "tertiary-fixed-dim": "#b4c9df",
+                      "secondary": "#515f73",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#3d4a42",
+                      "surface-bright": "#f7f9ff",
+                      "tertiary-container": "#7f93a8",
+                      "on-primary-fixed-variant": "#005138",
+                      "inverse-on-surface": "#e8f1ff",
+                      "secondary-container": "#d2e1f9",
+                      "on-error-container": "#93000a",
+                      "surface": "#f7f9ff",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#566478",
+                      "on-background": "#101d29",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed-dim": "#b9c7df",
+                      "surface-container-low": "#edf4ff",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#5cdda8",
+                      "on-tertiary-fixed-variant": "#35495b",
+                      "primary-fixed": "#7bfac3",
+                      "surface-container-high": "#dde9fa",
+                      "primary": "#006c4b",
+                      "on-secondary-fixed-variant": "#3a485b",
+                      "on-tertiary-fixed": "#071d2e",
+                      "tertiary": "#4d6074",
+                      "outline-variant": "#bccac0",
+                      "inverse-surface": "#26313e",
+                      "primary-container": "#03a575",
+                      "on-surface": "#101d29",
+                      "surface-container": "#e3efff",
+                      "on-tertiary-container": "#172c3d",
+                      "tertiary-fixed": "#d0e5fc",
+                      "outline": "#6d7a72",
+                      "surface-dim": "#cfdbec",
+                      "on-secondary-fixed": "#0e1c2e",
+                      "on-primary-container": "#003120",
+                      "on-primary-fixed": "#002114"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-md": "16px",
+                      "unit": "4px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "margin-desktop": "40px",
+                      "container-max": "1280px",
+                      "stack-lg": "32px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Hanken Grotesk"],
+                      "body-lg": ["Inter"],
+                      "display-lg-mobile": ["Hanken Grotesk"],
+                      "display-lg": ["Hanken Grotesk"],
+                      "body-md": ["Inter"],
+                      "label-sm": ["Geist"],
+                      "mono-code": ["Geist"]
+              },
+              "fontSize": {
+                      "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                      "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                      "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-on-surface-variant sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed" href="#">JobKaro</a>
+<nav class="hidden md:flex items-center gap-6 font-body-md text-body-md">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Private Jobs</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Govt Jobs</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Results</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Scholarships</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Schemes</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Resources</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors" href="#">Abroad Jobs</a></nav>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-variant/50 dark:hover:bg-surface-variant/10 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface">search</span>
+</button>
+<button class="p-2 hover:bg-surface-variant/50 dark:hover:bg-surface-variant/10 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined text-on-surface">account_circle</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<div class="flex flex-col md:grid md:grid-cols-12 gap-gutter">
+<!-- Sidebar Filters -->
+<aside class="md:col-span-3 space-y-stack-lg">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md sticky top-24">
+<div class="flex items-center justify-between mb-stack-md">
+<h2 class="font-headline-md text-headline-md">Filters</h2>
+<button class="text-label-sm font-label-sm text-primary hover:underline">Clear all</button>
+</div>
+<div class="space-y-stack-lg">
+<!-- Search Within -->
+<div class="space-y-stack-sm">
+<label class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Search Keywords</label>
+<div class="relative">
+<input class="w-full bg-surface-container border-none rounded-lg py-2 pl-10 pr-4 focus:ring-2 focus:ring-primary text-body-md outline-none" placeholder="Design, Engineer..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-secondary text-lg">search</span>
+</div>
+</div>
+<!-- Location -->
+<div class="space-y-stack-sm">
+<label class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Location</label>
+<select class="w-full bg-surface-container border-none rounded-lg py-2 px-3 focus:ring-2 focus:ring-primary text-body-md outline-none">
+<option>Remote</option>
+<option>Bengaluru, India</option>
+<option>Hyderabad, India</option>
+<option>Mumbai, India</option>
+<option>Pune, India</option>
+</select>
+</div>
+<!-- Experience -->
+<div class="space-y-stack-sm">
+<label class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Experience</label>
+<div class="space-y-2">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary border-outline focus:ring-primary" type="checkbox"/>
+<span class="text-body-md group-hover:text-primary transition-colors">Entry Level (0-2 yrs)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary border-outline focus:ring-primary" type="checkbox"/>
+<span class="text-body-md group-hover:text-primary transition-colors">Mid-Senior (3-5 yrs)</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-4 h-4 rounded text-primary border-outline focus:ring-primary" type="checkbox"/>
+<span class="text-body-md group-hover:text-primary transition-colors">Expert (6+ yrs)</span>
+</label>
+</div>
+</div>
+<!-- Salary Range -->
+<div class="space-y-stack-sm">
+<label class="text-label-sm font-label-sm text-secondary uppercase tracking-wider">Salary (Annual)</label>
+<input class="w-full accent-primary h-1 bg-surface-variant rounded-lg appearance-none cursor-pointer" type="range"/>
+<div class="flex justify-between text-label-sm text-secondary font-mono-code">
+<span class="">₹5L</span>
+<span class="">₹50L+</span>
+</div>
+</div>
+<!-- Remote Toggle -->
+<div class="flex items-center justify-between py-2">
+<span class="text-body-md font-medium">Remote Only</span>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<section class="md:col-span-9 space-y-stack-lg">
+<!-- Header & Sorting -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface">Explore Private Jobs</h1>
+<p class="text-secondary text-body-lg">Showing 1,248 high-growth opportunities for you</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-label-sm text-secondary">Sort by:</span>
+<select class="bg-transparent border-none font-medium text-primary focus:ring-0 cursor-pointer">
+<option>Most Recent</option>
+<option>High Salary</option>
+<option>Top Rated</option>
+</select>
+</div>
+</div>
+<!-- Job Grid -->
+<div class="space-y-4 mb-stack-lg"><div class="flex items-center justify-between"><h2 class="font-headline-md text-headline-md flex items-center gap-2"><span class="material-symbols-outlined text-primary">auto_awesome</span> Recommended for You</h2><a class="text-label-sm text-primary hover:underline" href="#">View all matches</a></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="bg-surface-container-lowest border border-primary/30 rounded-xl p-stack-md bento-card relative"><div class="absolute top-3 right-3 px-2 py-0.5 bg-primary-fixed text-on-primary-fixed text-[10px] font-bold rounded uppercase">98% Match</div><div class="flex gap-4"><div class="w-12 h-12 bg-surface-container rounded-lg shrink-0 flex items-center justify-center"><span class="material-symbols-outlined text-primary">code</span></div><div><h4 class="font-bold text-on-surface">Senior UI Engineer</h4><p class="text-sm text-secondary">TechFlow Systems</p><div class="flex items-center gap-3 mt-2 text-xs text-outline"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Remote</span><span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">payments</span> ₹28L+</span></div></div></div></div><div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md bento-card"><div class="flex gap-4"><div class="w-12 h-12 bg-surface-container rounded-lg shrink-0 flex items-center justify-center"><span class="material-symbols-outlined text-primary">palette</span></div><div><h4 class="font-bold text-on-surface">Product Designer</h4><p class="text-sm text-secondary">Creative Pulse</p><div class="flex items-center gap-3 mt-2 text-xs text-outline"><span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">location_on</span> Bengaluru</span><span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">payments</span> ₹18L+</span></div></div></div></div></div></div><div class="flex items-center justify-between mb-4"><h2 class="font-headline-md text-headline-md">Latest Private Jobs</h2><div class="flex items-center gap-2"><span class="text-label-sm text-secondary">Sort by:</span><select class="bg-transparent border-none font-medium text-primary focus:ring-0 cursor-pointer p-0"><option>Most Recent</option><option>High Salary</option></select></div></div><div class="grid grid-cols-1 gap-4">
+<!-- Native AdSense Card -->
+<div class="bg-inverse-surface text-inverse-on-surface rounded-xl p-stack-md border border-outline-variant bento-card relative overflow-hidden">
+<div class="absolute top-0 right-0 px-3 py-1 bg-primary text-on-primary font-mono-code text-[10px] uppercase tracking-widest">Sponsored</div>
+<div class="flex flex-col md:flex-row items-start gap-stack-md">
+<div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center overflow-hidden shrink-0">
+<img alt="Corporate Logo" class="w-10 h-10" data-alt="A clean and modern corporate logo featuring a minimalist rocket ship symbol in a deep navy blue and emerald green palette. The logo is displayed on a high-quality, matte white textured surface with professional studio lighting. The overall style is premium, tech-focused, and authoritative, fitting for a major venture-backed startup in a modern Silicon Valley office." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNV5M9Hmp_GD2e0Hxqps1I48cGxWs5o_mpCKbG9UnkybxVJ0at0hBRZJMVmNxN1PfgrLDCvw1hwe03H0MLNFRkLvjxwLyz83cBs6nFTo_Il79A7duNR0BhEhnmOuPgH36xkvNTs3hdFudbgVlsefTjeVBPwZededJdV3dYwnboKZWs9k4wnfKEHFm3xgjZ4NO77tR0w_9n9xQ1cJirhDb8bm9daTWRH_lQXLgSySs96w4rSwfNTLcZ8N2wTleWBg65n3ix7R_Ok8Oq"/>
+</div>
+<div class="flex-1 space-y-2">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-md text-headline-md text-primary-fixed">Lead Product Designer</h3>
+<span class="px-2 py-0.5 bg-primary/20 text-primary-fixed text-label-sm font-mono-code rounded">HOT</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-surface-variant">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">corporate_fare</span> ScaleX AI</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">location_on</span> San Francisco (Remote)</span>
+<span class="flex items-center gap-1.5 font-mono-code"><span class="material-symbols-outlined text-lg">payments</span> $180k – $240k</span>
+</div>
+<p class="text-surface-variant/80 max-w-2xl line-clamp-2">Shape the future of generative UI. Join a series-B team backed by top-tier VCs to lead the design systems of tomorrow.</p>
+</div>
+<div class="flex md:flex-col items-center gap-3 w-full md:w-auto">
+<button class="w-full md:w-32 py-2.5 bg-primary-fixed text-on-primary-fixed font-bold rounded-lg hover:scale-[1.02] transition-transform active:scale-95">Apply Now</button>
+<button class="p-2.5 rounded-lg border border-surface-variant/30 text-surface-variant hover:bg-surface-variant/10 transition-colors">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Regular Job Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md bento-card">
+<div class="flex flex-col md:flex-row items-start gap-stack-md">
+<div class="w-14 h-14 bg-surface-container rounded-lg overflow-hidden shrink-0 border border-outline-variant">
+<img alt="Company Logo" class="w-full h-full object-cover" data-alt="A professional high-contrast logo for a financial technology company named Zenith. The design features a bold, sans-serif letter Z integrated into a circular geometric shape using shades of deep slate and vibrant emerald green. The lighting is soft and even, highlighting the clean lines and modern professional aesthetic suitable for a high-growth fintech brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1K2eUSNCVQnn40xUO11xugUZC1gz3HDcnbq5fk1u8n9ux-ICubITVkDMS8pg0S5lzLCEbT2IsKcFJ_5pkVYVaTiJ3zTCeHA9vxJkF3FNO_mWaIVh_AFZZhHfN9BH_9bL_6uRKoYo2uiOYZWIG6PEQO4hRziXPbvmH9djP5wpp_n-vJl3g43Tj7zdUg-6UeAvmoLDbMWvUv8sNlKuXUbiPEJBJALMmOBJJPL7wx7gKra9EB1tmdbEIBPRVeUUTRIlXDo0S2C0Bp-IL"/>
+</div>
+<div class="flex-1">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md hover:text-primary transition-colors cursor-pointer">Senior Full-Stack Engineer</h3>
+<p class="text-secondary font-medium mt-0.5">Zenith Fintech Solutions</p>
+</div>
+<div class="flex items-center gap-1 bg-error-container text-on-error-container px-3 py-1 rounded-full text-label-sm font-mono-code">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                        4h left
+                                    </div>
+</div>
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 text-secondary">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">location_on</span> Bengaluru, KA</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">work</span> Full-time</span>
+<span class="flex items-center gap-1.5 font-mono-code"><span class="material-symbols-outlined text-lg">payments</span> ₹24L - ₹36L</span>
+</div>
+<div class="flex items-center gap-2 mt-4">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">React</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">Node.js</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">AWS</span>
+</div>
+</div>
+<button class="md:self-start p-2 hover:bg-surface-variant rounded-full transition-colors text-outline">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Regular Job Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md bento-card">
+<div class="flex flex-col md:flex-row items-start gap-stack-md">
+<div class="w-14 h-14 bg-surface-container rounded-lg overflow-hidden shrink-0 border border-outline-variant">
+<img alt="Company Logo" class="w-full h-full object-cover" data-alt="A modern minimalist logo for a logistics technology firm called Locus. The logo uses a stylized L formed by overlapping transparent gradient shapes in shades of professional blue and teal. The aesthetic is clean and high-utility, set against a pristine white background with a subtle ambient shadow. It conveys a sense of efficiency and rapid growth in a tech-driven market." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqrofkDi2MopKsZMwPILWfWHq4xmDZ5-UU72XXcNY_5ft_dSS_F0_Zgn-A3uqS8cINnPUEA5jGPGi4hJGhn1azBW7TMXpQhotQ4OInr4Vpk08YG8lRlpJ_B6S69Yzyb7O56Uujp3JfRNUoOm34jk4w9MD2OvkyBXMOsg30T0RcNqV8o1wUlTjNtRJ1X9CsWN4pxVzSWVnMph7WvAJ0UZfBwCNCpvDo-ReHmNyaQ-3b9Ut-7eRbeJcz4UX_pZRbc2supDkLyRmN74GL"/>
+</div>
+<div class="flex-1">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md hover:text-primary transition-colors cursor-pointer">Mobile App Developer (Flutter)</h3>
+<p class="text-secondary font-medium mt-0.5">Locus Logistics</p>
+</div>
+<div class="text-label-sm font-mono-code text-outline">Posted 2 days ago</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 text-secondary">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">location_on</span> Remote</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">work</span> Contract</span>
+<span class="flex items-center gap-1.5 font-mono-code"><span class="material-symbols-outlined text-lg">payments</span> ₹18L - ₹22L</span>
+</div>
+<div class="flex items-center gap-2 mt-4">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">Flutter</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">Dart</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">Firebase</span>
+</div>
+</div>
+<button class="md:self-start p-2 hover:bg-surface-variant rounded-full transition-colors text-primary" style="font-variation-settings: 'FILL' 1;">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+<!-- Regular Job Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md bento-card">
+<div class="flex flex-col md:flex-row items-start gap-stack-md">
+<div class="w-14 h-14 bg-surface-container rounded-lg overflow-hidden shrink-0 border border-outline-variant">
+<img alt="Company Logo" class="w-full h-full object-cover" data-alt="A professional tech logo for an operations management company named Orbit. The design shows a sleek, stylized O consisting of orbiting rings with a subtle metallic finish. The primary colors are charcoal gray and a bright, energizing emerald green. The logo is rendered in a clean, high-precision style, placed on a slightly textured light-gray background with professional-grade lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Jh5xss2LnFjwpAOsAP-ox1QTakQgqZGTRATzU2VVhlAZflwTH1qWtdLDO64Ak-snoVVbTzYfRVJbkvGnYY_WdZkO2bLk-8k8QIB4OP99gSBfgefGTpzaysljDiETQBEAHVq8SgHHlcxR0WAaDzjcRGHsu74vpkdNTBcb2XBLma4Zqy4cNHWzn5tCSfb-1tuFHiLilMWfF9pRZJ7sLhPVC3wonGDHfiaj-7p_DtCiMOa6vO5HHRpsicREyAxpjTQ61aujEVd27b_3"/>
+</div>
+<div class="flex-1">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md hover:text-primary transition-colors cursor-pointer">Marketing Operations Manager</h3>
+<p class="text-secondary font-medium mt-0.5">Orbit SaaS</p>
+</div>
+<div class="text-label-sm font-mono-code text-outline">Posted 1 week ago</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-6 gap-y-2 mt-4 text-secondary">
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">location_on</span> Mumbai, MH</span>
+<span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-lg">work</span> Full-time</span>
+<span class="flex items-center gap-1.5 font-mono-code"><span class="material-symbols-outlined text-lg">payments</span> ₹12L - ₹18L</span>
+</div>
+<div class="flex items-center gap-2 mt-4">
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">CRM</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">Analytics</span>
+<span class="px-2 py-1 bg-surface-container text-on-surface-variant rounded text-label-sm">Strategy</span>
+</div>
+</div>
+<button class="md:self-start p-2 hover:bg-surface-variant rounded-full transition-colors text-outline">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Load More / Pagination -->
+<div class="flex justify-center py-stack-lg">
+<button class="flex items-center gap-2 px-8 py-3 bg-white border border-outline-variant rounded-full font-bold text-primary hover:bg-surface-container transition-colors active:scale-95 shadow-sm">
+                        View more jobs
+                        <span class="material-symbols-outlined">expand_more</span>
+</button>
+</div>
+<!-- SEO Content Block -->
+<div class="bg-surface-container-low rounded-2xl p-stack-lg mt-stack-lg border border-outline-variant/50">
+<h4 class="font-headline-md text-headline-md text-on-surface mb-stack-sm">Why JobKaro for Private Jobs?</h4>
+<p class="text-secondary text-body-md leading-relaxed">
+                        JobKaro provides a curated ecosystem for high-growth talent looking for verified private sector opportunities. Our platform bridges the gap between emerging startups and established MNCs with skilled professionals. Whether you are looking for remote work in software development, on-site roles in operations, or executive positions in marketing, our advanced filter system ensures you find the most relevant roles based on your experience, salary expectations, and location.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-stack-md pt-stack-md border-t border-outline-variant">
+<div>
+<span class="font-bold text-primary block">10k+</span>
+<span class="text-label-sm text-secondary uppercase">Active Listings</span>
+</div>
+<div>
+<span class="font-bold text-primary block">500+</span>
+<span class="text-label-sm text-secondary uppercase">Verified Employers</span>
+</div>
+<div>
+<span class="font-bold text-primary block">24h</span>
+<span class="text-label-sm text-secondary uppercase">Avg. Response Time</span>
+</div>
+<div>
+<span class="font-bold text-primary block">₹50L+</span>
+<span class="text-label-sm text-secondary uppercase">Top Salary Package</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface mt-12">
+<div class="w-full py-stack-lg px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+<div class="col-span-2 space-y-4">
+<a class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed" href="#">JobKaro</a>
+<p class="text-on-surface-variant dark:text-surface-variant max-w-xs">© 2024 JobKaro. Accelerating professional growth through precision-engineered career tools.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-bold text-on-surface dark:text-inverse-on-surface">Opportunities</h5>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">Private Jobs Hub</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">Govt Portals</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">Result Center</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-bold text-on-surface dark:text-inverse-on-surface">Resources</h5>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">Scholarship Finder</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">State Schemes</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">Career Resources</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-bold text-on-surface dark:text-inverse-on-surface">Legal</h5>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed text-body-md transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<h5 class="font-bold text-on-surface dark:text-inverse-on-surface">Connect</h5>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-surface dark:bg-on-background border-t border-outline-variant dark:border-on-surface-variant shadow-lg">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="font-label-sm text-label-sm">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="font-label-sm text-label-sm">Updates</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-label-sm text-label-sm">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interaction for filter range
+        const range = document.querySelector('input[type="range"]');
+        if (range) {
+            range.addEventListener('input', (e) => {
+                const val = e.target.value;
+                // Visual feedback logic could go here
+            });
+        }
+
+        // Bookmark toggle simulation
+        document.querySelectorAll('button .material-symbols-outlined').forEach(icon => {
+            if (icon.textContent === 'bookmark') {
+                icon.parentElement.addEventListener('click', function() {
+                    const isFilled = icon.style.fontVariationSettings === "'FILL' 1";
+                    icon.style.fontVariationSettings = isFilled ? "'FILL' 0" : "'FILL' 1";
+                    icon.classList.toggle('text-primary');
+                });
+            }
+        });
+    </script>
+</body></html>
