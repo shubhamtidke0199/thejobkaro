@@ -3,6 +3,7 @@ import { Search, UserCircle } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
 import { Logo } from "@/components/shared/Logo";
+import { MobileNavMenu } from "@/components/shared/MobileNavMenu";
 import { NAV_LINKS } from "@/constants/navigation";
 import { isNavLinkActive } from "@/lib/navigation";
 
@@ -40,6 +41,7 @@ export function Navbar({ activeHref = "/" }: NavbarProps) {
         </div>
 
         <div className="flex items-center gap-2">
+          <MobileNavMenu activeHref={activeHref} />
           <button
             type="button"
             className="rounded-lg p-2 transition-all hover:bg-surface-container-high active:scale-95"

@@ -15,7 +15,11 @@ export function MobileBottomNav({ activeHref = "/" }: MobileBottomNavProps) {
     >
       {MOBILE_NAV_ITEMS.map((item) => {
         const Icon = item.icon;
-        const active = isMobileNavActive(item.href, activeHref);
+        const active = isMobileNavActive(
+          item.href,
+          activeHref,
+          item.activePrefixes,
+        );
         return (
           <Link
             key={item.label}
