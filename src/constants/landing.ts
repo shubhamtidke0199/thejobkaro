@@ -35,7 +35,7 @@ export const CATEGORIES: Category[] = [
   {
     title: "Results",
     description: "Check Scorecards",
-    href: "#",
+    href: "/results",
     icon: ClipboardCheck,
   },
   {
@@ -53,7 +53,7 @@ export const CATEGORIES: Category[] = [
   {
     title: "Scholarships",
     description: "Merit & Need Based",
-    href: "#",
+    href: "/scholarships",
     icon: GraduationCap,
   },
   {

@@ -19,7 +19,7 @@ export const NAV_LINKS: NavLink[] = [
   { label: "Govt Jobs", href: "/government-jobs" },
   { label: "Abroad Jobs", href: "/abroad-jobs" },
   { label: "Results", href: "/results" },
-  { label: "Scholarships", href: "#" },
+  { label: "Scholarships", href: "/scholarships" },
   { label: "Schemes", href: "/schemes" },
   { label: "Resources", href: "#" },
 ];
@@ -47,7 +47,7 @@ export const FOOTER_COLUMNS: FooterColumn[] = [
     title: "Resources",
     links: [
       { label: "Result Center", href: "/results" },
-      { label: "Scholarship Finder", href: "#" },
+      { label: "Scholarship Finder", href: "/scholarships" },
       { label: "State Schemes", href: "/schemes" },
     ],
   },
