@@ -21,3 +21,10 @@ export const SCHEME_IMAGES = {
   benefitMarketEntry:
     "https://lh3.googleusercontent.com/aida-public/AB6AXuC3DG68h-LJ9-SGUleXr2XtCKZKxQq7PUzwtMjMSt_O44ePykxdB5zN9cwcL1KFJdVc3QXGg2Gf2JQS1eUD5EApB5iC4dR7510y0dlSsM3NTjTwJHmiDCSBhTtQZx4YvrND0RMSHGYpgLp3l11yryqsE3hOD2hQ5_p4gVPE2xxDP3E0KLI23RTr0RfJ4OYIiXTWUrA7LhjKobdYwfvtWFb51zEBek8t3KqLUby70wS_-dpocobDYREqxHj3oRVfM9Y6sgyDOqn7S5Af",
 } as const;
+
+export const RESULTS_IMAGES = {
+  sscLogo:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuDLglTyNJ4sw2JbgfMordVuz0W-TKabJdMrJIzE-F_GyY25xT6B-Np_jZ8_tcRJgc2ay1Zd12VSaKEWiYMzhWBcvErYgmLmVSm5EJnsVS4qB7gFtg07lOEY3lVHgMkeVeOMexQISGV0l89IRXkajgdfEAJ9GWeHNbL7s1tZxQ44MUpDexoJz0UJ0UYJ0VaTpNLZB1Q63Df4Ur6fEAwJNnDJgG6FhKcB9XuwCWj6OXMe3_Qu3FxHpiJHsoz85k5BmauioagJciKIAOiu",
+  sponsoredCloud:
+    "https://lh3.googleusercontent.com/aida-public/AB6AXuC1rT3PFcItEZ_gPT3OrIMxx1PDfLo4CJxtvhsqPzJFTUBEMTn53RqoV7n4b7JHAJiCqZZjmKPEFL7APb0MrDqvM3U_aIOe2F7Tk2Z2-oIR5AArP60-4Qk4tB1iA7F6liSMrGs5YMpxWAIMoASCv6g6IBRgroff2i0TpyhZdZeI8PR_mETu-LVN4gMB1NPGBU5jN27Dw3TscJ1MVQ_pAq4K1VBohVsJEWa9HueStPSAFAZCuSs_LV7PI0ZlLaurzMw6qXrCuUhnXArx",
+} as const;
