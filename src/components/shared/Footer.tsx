@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Container } from "@/components/shared/Container";
+import { Logo } from "@/components/shared/Logo";
 import { FOOTER_COLUMNS } from "@/constants/navigation";
 
 export function Footer() {
@@ -8,12 +9,7 @@ export function Footer() {
     <footer className="mt-12 border-t border-outline-variant bg-surface-container-low">
       <Container className="grid grid-cols-2 gap-6 py-8 md:grid-cols-4 lg:grid-cols-6">
         <div className="col-span-2">
-          <Link
-            href="/"
-            className="mb-4 block font-sans text-headline-md font-bold text-primary"
-          >
-            JobKaro
-          </Link>
+          <Logo className="mb-4" height={80} />
           <p className="mb-6 max-w-xs text-base text-on-surface-variant">
             Accelerating professional growth by bridging the gap between talent
             and opportunity.

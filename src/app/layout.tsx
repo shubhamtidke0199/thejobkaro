@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Hanken_Grotesk, Inter } from "next/font/google";
+
+import { BRAND_LOGO_SRC } from "@/constants/images";
+
 import "./globals.css";
 
 const hankenGrotesk = Hanken_Grotesk({
@@ -30,6 +33,10 @@ export const metadata: Metadata = {
   title: "JobKaro | Accelerating Professional Growth",
   description:
     "Find jobs, results, scholarships, and opportunities — all in one place. Your career operating system for government exams, private roles, and more.",
+  icons: {
+    icon: BRAND_LOGO_SRC,
+    apple: BRAND_LOGO_SRC,
+  },
 };
 
 export default function RootLayout({

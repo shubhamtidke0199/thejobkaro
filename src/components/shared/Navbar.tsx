@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Search, UserCircle } from "lucide-react";
 
 import { Container } from "@/components/shared/Container";
+import { Logo } from "@/components/shared/Logo";
 import { NAV_LINKS } from "@/constants/navigation";
 import { isNavLinkActive } from "@/lib/navigation";
 
@@ -14,9 +15,7 @@ export function Navbar({ activeHref = "/" }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full border-b border-outline-variant bg-surface">
       <Container as="nav" className="flex h-16 items-center justify-between">
         <div className="flex items-center gap-8">
-          <Link href="/" className="font-sans text-xl font-bold text-primary">
-            JobKaro
-          </Link>
+          <Logo priority />
 
           <ul className="hidden items-center gap-6 md:flex">
             {NAV_LINKS.map((link) => {

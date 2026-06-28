@@ -59,7 +59,7 @@ export const CATEGORIES: Category[] = [
   {
     title: "Govt Schemes",
     description: "State & Central",
-    href: "#",
+    href: "/schemes",
     icon: ScrollText,
   },
   {

@@ -142,4 +142,18 @@
     transform: translateY(-2px);
     box-shadow: var(--shadow-md);
   }
+
+  .step-line::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 24px;
+    bottom: -24px;
+    width: 2px;
+    border-left: 2px dashed var(--color-outline-variant);
+  }
+
+  .step-line:last-child::before {
+    display: none;
+  }
 }
