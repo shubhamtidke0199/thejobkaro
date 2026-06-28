@@ -156,4 +156,18 @@
   .step-line:last-child::before {
     display: none;
   }
+
+  .timeline-connector::before {
+    content: "";
+    position: absolute;
+    left: 11px;
+    top: 24px;
+    bottom: -8px;
+    width: 2px;
+    border-left: 2px dashed var(--color-outline-variant);
+  }
+
+  .timeline-connector:last-child::before {
+    display: none;
+  }
 }

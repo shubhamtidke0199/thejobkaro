@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Reliance Foundation Undergraduate Scholarship | JobKaro</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b9c7df",
+                    "tertiary": "#4d6074",
+                    "surface-variant": "#d7e4f5",
+                    "primary-fixed": "#7bfac3",
+                    "on-error": "#ffffff",
+                    "on-tertiary-fixed": "#071d2e",
+                    "on-surface": "#101d29",
+                    "surface-container": "#e3efff",
+                    "secondary-fixed": "#d5e3fb",
+                    "on-tertiary": "#ffffff",
+                    "inverse-surface": "#26313e",
+                    "primary": "#006c4b",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#005138",
+                    "outline-variant": "#bccac0",
+                    "on-surface-variant": "#3d4a42",
+                    "surface-container-low": "#edf4ff",
+                    "tertiary-container": "#7f93a8",
+                    "surface-dim": "#cfdbec",
+                    "surface": "#f7f9ff",
+                    "on-primary-fixed": "#002114",
+                    "on-error-container": "#93000a",
+                    "background": "#f7f9ff",
+                    "on-primary-container": "#003120",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#e8f1ff",
+                    "on-secondary-fixed": "#0e1c2e",
+                    "on-background": "#101d29",
+                    "primary-container": "#03a575",
+                    "on-tertiary-container": "#172c3d",
+                    "tertiary-fixed-dim": "#b4c9df",
+                    "on-secondary-container": "#566478",
+                    "on-tertiary-fixed-variant": "#35495b",
+                    "surface-container-high": "#dde9fa",
+                    "tertiary-fixed": "#d0e5fc",
+                    "primary-fixed-dim": "#5cdda8",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "surface-tint": "#006c4b",
+                    "surface-container-highest": "#d7e4f5",
+                    "secondary-container": "#d2e1f9",
+                    "inverse-primary": "#5cdda8",
+                    "error-container": "#ffdad6",
+                    "outline": "#6d7a72",
+                    "surface-bright": "#f7f9ff",
+                    "secondary": "#515f73",
+                    "on-secondary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "margin-mobile": "16px",
+                    "stack-md": "16px",
+                    "margin-desktop": "40px",
+                    "container-max": "1280px",
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "stack-sm": "8px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "label-sm": ["Geist"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "body-md": ["Inter"],
+                    "mono-code": ["Geist"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bento-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 20px rgba(7, 22, 39, 0.05);
+        }
+        .sticky-rail {
+            position: sticky;
+            top: 5rem;
+        }
+        .timeline-connector {
+            position: relative;
+        }
+        .timeline-connector::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            bottom: -8px;
+            width: 2px;
+            border-left: 2px dashed #bccac0;
+        }
+        .timeline-connector:last-child::before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-10 h-16 max-w-container-max mx-auto transition-colors duration-200">
+<div class="flex items-center gap-gutter">
+<span class="text-headline-md font-bold text-primary">JobKaro</span>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-secondary font-medium font-body-md hover:text-primary transition-colors" href="#">Private Jobs</a>
+<a class="text-secondary font-medium font-body-md hover:text-primary transition-colors" href="#">Govt Jobs</a>
+<a class="text-secondary font-medium font-body-md hover:text-primary transition-colors" href="#">Results</a>
+<a class="text-primary font-bold font-body-md border-b-2 border-primary pb-1" href="#">Scholarships</a>
+<a class="text-secondary font-medium font-body-md hover:text-primary transition-colors" href="#">Internships</a>
+<a class="text-secondary font-medium font-body-md hover:text-primary transition-colors" href="#">Schemes</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="hidden lg:flex items-center bg-surface-container-low px-4 py-2 rounded-full border border-outline-variant">
+<span class="material-symbols-outlined text-outline mr-2">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-md w-48" placeholder="Search opportunities..." type="text"/>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-bold hover:opacity-90 active:scale-95 transition-all">Sign Up</button>
+</div>
+</header>
+<main class="pt-24 pb-stack-lg max-w-container-max mx-auto px-10">
+<!-- Breadcrumbs -->
+<nav class="mb-stack-md flex items-center gap-2 text-label-sm font-label-sm text-secondary">
+<a class="hover:text-primary" href="#">Home</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<a class="hover:text-primary" href="#">Scholarships</a>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface">Reliance Foundation Scholarship</span>
+</nav>
+<!-- Hero Header -->
+<section class="bg-white border border-outline-variant rounded-xl p-stack-lg mb-gutter">
+<div class="flex flex-col md:flex-row justify-between items-start gap-stack-lg">
+<div class="flex-1">
+<div class="flex items-center gap-4 mb-stack-sm">
+<div class="w-12 h-12 rounded-lg border border-outline-variant bg-white flex items-center justify-center overflow-hidden">
+<img class="w-10 h-10 object-contain" data-alt="A clean, professional corporate logo for the Reliance Foundation. The design is minimalist, utilizing a sophisticated deep blue and white color scheme. The visual style is high-end and authoritative, reflecting the premium New Silicon Valley aesthetic of the JobKaro platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcKqWYVQGRHJEExPiOL8rlsXbXsaC-5OtIeJk2UKlYUcnoSfOsYYws61cGdTjdvUJRrr3g2zmYbjBb1xYY2UPQP87mqJxhLW3jIs9nhYX0E5VU6LDRMw50mxBwaxsWJtGoMqtmTSyawr95cxIHcovr4MbjBYyFC9jwKDgHOyBwoHbHxJevBY6mPHa2yAq3bOVN3LDDjWRPFfZD__CHamlYlyTEZ8HqGLejdDePJLorNnqN60IY4_0POZXz7Usz9ccs4vq9klDGA9T8"/>
+</div>
+<span class="font-bold text-secondary font-headline-md">Reliance Foundation</span>
+</div>
+<h1 class="text-display-lg font-display-lg text-on-surface mb-stack-md leading-tight">Undergraduate Scholarship 2024-25</h1>
+<div class="flex flex-wrap gap-stack-md">
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">payments</span>
+<div>
+<p class="text-label-sm text-secondary leading-none uppercase tracking-wider">Amount</p>
+<p class="font-bold text-on-surface">Up to ₹2,00,000</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">event_busy</span>
+<div>
+<p class="text-label-sm text-secondary leading-none uppercase tracking-wider">Deadline</p>
+<p class="font-bold text-on-surface">Oct 15, 2024</p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-surface-container-low px-4 py-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">school</span>
+<div>
+<p class="text-label-sm text-secondary leading-none uppercase tracking-wider">Education</p>
+<p class="font-bold text-on-surface">1st Year UG</p>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-stack-sm min-w-[200px]">
+<button class="bg-primary-container text-on-primary-container w-full py-4 rounded-xl font-bold text-body-lg hover:opacity-90 active:scale-95 transition-all shadow-sm">Apply Now</button>
+<p class="text-center text-label-sm text-secondary font-mono-code">5,420 students applied recently</p>
+</div>
+</div>
+</section>
+<!-- Main Content Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left: Core Content (9 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Highlights Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-stack-md">
+<div class="bento-card bg-white border border-outline-variant p-stack-md rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">public</span>
+<h4 class="text-label-sm text-secondary uppercase font-bold tracking-widest">Region</h4>
+<p class="text-body-lg font-bold">Pan India</p>
+</div>
+<div class="bento-card bg-white border border-outline-variant p-stack-md rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">star</span>
+<h4 class="text-label-sm text-secondary uppercase font-bold tracking-widest">Type</h4>
+<p class="text-body-lg font-bold">Merit-based</p>
+</div>
+<div class="bento-card bg-white border border-outline-variant p-stack-md rounded-xl">
+<span class="material-symbols-outlined text-primary mb-2">schedule</span>
+<h4 class="text-label-sm text-secondary uppercase font-bold tracking-widest">Duration</h4>
+<p class="text-body-lg font-bold">Degree Program</p>
+</div>
+</div>
+<!-- Overview Section -->
+<article class="bg-white border border-outline-variant rounded-xl p-stack-lg">
+<h2 class="text-headline-md font-bold mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined">info</span> Overview
+                    </h2>
+<p class="text-body-lg text-on-surface-variant leading-relaxed">
+                        The Reliance Foundation Undergraduate Scholarship aims to support meritorious students from all over India to pursue their undergraduate education in any stream. The program focuses on empowering young minds who demonstrate exceptional potential and a commitment to positive social change. Beyond financial aid, scholars gain access to a vibrant community and mentorship opportunities.
+                    </p>
+</article>
+<!-- Eligibility -->
+<article class="bg-white border border-outline-variant rounded-xl p-stack-lg">
+<h2 class="text-headline-md font-bold mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">check_circle</span> Eligibility Criteria
+                    </h2>
+<ul class="space-y-4">
+<li class="flex gap-4">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 text-[14px] font-bold">1</span>
+<p class="text-body-md text-on-surface-variant">Must be an Indian citizen currently residing in India.</p>
+</li>
+<li class="flex gap-4">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 text-[14px] font-bold">2</span>
+<p class="text-body-md text-on-surface-variant">Enrolled in the first year of a full-time undergraduate degree program.</p>
+</li>
+<li class="flex gap-4">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 text-[14px] font-bold">3</span>
+<p class="text-body-md text-on-surface-variant">Minimum 60% marks in the 12th standard board examination.</p>
+</li>
+<li class="flex gap-4">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center flex-shrink-0 text-[14px] font-bold">4</span>
+<p class="text-body-md text-on-surface-variant">Annual household income must be less than ₹15,00,000 (preference for &lt; ₹2.5 Lakhs).</p>
+</li>
+</ul>
+</article>
+<!-- Benefits -->
+<article class="bg-white border border-outline-variant rounded-xl p-stack-lg">
+<h2 class="text-headline-md font-bold mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">redeem</span> Scholarship Benefits
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant">
+<h3 class="font-bold text-body-lg mb-2">Financial Support</h3>
+<p class="text-body-md text-secondary">Total grant of up to ₹2,00,000 over the duration of the degree to cover tuition and study materials.</p>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant">
+<h3 class="font-bold text-body-lg mb-2">Skill Development</h3>
+<p class="text-body-md text-secondary">Exclusive access to leadership workshops, webinars, and professional networking events.</p>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant">
+<h3 class="font-bold text-body-lg mb-2">Mentorship</h3>
+<p class="text-body-md text-secondary">One-on-one guidance from industry experts and Reliance Foundation alumni.</p>
+</div>
+<div class="p-stack-md bg-surface-container-low rounded-lg border border-outline-variant">
+<h3 class="font-bold text-body-lg mb-2">Alumni Network</h3>
+<p class="text-body-md text-secondary">Lifetime membership to an elite circle of scholars and high-achievers across India.</p>
+</div>
+</div>
+</article>
+<!-- Roadmap / Process -->
+<article class="bg-white border border-outline-variant rounded-xl p-stack-lg">
+<h2 class="text-headline-md font-bold mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">route</span> Application Process
+                    </h2>
+<div class="flex flex-col gap-0">
+<div class="timeline-connector flex gap-stack-md pb-stack-lg">
+<div class="w-6 h-6 rounded-full bg-primary flex-shrink-0 mt-1 z-10 border-4 border-primary-container"></div>
+<div>
+<h3 class="font-bold text-body-lg">Online Registration</h3>
+<p class="text-body-md text-on-surface-variant">Submit basic details on the foundation portal to generate a unique ID.</p>
+</div>
+</div>
+<div class="timeline-connector flex gap-stack-md pb-stack-lg">
+<div class="w-6 h-6 rounded-full bg-outline-variant flex-shrink-0 mt-1 z-10 border-4 border-surface"></div>
+<div>
+<h3 class="font-bold text-body-lg">Aptitude Test</h3>
+<p class="text-body-md text-on-surface-variant">A 60-minute online assessment covering logical reasoning and verbal ability.</p>
+</div>
+</div>
+<div class="timeline-connector flex gap-stack-md pb-stack-lg">
+<div class="w-6 h-6 rounded-full bg-outline-variant flex-shrink-0 mt-1 z-10 border-4 border-surface"></div>
+<div>
+<h3 class="font-bold text-body-lg">Document Verification</h3>
+<p class="text-body-md text-on-surface-variant">Upload academic transcripts and income certificates for final validation.</p>
+</div>
+</div>
+<div class="timeline-connector flex gap-stack-md">
+<div class="w-6 h-6 rounded-full bg-outline-variant flex-shrink-0 mt-1 z-10 border-4 border-surface"></div>
+<div>
+<h3 class="font-bold text-body-lg">Final Selection</h3>
+<p class="text-body-md text-on-surface-variant">Selected scholars will be announced via the portal and notified by email.</p>
+</div>
+</div>
+</div>
+</article>
+</div>
+<!-- Right: Sidebar (3 Columns) -->
+<aside class="lg:col-span-4">
+<div class="sticky-rail flex flex-col gap-gutter">
+<!-- Grantor Info -->
+<section class="bg-white border border-outline-variant rounded-xl p-stack-md">
+<h3 class="text-label-sm font-bold text-secondary uppercase tracking-widest mb-stack-sm">About Grantor</h3>
+<div class="flex items-center gap-3 mb-stack-sm">
+<div class="w-10 h-10 rounded border border-outline-variant bg-surface flex items-center justify-center p-1">
+<img class="w-full h-full object-contain" data-alt="A detailed closeup of a philanthropic organization's logo, presented in a clean, modern style with soft ambient lighting. The background is a crisp white with very subtle gray shadows, fitting a high-end corporate aesthetic. The logo itself features an abstract emblem symbolizing growth and support." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmS9GKcLTNovLHZO2qut2pZ3ItqGjlVaPhM7QhLN_GIfYzTogFbYuyF9N7HLEP6JDx4JBCpCyucyCjydOB3bNc2O7GGpsNY74qGEJZI9RSjHG50bmcX8OWsV1OcFOGZ-aeU6ET8pe7UmTcMKaOk1eRORaMkN9kta1itInWFR8KPUSLWHSvPSh0_30p8I868CEdi32mZ9hFJFEvEGiYJ3D9GEpEGBkfeEiNSZLGUn1RN8Ziudjo5X_Bfrr236LB9qlF1h-xPZPnqZ3M"/>
+</div>
+<span class="font-bold text-body-lg">Reliance Foundation</span>
+</div>
+<p class="text-body-md text-on-surface-variant leading-snug mb-4">
+                            India's largest private sector foundation, dedicated to addressing India's development challenges through innovative and sustainable solutions.
+                        </p>
+<a class="text-primary font-bold text-label-sm flex items-center gap-1 hover:underline" href="#">
+                            Visit Website <span class="material-symbols-outlined text-[16px]">open_in_new</span>
+</a>
+</section>
+<!-- Utility Actions -->
+<section class="bg-white border border-outline-variant rounded-xl p-stack-md">
+<div class="flex flex-col gap-stack-sm">
+<button class="flex items-center justify-center gap-2 border border-outline text-on-surface py-2 rounded-lg font-bold hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">bookmark</span> Save Scholarship
+                            </button>
+<button class="flex items-center justify-center gap-2 border border-outline text-on-surface py-2 rounded-lg font-bold hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined">share</span> Share Link
+                            </button>
+</div>
+</section>
+<!-- Similar Scholarships -->
+<section class="bg-white border border-outline-variant rounded-xl p-stack-md">
+<h3 class="text-label-sm font-bold text-secondary uppercase tracking-widest mb-stack-sm">Similar Opportunities</h3>
+<div class="flex flex-col gap-4">
+<a class="group block border-b border-outline-variant pb-3 last:border-0 last:pb-0" href="#">
+<p class="text-label-sm text-primary font-bold group-hover:underline">HDFC Bank Parivartan</p>
+<p class="text-body-md font-medium text-on-surface line-clamp-1">ECSS Programme 2024</p>
+<p class="text-label-sm text-secondary">₹75,000 • Merit-based</p>
+</a>
+<a class="group block border-b border-outline-variant pb-3 last:border-0 last:pb-0" href="#">
+<p class="text-label-sm text-primary font-bold group-hover:underline">Tata Scholarship</p>
+<p class="text-body-md font-medium text-on-surface line-clamp-1">Cornell University Support</p>
+<p class="text-label-sm text-secondary">Full Tuition • Needs-based</p>
+</a>
+<a class="group block" href="#">
+<p class="text-label-sm text-primary font-bold group-hover:underline">Adobe Women in Tech</p>
+<p class="text-body-md font-medium text-on-surface line-clamp-1">Computer Science Grant</p>
+<p class="text-label-sm text-secondary">$10,000 • Tech focused</p>
+</a>
+</div>
+</section>
+<!-- Contact Support -->
+<section class="bg-surface-container-highest rounded-xl p-stack-md border border-outline-variant">
+<h3 class="font-bold text-body-md mb-2">Need Help?</h3>
+<p class="text-label-sm text-on-surface-variant mb-4">Facing issues with application or eligibility? Reach out to our experts.</p>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-2 text-primary font-bold text-label-sm" href="mailto:support@jobkaro.com">
+<span class="material-symbols-outlined text-[18px]">mail</span> support@jobkaro.com
+                            </a>
+<a class="flex items-center gap-2 text-primary font-bold text-label-sm" href="#">
+<span class="material-symbols-outlined text-[18px]">chat</span> Live Chat Support
+                            </a>
+</div>
+</section>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop bg-inverse-surface text-secondary-fixed-dim flex flex-col md:flex-row justify-between items-center gap-gutter mt-12">
+<div class="flex flex-col gap-2">
+<span class="text-headline-md font-bold text-primary-fixed">JobKaro</span>
+<p class="text-body-md">© 2026 JobKaro Platform. Accelerating Careers globally.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all" href="#">Privacy Policy</a>
+<a class="text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all" href="#">Terms of Service</a>
+<a class="text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all" href="#">Cookie Policy</a>
+<a class="text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all" href="#">Contact Us</a>
+<a class="text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all" href="#">About Us</a>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Active state for application process icons
+        document.querySelectorAll('.timeline-connector').forEach(step => {
+            step.addEventListener('mouseenter', () => {
+                const dot = step.querySelector('.w-6');
+                dot.classList.remove('bg-outline-variant');
+                dot.classList.add('bg-primary-container');
+            });
+            step.addEventListener('mouseleave', () => {
+                const dot = step.querySelector('.w-6');
+                if (!dot.classList.contains('bg-primary')) {
+                    dot.classList.add('bg-outline-variant');
+                    dot.classList.remove('bg-primary-container');
+                }
+            });
+        });
+
+        // Search Bar Focus Effect
+        const searchInput = document.querySelector('input[type="text"]');
+        const searchContainer = searchInput.parentElement;
+        searchInput.addEventListener('focus', () => {
+            searchContainer.classList.add('border-primary', 'ring-2', 'ring-primary/20');
+        });
+        searchInput.addEventListener('blur', () => {
+            searchContainer.classList.remove('border-primary', 'ring-2', 'ring-primary/20');
+        });
+    </script>
+</body></html>
