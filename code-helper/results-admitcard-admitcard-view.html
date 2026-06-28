@@ -1,0 +1,318 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Admit Card Center - JobKaro</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Hanken+Grotesk:wght@600;700;800&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "surface-container": "#e3efff",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#7bfac3",
+                        "surface-variant": "#d7e4f5",
+                        "on-primary-fixed": "#002114",
+                        "outline-variant": "#bccac0",
+                        "on-secondary-fixed": "#0e1c2e",
+                        "surface": "#f7f9ff",
+                        "secondary-fixed": "#d5e3fb",
+                        "tertiary-container": "#7f93a8",
+                        "tertiary": "#4d6074",
+                        "outline": "#6d7a72",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "surface-tint": "#006c4b",
+                        "surface-dim": "#cfdbec",
+                        "surface-container-highest": "#d7e4f5",
+                        "surface-container-high": "#dde9fa",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#e8f1ff",
+                        "error-container": "#ffdad6",
+                        "primary-fixed-dim": "#5cdda8",
+                        "background": "#f7f9ff",
+                        "secondary": "#515f73",
+                        "on-secondary-container": "#566478",
+                        "secondary-container": "#d2e1f9",
+                        "surface-bright": "#f7f9ff",
+                        "primary-container": "#03a575",
+                        "surface-container-low": "#edf4ff",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#003120",
+                        "inverse-surface": "#26313e",
+                        "on-surface": "#101d29",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#5cdda8",
+                        "primary": "#006c4b",
+                        "tertiary-fixed": "#d0e5fc",
+                        "on-tertiary-fixed": "#071d2e",
+                        "on-tertiary-container": "#172c3d",
+                        "on-primary-fixed-variant": "#005138",
+                        "on-tertiary-fixed-variant": "#35495b",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#101d29",
+                        "tertiary-fixed-dim": "#b4c9df",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#3d4a42"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                },
+                "spacing": {
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "unit": "4px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "40px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                },
+                "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "label-sm": ["Geist"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "mono-code": ["Geist"]
+                },
+                "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}]
+                }
+              },
+            },
+          }
+        </script>
+    <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+                vertical-align: middle;
+            }
+            .active-tab {
+                position: relative;
+            }
+            .active-tab::after {
+                content: '';
+                position: absolute;
+                bottom: -2px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #03a575;
+            }
+        </style>
+    </head>
+    <body class="bg-surface text-on-surface font-body-md min-h-screen">
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline h-16">
+    <nav class="max-w-container-max mx-auto px-margin-desktop h-full flex justify-between items-center">
+    <div class="flex items-center gap-stack-lg">
+    <span class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed">JobKaro</span>
+    <div class="hidden md:flex gap-stack-md font-body-md text-body-md font-medium">
+    <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low transition-colors duration-200" href="#">Private Jobs</a>
+    <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low transition-colors duration-200" href="#">Govt Jobs</a>
+    <a class="text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1" href="#">Results</a>
+    <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low transition-colors duration-200" href="#">Scholarships</a>
+    <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low transition-colors duration-200" href="#">Internships</a>
+    <a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed hover:bg-surface-container-low transition-colors duration-200" href="#">Schemes</a>
+    </div>
+    </div>
+    <div class="flex items-center gap-stack-md">
+    <button class="px-6 py-2 bg-primary-container text-on-primary-container rounded-full font-bold hover:opacity-90 active:scale-95 transition-all">Sign Up</button>
+    </div>
+    </nav>
+    </header>
+    <main class="pt-24 pb-stack-lg px-margin-desktop max-w-container-max mx-auto">
+    <!-- Header Section -->
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-stack-md mb-stack-lg">
+    <div>
+    <h1 class="font-headline-md text-headline-md text-on-surface">Results &amp; Admit Card Hub</h1>
+    <p class="text-on-surface-variant font-body-md">Your central destination for examination updates and logistics.</p>
+    </div>
+    <button class="flex items-center gap-2 bg-primary text-on-primary px-6 py-3 rounded-xl font-bold shadow-sm hover:shadow-md transition-all active:scale-95">
+    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+                    Enable Instant Alerts
+                </button>
+    </div>
+    <!-- Tab Navigation -->
+    <div class="flex border-b border-outline-variant mb-stack-lg">
+    <button class="px-gutter py-4 text-on-surface-variant font-medium hover:bg-surface-container-low transition-colors">Examination Results</button>
+    <button class="px-gutter py-4 text-primary font-bold active-tab border-b-2 border-primary">Admit Card Center</button>
+    </div>
+    <!-- Main Grid Layout -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+    <!-- Left Content Area (9 columns) -->
+    <div class="lg:col-span-8">
+    <!-- Search Bar -->
+    <div class="relative mb-stack-lg">
+    <span class="absolute left-4 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline">search</span>
+    <input class="w-full bg-white border border-outline-variant rounded-xl py-4 pl-12 pr-24 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all shadow-sm" placeholder="Search exams, organizations, or post names..." type="text">
+    <div class="absolute right-4 top-1/2 -translate-y-1/2 bg-surface-container px-2 py-1 rounded text-label-sm font-mono-code text-on-surface-variant border border-outline-variant">
+                            Press / to focus
+                        </div>
+    </div>
+    <!-- Content Rows -->
+    <div class="space-y-stack-md">
+    <!-- Card 1: Available -->
+    <div class="bg-white border border-outline-variant rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-surface-container-low transition-all group">
+    <div class="flex gap-4 items-start">
+    <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-primary">
+    <span class="material-symbols-outlined text-3xl">account_balance</span>
+    </div>
+    <div>
+    <div class="flex items-center gap-2 mb-1">
+    <span class="bg-[#e6f4ea] text-[#006c4b] text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">AVAILABLE</span>
+    <h3 class="font-headline-md text-headline-md text-on-surface text-[18px]">UPSC Civil Services Prelims 2024</h3>
+    </div>
+    <p class="text-on-surface-variant font-body-md text-sm">Exam Date: <span class="font-semibold text-on-surface">Nov 15, 2024</span> • Venue details updated</p>
+    </div>
+    </div>
+    <button class="w-full md:w-auto bg-primary text-on-primary px-6 py-3 rounded-lg font-bold hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined">download</span>
+                                Download</button>
+    </div>
+    <!-- Card 2: Date Announced -->
+    <div class="bg-white border border-outline-variant rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-surface-container-low transition-all group">
+    <div class="flex gap-4 items-start">
+    <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-secondary">
+    <span class="material-symbols-outlined text-3xl">engineering</span>
+    </div>
+    <div>
+    <div class="flex items-center gap-2 mb-1">
+    <span class="bg-surface-container-high text-on-secondary-container text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">RELEASING NOV 20</span>
+    <h3 class="font-headline-md text-headline-md text-on-surface text-[18px]">SSC CHSL Tier-1 Admit Card 2024</h3>
+    </div>
+    <p class="text-on-surface-variant font-body-md text-sm">Exam Date: <span class="font-semibold text-on-surface">Dec 1, 2024</span> • Center allocation in progress</p>
+    </div>
+    </div>
+    <button class="w-full md:w-auto border border-primary text-primary px-6 py-3 rounded-lg font-bold hover:bg-primary-container/10 transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined">notifications</span>
+                                Notify Me
+                            </button>
+    </div>
+    <!-- Card 3: TBA -->
+    <div class="bg-white border border-outline-variant rounded-xl p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 hover:bg-surface-container-low transition-all group">
+    <div class="flex gap-4 items-start">
+    <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center text-tertiary">
+    <span class="material-symbols-outlined text-3xl">savings</span>
+    </div>
+    <div>
+    <div class="flex items-center gap-2 mb-1">
+    <span class="bg-surface-container-lowest border border-outline-variant text-outline text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">TBA</span>
+    <h3 class="font-headline-md text-headline-md text-on-surface text-[18px]">RBI Grade B Phase II Admit Card</h3>
+    </div>
+    <p class="text-on-surface-variant font-body-md text-sm">Exam Date: <span class="italic">To be announced</span> • Stay tuned for official circular</p>
+    </div>
+    </div>
+    <button class="w-full md:w-auto border border-outline text-on-surface-variant px-6 py-3 rounded-lg font-bold hover:bg-surface-container transition-all flex items-center justify-center gap-2">
+    <span class="material-symbols-outlined">campaign</span>
+                                Get Alert
+                            </button>
+    </div>
+    </div>
+    <!-- Load More / Pagination -->
+    <div class="mt-stack-lg flex justify-center">
+    <button class="text-primary font-bold flex items-center gap-1 hover:underline underline-offset-4">
+                            View older admit cards
+                            <span class="material-symbols-outlined">keyboard_arrow_down</span>
+    </button>
+    </div>
+    </div>
+    <!-- Right Sidebar (4 columns) -->
+    <aside class="lg:col-span-4 space-y-gutter">
+    <!-- Sponsored Section -->
+    <div class="bg-inverse-surface rounded-2xl overflow-hidden shadow-lg p-6 relative">
+    <div class="absolute top-4 right-4 text-[10px] font-mono-code text-secondary-fixed-dim uppercase tracking-widest bg-white/5 px-2 py-0.5 rounded">Sponsored</div>
+    <div class="flex flex-col h-full">
+    <div class="w-full h-40 rounded-xl mb-4 overflow-hidden">
+    <img class="w-full h-full object-cover" data-alt="A professional masterclass advertisement for cloud computing featuring high-tech server racks bathed in neon green light, an abstract digital globe in the background, and a clean minimalist aesthetic. The lighting is sophisticated and moody, emphasizing expertise and modern technology. Venture emerald green accents contrast with deep slate backgrounds." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1rT3PFcItEZ_gPT3OrIMxx1PDfLo4CJxtvhsqPzJFTUBEMTn53RqoV7n4b7JHAJiCqZZjmKPEFL7APb0MrDqvM3U_aIOe2F7Tk2Z2-oIR5AArP60-4Qk4tB1iA7F6liSMrGs5YMpxWAIMoASCv6g6IBRgroff2i0TpyhZdZeI8PR_mETu-LVN4gMB1NPGBU5jN27Dw3TscJ1MVQ_pAq4K1VBohVsJEWa9HueStPSAFAZCuSs_LV7PI0ZlLaurzMw6qXrCuUhnXArx">
+    </div>
+    <h4 class="text-white font-headline-md text-headline-md mb-2">Master Cloud Computing</h4>
+    <p class="text-secondary-fixed-dim text-sm mb-4 font-body-md">Get certified with the industry-leading course designed by experts at JobKaro Academy.</p>
+    <button class="w-full bg-primary-fixed text-on-primary-fixed py-3 rounded-lg font-bold hover:brightness-110 transition-all">Explore Curriculum</button>
+    </div>
+    </div>
+    <!-- Trending Resources -->
+    <div class="bg-white border border-outline-variant rounded-2xl p-6 shadow-sm">
+    <h3 class="font-headline-md text-[18px] text-on-surface mb-4">Trending Resources</h3>
+    <ul class="space-y-4">
+    <li class="flex items-center justify-between group cursor-pointer">
+    <div class="flex items-center gap-3">
+    <div class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center text-primary">
+    <span class="material-symbols-outlined">description</span>
+    </div>
+    <span class="font-medium text-on-surface group-hover:text-primary transition-colors">Resume Builder 2024</span>
+    </div>
+    <span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+    </li>
+    <li class="flex items-center justify-between group cursor-pointer">
+    <div class="flex items-center gap-3">
+    <div class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center text-primary">
+    <span class="material-symbols-outlined">quiz</span>
+    </div>
+    <span class="font-medium text-on-surface group-hover:text-primary transition-colors">Interview Prep Guide</span>
+    </div>
+    <span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+    </li>
+    <li class="flex items-center justify-between group cursor-pointer">
+    <div class="flex items-center gap-3">
+    <div class="w-10 h-10 bg-surface-container rounded-lg flex items-center justify-center text-primary">
+    <span class="material-symbols-outlined">trending_up</span>
+    </div>
+    <span class="font-medium text-on-surface group-hover:text-primary transition-colors">Salary Insights Tool</span>
+    </div>
+    <span class="material-symbols-outlined text-outline group-hover:translate-x-1 transition-transform">arrow_forward_ios</span>
+    </li>
+    </ul>
+    </div>
+    <!-- Quick Help -->
+    <div class="bg-surface-container-low rounded-2xl p-6 border border-outline-variant/50">
+    <div class="flex items-center gap-3 mb-3">
+    <span class="material-symbols-outlined text-primary">help</span>
+    <h4 class="font-bold text-on-surface">Need Help?</h4>
+    </div>
+    <p class="text-sm text-on-surface-variant font-body-md mb-4">Facing issues with downloading your admit card? Contact our support team immediately.</p>
+    <a class="text-primary font-bold text-sm hover:underline" href="#">Get Support Now</a>
+    </div>
+    </aside>
+    </div>
+    </main>
+    <!-- Footer Component -->
+    <footer class="w-full py-stack-lg px-margin-desktop bg-inverse-surface dark:bg-surface-container-lowest border-t border-outline flex flex-col md:flex-row justify-between items-center gap-gutter">
+    <div class="flex flex-col items-center md:items-start gap-stack-sm">
+    <span class="text-headline-md font-headline-md font-bold text-primary-fixed dark:text-primary">JobKaro</span>
+    <p class="text-secondary-fixed-dim font-body-md text-sm">© 2026 JobKaro Platform. Accelerating Careers globally.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-stack-md">
+    <a class="text-secondary-fixed-dim hover:text-white transition-all duration-300 hover:underline decoration-primary-fixed underline-offset-4 font-body-md" href="#">Privacy Policy</a>
+    <a class="text-secondary-fixed-dim hover:text-white transition-all duration-300 hover:underline decoration-primary-fixed underline-offset-4 font-body-md" href="#">Terms of Service</a>
+    <a class="text-secondary-fixed-dim hover:text-white transition-all duration-300 hover:underline decoration-primary-fixed underline-offset-4 font-body-md" href="#">Cookie Policy</a>
+    <a class="text-secondary-fixed-dim hover:text-white transition-all duration-300 hover:underline decoration-primary-fixed underline-offset-4 font-body-md" href="#">Contact Us</a>
+    <a class="text-secondary-fixed-dim hover:text-white transition-all duration-300 hover:underline decoration-primary-fixed underline-offset-4 font-body-md" href="#">About Us</a>
+    </div>
+    </footer>
+    <script>
+            // Micro-interaction for search shortcut
+            document.addEventListener('keydown', (e) => {
+                if (e.key === '/') {
+                    e.preventDefault();
+                    document.querySelector('input[type="text"]').focus();
+                }
+            });
+        </script>
+    
+    
+    </body></html>
