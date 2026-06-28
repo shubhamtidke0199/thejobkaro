@@ -1,11 +1,7 @@
-import { FileText, IdCard, Presentation, Receipt } from "lucide-react";
-
-import { detailCardClassName } from "@/components/features/schemes/detailCardClassName";
-
-const documentIcons = [FileText, IdCard, Presentation, Receipt];
+import type { SchemeDocument } from "@/types/schemes";
 
 interface SchemeDocumentsSectionProps {
-  documents: string[];
+  documents: SchemeDocument[];
 }
 
 export function SchemeDocumentsSection({ documents }: SchemeDocumentsSectionProps) {
@@ -15,15 +11,15 @@ export function SchemeDocumentsSection({ documents }: SchemeDocumentsSectionProp
         Required Documents
       </h2>
       <ul className="space-y-3">
-        {documents.map((document, index) => {
-          const Icon = documentIcons[index % documentIcons.length];
+        {documents.map((document) => {
+          const Icon = document.icon;
           return (
             <li
-              key={document}
-              className={`${detailCardClassName} flex items-center gap-3 p-3`}
+              key={document.label}
+              className="flex items-center gap-3 rounded-md border border-outline-variant bg-surface-container-lowest p-3"
             >
-              <Icon className="size-5 text-primary" aria-hidden="true" />
-              <span className="text-on-surface">{document}</span>
+              <Icon className="size-5 shrink-0 text-primary" aria-hidden="true" />
+              <span className="text-on-surface">{document.label}</span>
             </li>
           );
         })}

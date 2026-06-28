@@ -67,6 +67,11 @@ export interface SchemeBenefit {
   imageKey: keyof typeof import("@/constants/images").SCHEME_IMAGES;
 }
 
+export interface SchemeDocument {
+  label: string;
+  icon: LucideIcon;
+}
+
 export interface SchemeApplicationGuideStep {
   step: number;
   title: string;
@@ -82,7 +87,7 @@ export interface SchemeDetail {
   about: string[];
   eligibility: SchemeEligibilityItem[];
   benefits: SchemeBenefit[];
-  documents: string[];
+  documents: SchemeDocument[];
   applicationSteps: SchemeApplicationGuideStep[];
 }
 

@@ -1,4 +1,4 @@
-import { detailCardClassName } from "@/components/features/schemes/detailCardClassName";
+import { detailSectionCardClassName } from "@/components/features/schemes/detailCardClassName";
 
 interface SchemeAboutSectionProps {
   paragraphs: string[];
@@ -6,7 +6,7 @@ interface SchemeAboutSectionProps {
 
 export function SchemeAboutSection({ paragraphs }: SchemeAboutSectionProps) {
   return (
-    <section className={`${detailCardClassName} rounded-2xl p-6 md:p-8`}>
+    <section className={`${detailSectionCardClassName} p-6 md:p-8`}>
       <h2 className="mb-4 font-sans text-xl font-semibold text-on-surface">
         About the Scheme
       </h2>

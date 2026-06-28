@@ -1,10 +1,14 @@
 import {
+  Briefcase,
   CheckCircle,
+  FileText,
   HandCoins,
   HelpCircle,
+  IdCard,
   Landmark,
   Mail,
   Phone,
+  Receipt,
   Verified,
 } from "lucide-react";
 
@@ -71,10 +75,13 @@ export const SCHEME_DETAILS: Record<string, SchemeDetail> = {
       },
     ],
     documents: [
-      "DPIIT Recognition Certificate",
-      "Founders' ID and Address Proofs",
-      "Pitch Deck (Max 10 slides)",
-      "Financial Statements of the previous year (if applicable)",
+      { label: "DPIIT Recognition Certificate", icon: FileText },
+      { label: "Founders' ID and Address Proofs", icon: IdCard },
+      { label: "Pitch Deck (Max 10 slides)", icon: Briefcase },
+      {
+        label: "Financial Statements of the previous year (if applicable)",
+        icon: Receipt,
+      },
     ],
     applicationSteps: [
       {
