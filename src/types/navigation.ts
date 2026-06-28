@@ -9,6 +9,8 @@ export interface MobileNavItem {
   label: string;
   href: string;
   icon: LucideIcon;
+  /** Path prefixes that mark this tab active (defaults to href) */
+  activePrefixes?: string[];
 }
 
 export interface FooterColumn {

@@ -1,9 +1,9 @@
 import {
-  Bell,
-  Bookmark,
-  Compass,
+  GraduationCap,
   Home,
-  User,
+  Landmark,
+  ScrollText,
+  Trophy,
 } from "lucide-react";
 
 import type {
@@ -26,10 +26,35 @@ export const NAV_LINKS: NavLink[] = [
 
 export const MOBILE_NAV_ITEMS: MobileNavItem[] = [
   { label: "Home", href: "/", icon: Home },
-  { label: "Explore", href: "/private-jobs", icon: Compass },
-  { label: "Updates", href: "#", icon: Bell },
-  { label: "Saved", href: "#", icon: Bookmark },
-  { label: "Profile", href: "#", icon: User },
+  {
+    label: "Jobs",
+    href: "/private-jobs",
+    icon: Landmark,
+    activePrefixes: [
+      "/private-jobs",
+      "/government-jobs",
+      "/internships",
+      "/abroad-jobs",
+    ],
+  },
+  {
+    label: "Scholarships",
+    href: "/scholarships",
+    icon: GraduationCap,
+    activePrefixes: ["/scholarships"],
+  },
+  {
+    label: "Results",
+    href: "/results",
+    icon: Trophy,
+    activePrefixes: ["/results"],
+  },
+  {
+    label: "Schemes",
+    href: "/schemes",
+    icon: ScrollText,
+    activePrefixes: ["/schemes"],
+  },
 ];
 
 export const FOOTER_COLUMNS: FooterColumn[] = [
