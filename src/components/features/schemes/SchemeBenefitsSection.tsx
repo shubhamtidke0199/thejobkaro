@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { detailCardClassName } from "@/components/features/schemes/detailCardClassName";
+import { detailSectionCardClassName } from "@/components/features/schemes/detailCardClassName";
 import { SCHEME_IMAGES } from "@/constants/images";
 import type { SchemeBenefit } from "@/types/schemes";
 
@@ -18,7 +18,7 @@ export function SchemeBenefitsSection({ benefits }: SchemeBenefitsSectionProps) 
         {benefits.map((benefit) => (
           <article
             key={benefit.title}
-            className={`${detailCardClassName} rounded-2xl p-4 md:p-6`}
+            className={`${detailSectionCardClassName} p-4 md:p-6`}
           >
             <div className="relative mb-4 h-40 w-full overflow-hidden rounded-xl">
               <Image

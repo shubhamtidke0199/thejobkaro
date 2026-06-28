@@ -1,11 +1,11 @@
 import Link from "next/link";
 
-import { detailCardClassName } from "@/components/features/schemes/detailCardClassName";
+import { detailSectionCardClassName } from "@/components/features/schemes/detailCardClassName";
 import { RELATED_SCHEMES } from "@/data/scheme-details";
 
 export function RelatedSchemesSection() {
   return (
-    <section className={`${detailCardClassName} rounded-2xl p-4 md:p-6`}>
+    <section className={`${detailSectionCardClassName} p-4 md:p-6`}>
       <h3 className="mb-4 font-sans text-xl font-semibold text-on-surface">
         Related Schemes
       </h3>
