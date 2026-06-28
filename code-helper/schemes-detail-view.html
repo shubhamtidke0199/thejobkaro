@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Startup India Seed Fund Scheme (SISFS) | JobKaro</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#006c4b",
+                    "surface-container-highest": "#d7e4f5",
+                    "on-surface": "#101d29",
+                    "surface-container-high": "#dde9fa",
+                    "background": "#f7f9ff",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#5cdda8",
+                    "primary-fixed-dim": "#5cdda8",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#071d2e",
+                    "surface-tint": "#006c4b",
+                    "on-tertiary-container": "#172c3d",
+                    "surface-bright": "#f7f9ff",
+                    "surface-variant": "#d7e4f5",
+                    "error": "#ba1a1a",
+                    "surface": "#f7f9ff",
+                    "tertiary-fixed": "#d0e5fc",
+                    "primary-container": "#03a575",
+                    "outline-variant": "#bccac0",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#7f93a8",
+                    "tertiary-fixed-dim": "#b4c9df",
+                    "secondary-fixed-dim": "#b9c7df",
+                    "tertiary": "#4d6074",
+                    "inverse-surface": "#26313e",
+                    "surface-container": "#e3efff",
+                    "on-secondary-container": "#566478",
+                    "secondary-container": "#d2e1f9",
+                    "on-background": "#101d29",
+                    "secondary-fixed": "#d5e3fb",
+                    "on-primary-fixed-variant": "#005138",
+                    "on-secondary-fixed-variant": "#3a485b",
+                    "on-secondary": "#ffffff",
+                    "outline": "#6d7a72",
+                    "on-primary-container": "#003120",
+                    "on-surface-variant": "#3d4a42",
+                    "on-secondary-fixed": "#0e1c2e",
+                    "surface-dim": "#cfdbec",
+                    "secondary": "#515f73",
+                    "primary-fixed": "#7bfac3",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#edf4ff",
+                    "on-tertiary-fixed-variant": "#35495b",
+                    "on-primary-fixed": "#002114",
+                    "error-container": "#ffdad6",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#e8f1ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "stack-sm": "8px",
+                    "margin-mobile": "16px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "margin-desktop": "40px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "mono-code": ["Geist"],
+                    "body-md": ["Inter"],
+                    "label-sm": ["Geist"],
+                    "display-lg-mobile": ["Hanken Grotesk"],
+                    "display-lg": ["Hanken Grotesk"],
+                    "headline-md": ["Hanken Grotesk"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bento-card {
+            background: #ffffff;
+            border: 1px solid #E5E7EB;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bento-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 4px 20px rgba(7, 22, 39, 0.05);
+            border-color: #006c4b;
+        }
+        .step-line::before {
+            content: '';
+            position: absolute;
+            left: 11px;
+            top: 24px;
+            bottom: -24px;
+            width: 2px;
+            border-left: 2px dashed #bccac0;
+        }
+        .step-line:last-child::before {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-on-background border-b border-outline-variant dark:border-on-surface-variant fixed top-0 w-full z-50">
+<nav class="flex justify-between items-center w-full px-margin-desktop max-w-container-max mx-auto h-16">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed cursor-pointer">JobKaro</span>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Home</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Private Jobs</a>
+<a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 font-body-md text-body-md" href="#">Schemes</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Govt Jobs</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Resources</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-surface-variant/50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 hover:bg-surface-variant/50 rounded-lg transition-all active:scale-95">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</nav>
+</header>
+<main class="pt-24 pb-stack-lg px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Breadcrumbs -->
+<nav class="mb-stack-md flex items-center gap-2 text-on-surface-variant overflow-x-auto whitespace-nowrap">
+<a class="hover:text-primary transition-colors flex items-center gap-1 font-label-sm text-label-sm" href="#">
+<span class="material-symbols-outlined text-sm">home</span> Home
+            </a>
+<span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
+<a class="hover:text-primary transition-colors font-label-sm text-label-sm" href="#">Schemes</a>
+<span class="material-symbols-outlined text-sm opacity-50">chevron_right</span>
+<span class="text-primary font-bold font-label-sm text-label-sm">Startup India Seed Fund</span>
+</nav>
+<!-- Hero Header -->
+<section class="mb-stack-lg flex flex-col md:flex-row md:items-end justify-between gap-gutter">
+<div class="max-w-3xl">
+<div class="flex flex-wrap items-center gap-stack-sm mb-4">
+<span class="px-3 py-1 bg-primary-container text-on-primary-container rounded-full font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">stars</span> Recommended
+                    </span>
+<span class="px-3 py-1 bg-secondary-container text-on-secondary-container rounded-full font-label-sm text-label-sm">Central Govt</span>
+<span class="px-3 py-1 bg-surface-container-highest text-on-surface-variant rounded-full font-label-sm text-label-sm">Deadline: 31 Dec 2024</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight mb-4">
+                    Startup India Seed Fund Scheme (SISFS)
+                </h1>
+<p class="text-on-surface-variant text-body-lg font-body-lg max-w-2xl">
+                    Financial assistance to early-stage startups for proof of concept, prototype development, product trials, market entry, and commercialization.
+                </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-3">
+<button class="bg-primary text-on-primary px-8 py-3 rounded-xl font-bold hover:bg-primary-container transition-all active:scale-95 shadow-sm">
+                    Apply Now
+                </button>
+<button class="border border-outline text-primary px-6 py-3 rounded-xl font-bold hover:bg-surface-container-low transition-all active:scale-95 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">download</span> Guidelines
+                </button>
+</div>
+</section>
+<!-- Main Layout Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Content Area (9 Columns) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Quick Facts Bento -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-stack-md">
+<div class="bento-card p-stack-md rounded-xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">payments</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Max Benefit</span>
+<span class="font-headline-md text-headline-md text-on-surface">₹50 Lakhs</span>
+</div>
+<div class="bento-card p-stack-md rounded-xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">verified_user</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Eligibility</span>
+<span class="font-headline-md text-headline-md text-on-surface">Early Stage</span>
+</div>
+<div class="bento-card p-stack-md rounded-xl flex flex-col gap-2">
+<span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm uppercase">Ministry</span>
+<span class="font-headline-md text-headline-md text-on-surface">Commerce</span>
+</div>
+</div>
+<!-- About Section -->
+<section class="bg-surface-container-lowest p-stack-lg rounded-2xl border border-outline-variant">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-4">About the Scheme</h2>
+<div class="space-y-4 text-on-surface-variant leading-relaxed">
+<p>The Startup India Seed Fund Scheme (SISFS) aims to provide financial assistance to startups for proof of concept, prototype development, product trials, market entry, and commercialization. This enables startups to graduate to a level where they will be able to raise investments from angel investors or venture capitalists or seek loans from commercial banks or financial institutions.</p>
+<p>The government has approved a budget of ₹945 Crore for the Startup India Seed Fund Scheme for a period of 4 years starting from 2021-22.</p>
+</div>
+</section>
+<!-- Eligibility Section -->
+<section class="bg-surface-container-lowest p-stack-lg rounded-2xl border border-outline-variant">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Who Can Apply</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">DPIIT Recognition</h4>
+<p class="text-on-surface-variant font-body-md">Startup must be recognized by DPIIT, incorporated not more than 2 years ago.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Innovation Quotient</h4>
+<p class="text-on-surface-variant font-body-md">Must have a business idea to develop a product or a service with a market fit.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Tech-Enabled Solutions</h4>
+<p class="text-on-surface-variant font-body-md">Preferred sectors include healthtech, edtech, agriculture, and waste management.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+<div>
+<h4 class="font-bold text-on-surface mb-1">Max Fund History</h4>
+<p class="text-on-surface-variant font-body-md">Startup should not have received more than ₹10 lakhs of monetary support.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Benefits Grid -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Benefits &amp; Incentives</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter">
+<div class="bento-card p-stack-md rounded-2xl">
+<div class="w-full h-40 rounded-xl mb-4 bg-cover bg-center" data-alt="A clean, minimalist 3D render of a golden coin entering a secure digital vault. The lighting is soft and studio-quality with a focus on metallic textures and high-end professional finance vibes. Minimal green accents reflect growth and security." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDI1H_Jr50ghnuL_b25fV-Nju9DeNqhsoxFhrCv_K85rt_bzeErn36PCCdhRHzS0pOwOL7-S7Btoi40FzAysEASKhj43GXlwlGpvvpISBRA75eR3046CGlZ_Hv37SnFA5c0uPIhFijxAsRKnnS1b3QY41zhEtpsYL7mjr9D3U29Zfk_VMJlUcgYHHevuBiv4q4RsR7JhIjPwGhffKqadd1pTVi6ZCzKrH1vllcxa_pxo9LQrVHuLL5KYu9VyjEMW9eltpFcpAUIRlkJ')"></div>
+<h3 class="font-bold text-on-surface text-lg mb-2">₹20 Lakhs for Prototype</h3>
+<p class="text-on-surface-variant font-body-md">Grant for validation of Proof of Concept, or prototype development, or product trials.</p>
+</div>
+<div class="bento-card p-stack-md rounded-2xl">
+<div class="w-full h-40 rounded-xl mb-4 bg-cover bg-center" data-alt="An abstract visualization of a graph showing exponential growth, rendered in a 3D glassmorphism style. The background is a clean white studio setup with subtle emerald green highlights. High-precision utility aesthetic with professional clarity." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC3DG68h-LJ9-SGUleXr2XtCKZKxQq7PUzwtMjMSt_O44ePykxdB5zN9cwcL1KFJdVc3QXGg2Gf2JQS1eUD5EApB5iC4dR7510y0dlSsM3NTjTwJHmiDCSBhTtQZx4YvrND0RMSHGYpgLp3l11yryqsE3hOD2hQ5_p4gVPE2xxDP3E0KLI23RTr0RfJ4OYIiXTWUrA7LhjKobdYwfvtWFb51zEBek8t3KqLUby70wS_-dpocobDYREqxHj3oRVfM9Y6sgyDOqn7S5Af')"></div>
+<h3 class="font-bold text-on-surface text-lg mb-2">₹50 Lakhs for Market Entry</h3>
+<p class="text-on-surface-variant font-body-md">Investment for market entry, commercialization, or scaling up through debt-linked instruments.</p>
+</div>
+</div>
+</section>
+<!-- Documents Section -->
+<section class="bg-surface-container-low p-stack-lg rounded-2xl">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-6">Required Documents</h2>
+<ul class="space-y-3">
+<li class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="text-on-surface">DPIIT Recognition Certificate</span>
+</li>
+<li class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-primary">assignment_ind</span>
+<span class="text-on-surface">Founders' ID and Address Proofs</span>
+</li>
+<li class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-primary">business_center</span>
+<span class="text-on-surface">Pitch Deck (Max 10 slides)</span>
+</li>
+<li class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-xl border border-outline-variant">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+<span class="text-on-surface">Financial Statements of the previous year (if applicable)</span>
+</li>
+</ul>
+</section>
+<!-- Application Timeline -->
+<section>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-8">Step-by-Step Application Guide</h2>
+<div class="space-y-0">
+<div class="relative pl-10 pb-10 step-line">
+<div class="absolute left-0 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="text-[10px] text-on-primary font-bold">1</span>
+</div>
+<h4 class="font-bold text-on-surface mb-2">Create Profile</h4>
+<p class="text-on-surface-variant">Register on Startup India Portal and obtain DPIIT Recognition number.</p>
+</div>
+<div class="relative pl-10 pb-10 step-line">
+<div class="absolute left-0 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="text-[10px] text-on-primary font-bold">2</span>
+</div>
+<h4 class="font-bold text-on-surface mb-2">Select Incubator</h4>
+<p class="text-on-surface-variant">Choose up to 3 incubators as per your preference and location for evaluation.</p>
+</div>
+<div class="relative pl-10 pb-10 step-line">
+<div class="absolute left-0 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="text-[10px] text-on-primary font-bold">3</span>
+</div>
+<h4 class="font-bold text-on-surface mb-2">Fill Application</h4>
+<p class="text-on-surface-variant">Complete the online form with your pitch deck and required financial data.</p>
+</div>
+<div class="relative pl-10">
+<div class="absolute left-0 top-0 w-6 h-6 rounded-full bg-primary flex items-center justify-center z-10">
+<span class="text-[10px] text-on-primary font-bold">4</span>
+</div>
+<h4 class="font-bold text-on-surface mb-2">Review &amp; Pitch</h4>
+<p class="text-on-surface-variant">Incubators review your application and invite you for a virtual/physical pitch session.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Sidebar (4 Columns) -->
+<aside class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Related Schemes -->
+<div class="bento-card p-stack-md rounded-2xl">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-4">Related Schemes</h3>
+<div class="flex flex-col gap-stack-md">
+<a class="group block" href="#">
+<p class="text-primary font-bold mb-1 group-hover:underline">PMEGP Scheme</p>
+<p class="text-on-surface-variant text-sm line-clamp-2">Prime Minister's Employment Generation Programme for rural youth.</p>
+</a>
+<hr class="border-outline-variant"/>
+<a class="group block" href="#">
+<p class="text-primary font-bold mb-1 group-hover:underline">Stand Up India</p>
+<p class="text-on-surface-variant text-sm line-clamp-2">Loans for SC/ST and Women entrepreneurs for greenfield enterprises.</p>
+</a>
+<hr class="border-outline-variant"/>
+<a class="group block" href="#">
+<p class="text-primary font-bold mb-1 group-hover:underline">Credit Guarantee Fund</p>
+<p class="text-on-surface-variant text-sm line-clamp-2">Guarantee for collateral-free credit to MSME sector.</p>
+</a>
+</div>
+</div>
+<!-- Help & Support Card -->
+<div class="bg-inverse-surface text-inverse-on-surface p-stack-lg rounded-2xl">
+<h3 class="font-headline-md text-headline-md mb-6">Help &amp; Support</h3>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-fixed">help_center</span>
+<div>
+<p class="font-bold mb-1">FAQs</p>
+<p class="text-surface-variant text-sm">Read commonly asked questions about SISFS.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-fixed">mail</span>
+<div>
+<p class="font-bold mb-1">Email Support</p>
+<p class="text-surface-variant text-sm">seedfund-india@gov.in</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-fixed">call</span>
+<div>
+<p class="font-bold mb-1">Helpline</p>
+<p class="text-surface-variant text-sm">1800-115-565 (Toll Free)</p>
+</div>
+</div>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-bold mt-4">Chat with Assistant</button>
+</div>
+</div>
+<!-- Sponsored Content -->
+<div class="bento-card p-stack-md rounded-2xl bg-on-background relative overflow-hidden group">
+<div class="relative z-10">
+<span class="font-mono-code text-[10px] text-primary-fixed-dim uppercase tracking-widest">Sponsored</span>
+<h4 class="text-white font-headline-md mt-2 mb-4 leading-tight">Scale your Startup with Cloud Credits</h4>
+<p class="text-surface-variant text-sm mb-6">Get up to $100k in AWS credits and technical support through our partner network.</p>
+<button class="text-primary-fixed font-bold flex items-center gap-2 group-hover:gap-3 transition-all">
+                            Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<div class="absolute -right-10 -bottom-10 opacity-20 transform group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[120px] text-primary">cloud_queue</span>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface mt-stack-lg">
+<div class="w-full py-stack-lg px-margin-desktop max-w-container-max mx-auto grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-gutter">
+<div class="col-span-2 lg:col-span-2">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed mb-4 block">JobKaro</span>
+<p class="text-on-surface-variant dark:text-surface-variant font-body-md max-w-xs mb-6">© 2024 JobKaro. Accelerating professional growth for every Indian citizen.</p>
+</div>
+<div>
+<h5 class="font-bold text-on-surface dark:text-inverse-on-surface mb-4">Hubs</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Private Jobs Hub</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Govt Portals</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold text-on-surface dark:text-inverse-on-surface mb-4">Support</h5>
+<ul class="space-y-2">
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Result Center</a></li>
+<li><a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors font-body-md text-body-md" href="#">Scholarship Finder</a></li>
+</ul>
+</div>
+<div class="col-span-2 lg:col-span-2">
+<h5 class="font-bold text-on-surface dark:text-inverse-on-surface mb-4">Connect</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-surface dark:bg-on-background border-t border-outline-variant dark:border-on-surface-variant shadow-lg flex justify-around items-center px-4 py-3 md:hidden">
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-label-sm text-label-sm">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-label-sm text-label-sm">Explore</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed font-bold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<span class="font-label-sm text-label-sm">Schemes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim" href="#">
+<span class="material-symbols-outlined">bookmark</span>
+<span class="font-label-sm text-label-sm">Saved</span>
+</a>
+<a class="flex flex-col items-center justify-center text-secondary dark:text-secondary-fixed-dim" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm">Profile</span>
+</a>
+</nav>
+<script>
+        // Micro-interactions and scroll effects
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+                header.classList.remove('border-b');
+            } else {
+                header.classList.remove('shadow-md');
+                header.classList.add('border-b');
+            }
+        });
+
+        // Simple smooth entrance for content
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,439 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>JobKaro | Government Schemes Portal</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;family=Hanken+Grotesk:wght@600;700&amp;family=Geist:wght@400;500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Hanken+Grotesk:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet">
+    <script id="tailwind-config">
+          tailwind.config = {
+            darkMode: "class",
+            theme: {
+              extend: {
+                "colors": {
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed": "#7bfac3",
+                        "on-secondary-fixed-variant": "#3a485b",
+                        "on-tertiary-fixed-variant": "#35495b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#101d29",
+                        "tertiary": "#4d6074",
+                        "on-primary-fixed": "#002114",
+                        "tertiary-fixed-dim": "#b4c9df",
+                        "tertiary-fixed": "#d0e5fc",
+                        "surface": "#f7f9ff",
+                        "inverse-on-surface": "#e8f1ff",
+                        "inverse-primary": "#5cdda8",
+                        "surface-dim": "#cfdbec",
+                        "on-secondary-container": "#566478",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#d5e3fb",
+                        "outline": "#6d7a72",
+                        "secondary": "#515f73",
+                        "surface-variant": "#d7e4f5",
+                        "on-background": "#101d29",
+                        "on-secondary-fixed": "#0e1c2e",
+                        "outline-variant": "#bccac0",
+                        "primary": "#006c4b",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#172c3d",
+                        "secondary-fixed-dim": "#b9c7df",
+                        "background": "#f7f9ff",
+                        "secondary-container": "#d2e1f9",
+                        "primary-container": "#03a575",
+                        "surface-container-low": "#edf4ff",
+                        "tertiary-container": "#7f93a8",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#005138",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#3d4a42",
+                        "surface-container": "#e3efff",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed-dim": "#5cdda8",
+                        "surface-container-highest": "#d7e4f5",
+                        "surface-bright": "#f7f9ff",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed": "#071d2e",
+                        "on-primary-container": "#003120",
+                        "surface-tint": "#006c4b",
+                        "surface-container-high": "#dde9fa",
+                        "inverse-surface": "#26313e"
+                },
+                "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                },
+                "spacing": {
+                        "container-max": "1280px",
+                        "stack-md": "16px",
+                        "margin-desktop": "40px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "stack-sm": "8px",
+                        "margin-mobile": "16px"
+                },
+                "fontFamily": {
+                        "display-lg-mobile": ["Hanken Grotesk"],
+                        "mono-code": ["Geist"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"],
+                        "label-sm": ["Geist"]
+                },
+                "fontSize": {
+                        "display-lg-mobile": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "mono-code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "500"}]
+                }
+              },
+            },
+          }
+        </script>
+    <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+            .bento-card {
+                transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.2s ease;
+            }
+            .bento-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0px 4px 20px rgba(7, 22, 39, 0.05);
+            }
+            .search-blur {
+                backdrop-filter: blur(8px);
+            }
+            body {
+                background-color: #f7f9ff;
+                color: #101d29;
+                font-family: 'Inter', sans-serif;
+            }
+        </style>
+    </head>
+    <body class="bg-background text-on-background">
+    <!-- TopNavBar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-margin-desktop h-16 max-w-container-max mx-auto">
+    <div class="flex items-center gap-gutter">
+    <h1 class="text-headline-md font-headline-md font-bold text-primary">JobKaro</h1>
+    <nav class="hidden md:flex gap-stack-lg items-center">
+    <a class="font-body-md text-body-md font-medium text-secondary hover:text-primary transition-colors duration-200" href="#">Private Jobs</a>
+    <a class="font-body-md text-body-md font-medium text-secondary hover:text-primary transition-colors duration-200" href="#">Govt Jobs</a>
+    <a class="font-body-md text-body-md font-medium text-secondary hover:text-primary transition-colors duration-200" href="#">Results</a>
+    <a class="font-body-md text-body-md font-medium text-secondary hover:text-primary transition-colors duration-200" href="#">Scholarships</a>
+    <a class="font-body-md text-body-md font-medium text-secondary hover:text-primary transition-colors duration-200" href="#">Internships</a>
+    <a class="font-body-md text-body-md font-medium text-primary border-b-2 border-primary pb-1" href="#">Schemes</a>
+    </nav>
+    </div>
+    <div class="flex items-center gap-stack-md">
+    <button class="material-symbols-outlined text-secondary hover:text-primary">search</button>
+    <button class="bg-primary text-on-primary px-stack-lg py-2 rounded-lg font-body-md font-medium transition-transform active:scale-95">Sign Up</button>
+    </div>
+    </header>
+    <!-- SideNavBar -->
+    <!-- Main Content Canvas -->
+    <main class="mt-16 p-margin-mobile md:p-margin-desktop min-h-screen max-w-container-max mx-auto">
+    <!-- Hero & Search Section -->
+    <section class="max-w-container-max mx-auto mb-stack-lg">
+    <div class="relative rounded-xl overflow-hidden bg-inverse-surface py-20 px-8 text-center">
+    <img alt="Government Schemes Background" class="absolute inset-0 w-full h-full object-cover opacity-20" data-alt="A professional aerial view of a modern government district with clean architecture and lush greenery, symbolizing progress and structured growth. The scene is bathed in soft early morning sunlight, with a palette of muted blues and teals that match a high-end corporate aesthetic. The overall mood is authoritative yet hopeful, reflecting a bridge between citizens and opportunity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJnAQzuaAbTskmy5fz9zU5aEbYbIMN5RUhZKW5qVC8rZap6XBrk3nfoSfKRAWLloKWalTyXYpJPM25Y1GVou0kwKHi94JD6rRNBCGkm0eRcWCw3fiKbiJfHELZhbYd9j3Hx0Enjot-15BbbOp_zrCIriQ1iWHYY-WcNwTDui5j50c3Cqf3asXXELCuNxlBZm6gNMauY400P0FLPWusIefP6VyFZw0jfVcZL0i-_kPJ2N4xywP5DX2iSBEke6pax0PDQOcaWp6eAqZK">
+    <div class="relative z-10">
+    <h2 class="font-display-lg text-display-lg text-primary-fixed mb-stack-md">Welfare &amp; Career Schemes</h2>
+    <p class="font-body-lg text-body-lg text-surface-container-low max-w-2xl mx-auto mb-10">Discover verified government initiatives designed to empower students, entrepreneurs, and communities through financial and structural support.</p>
+    <div class="max-w-xl mx-auto relative group">
+    <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+    <input class="w-full pl-12 pr-4 py-4 rounded-full bg-white text-on-surface border-none shadow-sm focus:ring-2 focus:ring-primary-container search-blur transition-all outline-none" placeholder="Search by scheme name, state, or ministry..." type="text">
+    <div class="hidden group-focus-within:block absolute top-full left-0 w-full bg-white mt-2 rounded-xl shadow-lg border border-outline-variant p-4 text-left z-20">
+    <p class="text-label-sm font-bold mb-2 text-secondary px-2 uppercase tracking-wider">Quick Results</p>
+    <div class="space-y-1">
+    <div class="p-2 hover:bg-surface rounded-lg cursor-pointer flex items-center gap-3">
+    <span class="material-symbols-outlined text-primary">school</span>
+    <span class="text-body-md">PM Research Fellowship</span>
+    </div>
+    <div class="p-2 hover:bg-surface rounded-lg cursor-pointer flex items-center gap-3">
+    <span class="material-symbols-outlined text-primary">rocket_launch</span>
+    <span class="text-body-md">Startup India Seed Fund</span>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <!-- Category Filters -->
+    <section class="max-w-container-max mx-auto mb-stack-lg pb-4">
+    <div class="flex gap-stack-md whitespace-nowrap justify-center flex-wrap">
+    <button class="px-6 py-2 rounded-full bg-primary text-on-primary font-body-md font-medium shadow-sm">All Schemes</button>
+    <button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-secondary hover:bg-surface-variant font-body-md font-medium transition-colors">Students</button>
+    <button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-secondary hover:bg-surface-variant font-body-md font-medium transition-colors">Entrepreneurs</button>
+    <button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-secondary hover:bg-surface-variant font-body-md font-medium transition-colors">Farmers</button>
+    <button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-secondary hover:bg-surface-variant font-body-md font-medium transition-colors">Women-centric</button>
+    <button class="px-6 py-2 rounded-full bg-white border border-outline-variant text-secondary hover:bg-surface-variant font-body-md font-medium transition-colors">Healthcare</button>
+    </div>
+    </section>
+    <!-- Opportunity Bento Grid -->
+    <section class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mb-stack-lg">
+    <!-- Scheme Card 1 -->
+    <div class="bento-card bg-white p-gutter rounded-xl border border-outline-variant flex flex-col h-full">
+    <div class="flex justify-between items-start mb-6">
+    <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+    <span class="material-symbols-outlined text-primary text-[32px]">school</span>
+    </div>
+    <span class="bg-error-container text-on-error-container font-mono-code text-[11px] px-2 py-1 rounded uppercase font-bold">Ends in 4d 12h</span>
+    </div>
+    <div class="flex-1">
+    <h3 class="font-headline-md text-headline-md mb-2">Prime Minister Research Fellowship (PMRF)</h3>
+    <p class="text-secondary text-body-md mb-4">Direct admission to Ph.D. programs in IITs and IISc with a lucrative monthly stipend.</p>
+    <div class="space-y-3 mb-6">
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">payments</span>
+    <span class="text-label-sm font-medium">₹70,000 - ₹80,000 monthly</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">groups</span>
+    <span class="text-label-sm font-medium">Final year B.Tech/M.Tech students</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">account_balance</span>
+    <span class="text-label-sm font-medium">Ministry of Education</span>
+    </div>
+    </div>
+    </div>
+    <button class="w-full py-3 bg-surface-container-low hover:bg-primary-container hover:text-on-primary-container transition-colors font-bold rounded-lg text-primary">Apply Now</button>
+    </div>
+    <!-- Scheme Card 2 (Bento Wide/Featured) -->
+    <div class="bento-card bg-inverse-surface text-white p-gutter rounded-xl border border-outline md:col-span-2 flex flex-col md:flex-row gap-gutter">
+    <div class="flex-1">
+    <div class="flex items-center gap-2 mb-4">
+    <span class="bg-primary-fixed text-on-primary-fixed text-[10px] font-mono-code px-2 py-0.5 rounded-full uppercase tracking-widest font-bold">Recommended</span>
+    <span class="text-on-primary-fixed-variant text-[12px]">Featured Program</span>
+    </div>
+    <h3 class="font-headline-md text-display-lg-mobile md:text-headline-md mb-3 text-primary-fixed">Startup India Seed Fund Scheme (SISFS)</h3>
+    <p class="text-tertiary-fixed-dim text-body-md mb-6">Financial assistance to startups for proof of concept, prototype development, product trials, and market entry.</p>
+    <div class="grid grid-cols-2 gap-4 mb-6">
+    <div class="bg-surface-container-highest/10 p-3 rounded-lg border border-outline/20">
+    <p class="text-[10px] uppercase text-secondary-fixed-dim mb-1">Max Benefit</p>
+    <p class="font-bold text-headline-md">₹50 Lakhs</p>
+    </div>
+    <div class="bg-surface-container-highest/10 p-3 rounded-lg border border-outline/20">
+    <p class="text-[10px] uppercase text-secondary-fixed-dim mb-1">Stage</p>
+    <p class="font-bold text-headline-md">Early Seed</p>
+    </div>
+    </div>
+    <button class="px-8 py-3 bg-primary-fixed text-on-primary-fixed font-bold rounded-lg hover:brightness-110 transition-all">Start Registration</button>
+    </div>
+    <div class="w-full md:w-1/3 h-48 md:h-auto rounded-lg overflow-hidden relative grayscale hover:grayscale-0 transition-all duration-700">
+    <img class="w-full h-full object-cover" data-alt="A clean, modern workspace with a high-end laptop and architectural blueprints, shot from a top-down perspective. The lighting is crisp and even, highlighting a professional environment. The color palette consists of whites, greys, and deep emerald greens, aligning with the premium JobKaro brand identity. The focus is on precision and professional creation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqzBuFzpf9RGzL871MiG3x29J81GwMTB_Gk2lzO-aNZ_6_44Gk0wY_B9IBaAbhpR6AyCi0cg-RdV8wCK3gGtNv0IGfms0PiQv0pPXwhQas4SyWTtNsKE7rVUg5q-AuHrPZ-GGyiYP-tuLE_Bwc5UDWMphK4TbbXl2hp5ud-SK3vNk7q5GO5-6MnCIjue_W_j3q9ZcxGbkwCfEdh-TyRf6ld7VcPDrZ4oWsCW3IS5Zv8IjM0EtfMZ3l5Jcvekhckxu_NtcUhJ6nl3TP">
+    </div>
+    </div>
+    <!-- Scheme Card 3 -->
+    <div class="bento-card bg-white p-gutter rounded-xl border border-outline-variant flex flex-col h-full">
+    <div class="flex justify-between items-start mb-6">
+    <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+    <span class="material-symbols-outlined text-primary text-[32px]">agriculture</span>
+    </div>
+    <span class="text-secondary font-mono-code text-[11px] px-2 py-1 bg-surface-variant rounded">Rolling Basis</span>
+    </div>
+    <div class="flex-1">
+    <h3 class="font-headline-md text-headline-md mb-2">PM-Kisan Samman Nidhi</h3>
+    <p class="text-secondary text-body-md mb-4">Direct income support of ₹6,000 per year in three equal installments to small farmer families.</p>
+    <div class="space-y-3 mb-6">
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">eco</span>
+    <span class="text-label-sm font-medium">For Land-holding farmers</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">account_balance_wallet</span>
+    <span class="text-label-sm font-medium">Direct Bank Transfer (DBT)</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">account_balance</span>
+    <span class="text-label-sm font-medium">Min. of Agriculture &amp; FW</span>
+    </div>
+    </div>
+    </div>
+    <button class="w-full py-3 bg-surface-container-low text-primary font-bold rounded-lg border border-primary/20 hover:bg-primary hover:text-white transition-all">Check Status</button>
+    </div>
+    <!-- Scheme Card 4 (Women Focused) -->
+    <div class="bento-card bg-surface-container-low p-gutter rounded-xl border border-outline-variant flex flex-col h-full">
+    <div class="flex justify-between items-start mb-6">
+    <div class="w-12 h-12 rounded-lg bg-white flex items-center justify-center shadow-sm">
+    <span class="material-symbols-outlined text-primary text-[32px]">female</span>
+    </div>
+    <span class="text-secondary font-mono-code text-[11px] px-2 py-1 bg-white rounded">New Launch</span>
+    </div>
+    <div class="flex-1">
+    <h3 class="font-headline-md text-headline-md mb-2">Lakhpati Didi Scheme</h3>
+    <p class="text-secondary text-body-md mb-4">Skill training and financial literacy for women in Self-Help Groups (SHGs) to earn ₹1 Lakh annually.</p>
+    <div class="space-y-3 mb-6">
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">trending_up</span>
+    <span class="text-label-sm font-medium">Skill Development Focus</span>
+    </div>
+    <div class="flex items-center gap-2">
+    <span class="material-symbols-outlined text-[18px] text-primary">diversity_1</span>
+    <span class="text-label-sm font-medium">Target: 3 Crore Women</span>
+    </div>
+    </div>
+    </div>
+    <button class="w-full py-3 bg-primary text-on-primary font-bold rounded-lg shadow-md hover:translate-y-[-2px] transition-all">Join SHG Portal</button>
+    </div>
+    <!-- AdSense Style Bento Card -->
+    <div class="bento-card bg-inverse-surface p-gutter rounded-xl border border-outline relative flex flex-col justify-center text-center">
+    <span class="absolute top-4 right-4 font-mono-code text-[10px] text-secondary-fixed-dim uppercase opacity-60">Sponsored</span>
+    <span class="material-symbols-outlined text-primary-fixed text-[48px] mb-4 mx-auto">account_tree</span>
+    <h3 class="text-primary-fixed font-headline-md mb-2">Upskill with JobKaro AI</h3>
+    <p class="text-tertiary-fixed-dim text-label-sm mb-6 px-4">Match your profile with government schemes automatically using our AI analysis engine.</p>
+    <button class="mx-auto px-6 py-2 border border-primary-fixed text-primary-fixed rounded-full hover:bg-primary-fixed hover:text-on-primary-fixed transition-all font-bold text-label-sm">Go Premium</button>
+    </div>
+    <!-- Scheme Card 5: Skill India Digital -->
+    <div class="bento-card bg-white p-gutter rounded-xl border border-outline-variant flex flex-col h-full">
+      <div class="flex justify-between items-start mb-6">
+        <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-[32px]">psychology</span>
+        </div>
+        <span class="text-secondary font-mono-code text-[11px] px-2 py-1 bg-surface-variant rounded">Open Now</span>
+      </div>
+      <div class="flex-1">
+        <h3 class="font-headline-md text-headline-md mb-2">Skill India Digital</h3>
+        <p class="text-secondary text-body-md mb-4">A unified platform for skill development, job discovery, and entrepreneurship support for youth.</p>
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-primary">verified</span>
+            <span class="text-label-sm font-medium">Certified Courses</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-primary">work</span>
+            <span class="text-label-sm font-medium">Job Matching AI</span>
+          </div>
+        </div>
+      </div>
+      <button class="w-full py-3 bg-surface-container-low text-primary font-bold rounded-lg border border-primary/20 hover:bg-primary hover:text-white transition-all">Explore Courses</button>
+    </div>
+    
+    <!-- Scheme Card 6: National Apprenticeship Promotion Scheme -->
+    <div class="bento-card bg-white p-gutter rounded-xl border border-outline-variant flex flex-col h-full">
+      <div class="flex justify-between items-start mb-6">
+        <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-[32px]">handyman</span>
+        </div>
+        <span class="text-secondary font-mono-code text-[11px] px-2 py-1 bg-surface-variant rounded">Active</span>
+      </div>
+      <div class="flex-1">
+        <h3 class="font-headline-md text-headline-md mb-2">NAPS Apprenticeship</h3>
+        <p class="text-secondary text-body-md mb-4">On-the-job training with a monthly stipend to bridge the gap between education and industry.</p>
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-primary">payments</span>
+            <span class="text-label-sm font-medium">Stipend Support</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-primary">business</span>
+            <span class="text-label-sm font-medium">Industry Exposure</span>
+          </div>
+        </div>
+      </div>
+      <button class="w-full py-3 bg-surface-container-low text-primary font-bold rounded-lg border border-primary/20 hover:bg-primary hover:text-white transition-all">Find Vacancies</button>
+    </div>
+    
+    <!-- Scheme Card 7: Digital India Internship -->
+    <div class="bento-card bg-white p-gutter rounded-xl border border-outline-variant flex flex-col h-full">
+      <div class="flex justify-between items-start mb-6">
+        <div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center">
+          <span class="material-symbols-outlined text-primary text-[32px]">laptop_mac</span>
+        </div>
+        <span class="bg-error-container text-on-error-container font-mono-code text-[11px] px-2 py-1 rounded uppercase font-bold">Closing Soon</span>
+      </div>
+      <div class="flex-1">
+        <h3 class="font-headline-md text-headline-md mb-2">Digital India Internship</h3>
+        <p class="text-secondary text-body-md mb-4">Opportunity for students to work on live projects under the Ministry of Electronics &amp; IT.</p>
+        <div class="space-y-3 mb-6">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-primary">calendar_today</span>
+            <span class="text-label-sm font-medium">2-3 Months Duration</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-[18px] text-primary">workspace_premium</span>
+            <span class="text-label-sm font-medium">Govt. Certificate</span>
+          </div>
+        </div>
+      </div>
+      <button class="w-full py-3 bg-surface-container-low text-primary font-bold rounded-lg border border-primary/20 hover:bg-primary hover:text-white transition-all">Apply Now</button>
+    </div></section>
+    <!-- How to Apply Guide -->
+    <section class="max-w-container-max mx-auto mb-20">
+    <div class="bg-white rounded-2xl p-margin-desktop border border-outline-variant">
+    <h2 class="font-display-lg text-headline-md mb-stack-lg">Simplified Application Process</h2>
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter relative">
+    <!-- Progress line for desktop -->
+    <div class="hidden md:block absolute top-10 left-10 right-10 h-0.5 border-t-2 border-dashed border-outline-variant -z-10"></div>
+    <div class="flex flex-col items-center text-center group">
+    <div class="w-16 h-16 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-4 border-4 border-white shadow-md group-hover:scale-110 transition-transform">
+    <span class="material-symbols-outlined text-[28px]">search_check</span>
+    </div>
+    <h4 class="font-bold mb-2">1. Check Eligibility</h4>
+    <p class="text-secondary text-label-sm">Use our filters to find schemes matching your demographic and needs.</p>
+    </div>
+    <div class="flex flex-col items-center text-center group">
+    <div class="w-16 h-16 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center mb-4 border-4 border-white shadow-md group-hover:scale-110 transition-transform">
+    <span class="material-symbols-outlined text-[28px]">description</span>
+    </div>
+    <h4 class="font-bold mb-2">2. Prepare Documents</h4>
+    <p class="text-secondary text-label-sm">Keep Aadhar, Income Certificate, and Educational docs ready in PDF.</p>
+    </div>
+    <div class="flex flex-col items-center text-center group">
+    <div class="w-16 h-16 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center mb-4 border-4 border-white shadow-md group-hover:scale-110 transition-transform">
+    <span class="material-symbols-outlined text-[28px]">app_registration</span>
+    </div>
+    <h4 class="font-bold mb-2">3. Digital Filing</h4>
+    <p class="text-secondary text-label-sm">Navigate to the official Ministry portal via our secure 'Apply' links.</p>
+    </div>
+    <div class="flex flex-col items-center text-center group">
+    <div class="w-16 h-16 rounded-full bg-surface-container-highest text-secondary flex items-center justify-center mb-4 border-4 border-white shadow-md group-hover:scale-110 transition-transform">
+    <span class="material-symbols-outlined text-[28px]">task_alt</span>
+    </div>
+    <h4 class="font-bold mb-2">4. Track Approval</h4>
+    <p class="text-secondary text-label-sm">Enter your application ID on our 'Track Status' page for updates.</p>
+    </div>
+    </div>
+    </div>
+    </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full py-stack-lg px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-inverse-surface text-primary-fixed border-t border-outline">
+    <div class="flex flex-col items-center md:items-start gap-2">
+    <h2 class="text-headline-md font-headline-md font-bold text-primary-fixed">JobKaro</h2>
+    <p class="font-body-md text-body-md text-secondary-fixed-dim text-center md:text-left">© 2026 JobKaro Platform. Accelerating Careers globally.</p>
+    </div>
+    <div class="flex flex-wrap justify-center gap-stack-lg">
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Privacy Policy</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Terms of Service</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Cookie Policy</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">Contact Us</a>
+    <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-white hover:underline decoration-primary-fixed underline-offset-4 transition-all duration-300" href="#">About Us</a>
+    </div>
+    </footer>
+    <script>
+            // Simple search animation logic
+            const searchInput = document.querySelector('input[type="text"]');
+            const searchOverlay = document.querySelector('.group-focus-within\\:block');
+    
+            searchInput.addEventListener('focus', () => {
+                searchInput.parentElement.classList.add('scale-105');
+            });
+    
+            searchInput.addEventListener('blur', () => {
+                searchInput.parentElement.classList.remove('scale-105');
+            });
+        </script>
+    
+    
+    </body></html>
